@@ -1,0 +1,518 @@
+{
+  "platform": "linux",
+  "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron",
+  "results": [
+    {
+      "name": "collapsed math and code source markers have zero area and no padding box",
+      "status": "pass",
+      "details": [
+        {
+          "type": "math-block",
+          "width": 0,
+          "height": 0,
+          "padding": "0px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "type": "code-block",
+          "width": 0,
+          "height": 0,
+          "padding": "0px",
+          "background": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    {
+      "name": "expanding a formula keeps its original editable source visible",
+      "status": "pass",
+      "details": {
+        "width": 770,
+        "height": 67.875,
+        "padding": "18px 22px",
+        "editable": true,
+        "editorFocused": true,
+        "clickDiagnostics": [
+          {
+            "at": 1464.3,
+            "phase": "before-click",
+            "type": "state",
+            "target": "DIV.vditor-ir__node",
+            "relatedTarget": null,
+            "active": "PRE.vditor-reset.moye-table-root-1-0.moye-tables-grid",
+            "irScrollTop": 78,
+            "blockClass": "vditor-ir__node",
+            "sourcePoint": {
+              "node": "PRE.vditor-reset.moye-table-root-1-0.moye-tables-grid",
+              "offset": 0,
+              "collapsed": true
+            },
+            "preview": {
+              "rect": {
+                "x": 362,
+                "y": 244.171875,
+                "width": 770,
+                "height": 141.859375,
+                "top": 244.171875,
+                "right": 1132,
+                "bottom": 386.03125,
+                "left": 362
+              },
+              "tabindex": null,
+              "overflowX": "auto"
+            },
+            "math": {
+              "rect": {
+                "x": 384,
+                "y": 262.171875,
+                "width": 726,
+                "height": 89.859375,
+                "top": 262.171875,
+                "right": 1110,
+                "bottom": 352.03125,
+                "left": 384
+              },
+              "tabindex": null,
+              "overflowX": "auto",
+              "clientWidth": 726,
+              "scrollWidth": 726
+            },
+            "rendered": {
+              "tabindex": "0",
+              "overflowX": "visible",
+              "clientWidth": 726,
+              "scrollWidth": 726,
+              "role": null
+            }
+          },
+          {
+            "at": 1524.3,
+            "phase": "capture",
+            "type": "pointerdown",
+            "target": "svg",
+            "relatedTarget": null,
+            "active": "PRE.vditor-reset.moye-table-root-1-0.moye-tables-grid",
+            "irScrollTop": 78,
+            "blockClass": "vditor-ir__node",
+            "sourcePoint": {
+              "node": "PRE.vditor-reset.moye-table-root-1-0.moye-tables-grid",
+              "offset": 0,
+              "collapsed": true
+            },
+            "preview": {
+              "rect": {
+                "x": 362,
+                "y": 244.171875,
+                "width": 770,
+                "height": 141.859375,
+                "top": 244.171875,
+                "right": 1132,
+                "bottom": 386.03125,
+                "left": 362
+              },
+              "tabindex": null,
+              "overflowX": "auto"
+            },
+            "math": {
+              "rect": {
+                "x": 384,
+                "y": 262.171875,
+                "width": 726,
+                "height": 89.859375,
+                "top": 262.171875,
+                "right": 1110,
+                "bottom": 352.03125,
+                "left": 384
+              },
+              "tabindex": null,
+              "overflowX": "auto",
+              "clientWidth": 726,
+              "scrollWidth": 726
+            },
+            "rendered": {
+              "tabindex": "0",
+              "overflowX": "visible",
+              "clientWidth": 726,
+              "scrollWidth": 726,
+              "role": null
+            }
+          },
+          {
+            "at": 1524.5,
+            "phase": "capture",
+            "type": "mousedown",
+            "target": "svg",
+            "relatedTarget": null,
+            "active": "PRE.vditor-reset.moye-table-root-1-0.moye-tables-grid",
+            "irScrollTop": 78,
+            "blockClass": "vditor-ir__node",
+            "sourcePoint": {
+              "node": "PRE.vditor-reset.moye-table-root-1-0.moye-tables-grid",
+              "offset": 0,
+              "collapsed": true
+            },
+            "preview": {
+              "rect": {
+                "x": 362,
+                "y": 244.171875,
+                "width": 770,
+                "height": 141.859375,
+                "top": 244.171875,
+                "right": 1132,
+                "bottom": 386.03125,
+                "left": 362
+              },
+              "tabindex": null,
+              "overflowX": "auto"
+            },
+            "math": {
+              "rect": {
+                "x": 384,
+                "y": 262.171875,
+                "width": 726,
+                "height": 89.859375,
+                "top": 262.171875,
+                "right": 1110,
+                "bottom": 352.03125,
+                "left": 384
+              },
+              "tabindex": null,
+              "overflowX": "auto",
+              "clientWidth": 726,
+              "scrollWidth": 726
+            },
+            "rendered": {
+              "tabindex": "0",
+              "overflowX": "visible",
+              "clientWidth": 726,
+              "scrollWidth": 726,
+              "role": null
+            }
+          },
+          {
+            "at": 1525.4,
+            "phase": "capture",
+            "type": "pointerup",
+            "target": "svg",
+            "relatedTarget": null,
+            "active": "PRE.vditor-reset.moye-table-root-1-0.moye-tables-grid",
+            "irScrollTop": 78,
+            "blockClass": "vditor-ir__node",
+            "sourcePoint": {
+              "node": "#text<SPAN.vditor-ir__marker.vditor-ir__marker--heading>",
+              "offset": 0,
+              "collapsed": true
+            },
+            "preview": {
+              "rect": {
+                "x": 362,
+                "y": 244.171875,
+                "width": 770,
+                "height": 141.859375,
+                "top": 244.171875,
+                "right": 1132,
+                "bottom": 386.03125,
+                "left": 362
+              },
+              "tabindex": null,
+              "overflowX": "auto"
+            },
+            "math": {
+              "rect": {
+                "x": 384,
+                "y": 262.171875,
+                "width": 726,
+                "height": 89.859375,
+                "top": 262.171875,
+                "right": 1110,
+                "bottom": 352.03125,
+                "left": 384
+              },
+              "tabindex": null,
+              "overflowX": "auto",
+              "clientWidth": 726,
+              "scrollWidth": 726
+            },
+            "rendered": {
+              "tabindex": "0",
+              "overflowX": "visible",
+              "clientWidth": 726,
+              "scrollWidth": 726,
+              "role": null
+            }
+          },
+          {
+            "at": 1525.5,
+            "phase": "capture",
+            "type": "mouseup",
+            "target": "svg",
+            "relatedTarget": null,
+            "active": "PRE.vditor-reset.moye-table-root-1-0.moye-tables-grid",
+            "irScrollTop": 78,
+            "blockClass": "vditor-ir__node",
+            "sourcePoint": {
+              "node": "#text<SPAN.vditor-ir__marker.vditor-ir__marker--heading>",
+              "offset": 0,
+              "collapsed": true
+            },
+            "preview": {
+              "rect": {
+                "x": 362,
+                "y": 244.171875,
+                "width": 770,
+                "height": 141.859375,
+                "top": 244.171875,
+                "right": 1132,
+                "bottom": 386.03125,
+                "left": 362
+              },
+              "tabindex": null,
+              "overflowX": "auto"
+            },
+            "math": {
+              "rect": {
+                "x": 384,
+                "y": 262.171875,
+                "width": 726,
+                "height": 89.859375,
+                "top": 262.171875,
+                "right": 1110,
+                "bottom": 352.03125,
+                "left": 384
+              },
+              "tabindex": null,
+              "overflowX": "auto",
+              "clientWidth": 726,
+              "scrollWidth": 726
+            },
+            "rendered": {
+              "tabindex": "0",
+              "overflowX": "visible",
+              "clientWidth": 726,
+              "scrollWidth": 726,
+              "role": null
+            }
+          },
+          {
+            "at": 1525.6,
+            "phase": "capture",
+            "type": "click",
+            "target": "svg",
+            "relatedTarget": null,
+            "active": "PRE.vditor-reset.moye-table-root-1-0.moye-tables-grid",
+            "irScrollTop": 78,
+            "blockClass": "vditor-ir__node",
+            "sourcePoint": {
+              "node": "#text<SPAN.vditor-ir__marker.vditor-ir__marker--heading>",
+              "offset": 0,
+              "collapsed": true
+            },
+            "preview": {
+              "rect": {
+                "x": 362,
+                "y": 244.171875,
+                "width": 770,
+                "height": 141.859375,
+                "top": 244.171875,
+                "right": 1132,
+                "bottom": 386.03125,
+                "left": 362
+              },
+              "tabindex": null,
+              "overflowX": "auto"
+            },
+            "math": {
+              "rect": {
+                "x": 384,
+                "y": 262.171875,
+                "width": 726,
+                "height": 89.859375,
+                "top": 262.171875,
+                "right": 1110,
+                "bottom": 352.03125,
+                "left": 384
+              },
+              "tabindex": null,
+              "overflowX": "auto",
+              "clientWidth": 726,
+              "scrollWidth": 726
+            },
+            "rendered": {
+              "tabindex": "0",
+              "overflowX": "visible",
+              "clientWidth": 726,
+              "scrollWidth": 726,
+              "role": null
+            }
+          },
+          {
+            "at": 1527.4,
+            "phase": "class-mutation",
+            "type": "class",
+            "target": "DIV.vditor-ir__node.vditor-ir__node--expand",
+            "relatedTarget": null,
+            "active": "PRE.vditor-reset.moye-table-root-1-0.moye-tables-grid",
+            "irScrollTop": 78,
+            "blockClass": "vditor-ir__node vditor-ir__node--expand",
+            "sourcePoint": {
+              "node": "CODE.language-math",
+              "offset": 0,
+              "collapsed": true
+            },
+            "preview": {
+              "rect": {
+                "x": 362,
+                "y": 265.609375,
+                "width": 770,
+                "height": 141.859375,
+                "top": 265.609375,
+                "right": 1132,
+                "bottom": 407.46875,
+                "left": 362
+              },
+              "tabindex": null,
+              "overflowX": "auto"
+            },
+            "math": {
+              "rect": {
+                "x": 384,
+                "y": 283.609375,
+                "width": 726,
+                "height": 89.859375,
+                "top": 283.609375,
+                "right": 1110,
+                "bottom": 373.46875,
+                "left": 384
+              },
+              "tabindex": null,
+              "overflowX": "auto",
+              "clientWidth": 726,
+              "scrollWidth": 726
+            },
+            "rendered": {
+              "tabindex": "0",
+              "overflowX": "visible",
+              "clientWidth": 726,
+              "scrollWidth": 726,
+              "role": null
+            }
+          },
+          {
+            "at": 1527.5,
+            "phase": "class-mutation",
+            "type": "class",
+            "target": "DIV.vditor-ir__node.vditor-ir__node--expand",
+            "relatedTarget": null,
+            "active": "PRE.vditor-reset.moye-table-root-1-0.moye-tables-grid",
+            "irScrollTop": 78,
+            "blockClass": "vditor-ir__node vditor-ir__node--expand",
+            "sourcePoint": {
+              "node": "CODE.language-math",
+              "offset": 0,
+              "collapsed": true
+            },
+            "preview": {
+              "rect": {
+                "x": 362,
+                "y": 265.609375,
+                "width": 770,
+                "height": 141.859375,
+                "top": 265.609375,
+                "right": 1132,
+                "bottom": 407.46875,
+                "left": 362
+              },
+              "tabindex": null,
+              "overflowX": "auto"
+            },
+            "math": {
+              "rect": {
+                "x": 384,
+                "y": 283.609375,
+                "width": 726,
+                "height": 89.859375,
+                "top": 283.609375,
+                "right": 1110,
+                "bottom": 373.46875,
+                "left": 384
+              },
+              "tabindex": null,
+              "overflowX": "auto",
+              "clientWidth": 726,
+              "scrollWidth": 726
+            },
+            "rendered": {
+              "tabindex": "0",
+              "overflowX": "visible",
+              "clientWidth": 726,
+              "scrollWidth": 726,
+              "role": null
+            }
+          },
+          {
+            "at": 1527.6,
+            "phase": "ir-bubble",
+            "type": "click",
+            "target": "svg",
+            "relatedTarget": null,
+            "active": "PRE.vditor-reset.moye-table-root-1-0.moye-tables-grid",
+            "irScrollTop": 78,
+            "blockClass": "vditor-ir__node vditor-ir__node--expand",
+            "sourcePoint": {
+              "node": "CODE.language-math",
+              "offset": 0,
+              "collapsed": true
+            },
+            "preview": {
+              "rect": {
+                "x": 362,
+                "y": 265.609375,
+                "width": 770,
+                "height": 141.859375,
+                "top": 265.609375,
+                "right": 1132,
+                "bottom": 407.46875,
+                "left": 362
+              },
+              "tabindex": null,
+              "overflowX": "auto"
+            },
+            "math": {
+              "rect": {
+                "x": 384,
+                "y": 283.609375,
+                "width": 726,
+                "height": 89.859375,
+                "top": 283.609375,
+                "right": 1110,
+                "bottom": 373.46875,
+                "left": 384
+              },
+              "tabindex": null,
+              "overflowX": "auto",
+              "clientWidth": 726,
+              "scrollWidth": 726
+            },
+            "rendered": {
+              "tabindex": "0",
+              "overflowX": "visible",
+              "clientWidth": 726,
+              "scrollWidth": 726,
+              "role": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "leaving formula source collapses it again and preserves the original Markdown",
+      "status": "pass",
+      "details": {
+        "width": 0,
+        "height": 0,
+        "dirty": false,
+        "originalBytesPreserved": true
+      }
+    }
+  ],
+  "pageErrors": []
+}

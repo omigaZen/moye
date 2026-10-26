@@ -1,0 +1,13 @@
+:root{--content-width:780px;--body-font:"Noto Sans SC",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mono-font:SFMono-Regular,Consolas,"Liberation Mono","Noto Sans SC",monospace;--body-line-height:1.85;--tab-size:4}
+#editor .vditor-reset{font-family:var(--body-font)!important;line-height:var(--body-line-height)!important;tab-size:var(--tab-size)}
+#editor .vditor-ir .vditor-reset,#editor .vditor-wysiwyg .vditor-reset{padding-left:max(24px,calc((100% - var(--content-width))/2))!important;padding-right:max(24px,calc((100% - var(--content-width))/2))!important}
+#editor textarea.vditor-sv{padding-left:max(24px,calc((100% - var(--content-width))/2))!important;padding-right:max(24px,calc((100% - var(--content-width))/2))!important;font-family:var(--mono-font)!important;tab-size:var(--tab-size)}
+#editor .vditor-reset code,#editor .vditor-ir__marker--pre{font-family:var(--mono-font)!important;tab-size:var(--tab-size)}
+body.code-wrap #editor .vditor-reset pre code,body.code-wrap #editor .vditor-ir__marker--pre{white-space:pre-wrap!important;overflow-wrap:anywhere}
+body:not(.code-wrap) #editor .vditor-reset pre code,body:not(.code-wrap) #editor .vditor-ir__marker--pre{white-space:pre!important;overflow-wrap:normal}
+#settings-reload-banner{position:fixed;bottom:43px;left:50%;transform:translateX(-50%);width:min(760px,calc(100% - 32px));display:flex;align-items:center;gap:16px;z-index:85;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:12px 16px;box-shadow:var(--shadow);font-size:12px;line-height:1.7}
+#settings-reload-banner span{flex:1}#settings-reload-banner button{flex-shrink:0;color:var(--accent);border:1px solid var(--line);border-radius:5px;padding:5px 10px}
+#editor .vditor-reset :not(pre)>code{white-space:pre-wrap}
+::highlight(moye-autolink){color:var(--accent);text-decoration:underline}
+
+.shortcut-grid{max-height:40vh;overflow-y:auto;padding-right:8px;overflow-wrap:anywhere}

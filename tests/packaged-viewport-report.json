@@ -1,0 +1,41 @@
+{
+  "binary": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/Moye",
+  "platform": "linux",
+  "results": [
+    {
+      "name": "table caret -> source is visible with wrapped Chinese prefix",
+      "status": "pass",
+      "details": {
+        "selectionStart": 689,
+        "selectionEnd": 689,
+        "selected": "",
+        "caretTop": 435.59375,
+        "scrollTop": 62,
+        "visibleCaretTop": 373.59375,
+        "viewportHeight": 724,
+        "lineHeight": 25.9,
+        "fontSize": "14px",
+        "fontFamily": "SFMono-Regular, Consolas, \"Liberation Mono\", \"Noto Sans SC\", monospace",
+        "wrap": ""
+      }
+    },
+    {
+      "name": "source find scrolls offscreen match into the visible textarea",
+      "status": "pass",
+      "details": {
+        "selectionStart": 820,
+        "selectionEnd": 825,
+        "selected": "第005段",
+        "caretTop": 746.46875,
+        "scrollTop": 373,
+        "visibleCaretTop": 373.46875,
+        "viewportHeight": 724,
+        "lineHeight": 25.9,
+        "fontSize": "14px",
+        "fontFamily": "SFMono-Regular, Consolas, \"Liberation Mono\", \"Noto Sans SC\", monospace",
+        "wrap": ""
+      }
+    }
+  ],
+  "pageErrors": []
+}

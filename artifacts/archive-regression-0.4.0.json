@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "results": [
+    {
+      "format": "zip",
+      "unicodeContentExact": true,
+      "applicationExact": true,
+      "symlinksPreserved": true,
+      "executableModePreserved": true,
+      "temporarySyncAndAtomicEntriesExcluded": true
+    },
+    {
+      "format": "tar.gz",
+      "unicodeContentExact": true,
+      "applicationExact": true,
+      "symlinksPreserved": true,
+      "executableModePreserved": true,
+      "temporarySyncAndAtomicEntriesExcluded": true
+    }
+  ]
+}

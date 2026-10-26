@@ -1,0 +1,147 @@
+{
+  "generatedAt": "2026-10-25T10:54:30.699Z",
+  "platform": "linux",
+  "executable": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/Moye",
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": true,
+    "path": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/Moye"
+  },
+  "purpose": "Moye visible reading anchors and per-document position memory; independent implementation of publicly described reader behavior",
+  "results": [
+    {
+      "name": "font and line-height changes preserve the same visible text without changing document state",
+      "status": "pass",
+      "elapsedMs": 891,
+      "details": {
+        "before": {
+          "mode": "ir",
+          "block": 33,
+          "offset": 65,
+          "y": -3.265625,
+          "scrollTop": 12793
+        },
+        "afterY": -3.265625,
+        "differencePx": 0,
+        "rawUnchanged": true
+      }
+    },
+    {
+      "name": "window resize keeps a long paragraph text anchor rather than its old pixel scroll position",
+      "status": "pass",
+      "elapsedMs": 1000,
+      "details": {
+        "initialY": -3.265625,
+        "narrowY": -3.265625,
+        "restoredY": -3.265625
+      }
+    },
+    {
+      "name": "late image height changes above the viewport do not move the reading line",
+      "status": "pass",
+      "elapsedMs": 723,
+      "details": {
+        "differencePx": 0
+      }
+    },
+    {
+      "name": "reparsed duplicate paragraphs restore the nearest original block occurrence",
+      "status": "pass",
+      "elapsedMs": 614,
+      "details": {
+        "originalBlock": 39,
+        "offset": 448,
+        "after": {
+          "block": 39,
+          "offset": 448,
+          "y": -19.4375
+        }
+      }
+    },
+    {
+      "name": "source reflow preserves visible source context and backward selection",
+      "status": "pass",
+      "elapsedMs": 805,
+      "details": {
+        "oldOffset": 23836,
+        "newOffset": 23836,
+        "backwardSelection": [
+          12000,
+          12300,
+          "backward"
+        ],
+        "rawUnchanged": true
+      }
+    },
+    {
+      "name": "explicit user scroll cancels an outstanding layout restoration",
+      "status": "pass",
+      "elapsedMs": 710,
+      "details": {
+        "expected": 600,
+        "actual": 600
+      }
+    },
+    {
+      "name": "new input invalidates an old bookmark and remains undoable",
+      "status": "pass",
+      "elapsedMs": 734,
+      "details": {
+        "staleRestoreRejected": true,
+        "undoRestoresSource": true
+      }
+    },
+    {
+      "name": "composition defers automatic scroll work and never edits the document",
+      "status": "pass",
+      "elapsedMs": 536,
+      "details": {
+        "syntheticIMEGuard": true,
+        "rawUnchanged": true,
+        "realSystemIME": "not exercised"
+      }
+    },
+    {
+      "name": "reopening a named document restores its own position and keeps other documents isolated",
+      "status": "pass",
+      "elapsedMs": 1236,
+      "details": {
+        "expected": {
+          "mode": "ir",
+          "block": 41,
+          "offset": 65,
+          "y": -3.265625,
+          "scrollTop": 15947
+        },
+        "actual": {
+          "block": 41,
+          "offset": 65,
+          "scrollTop": 15947
+        },
+        "otherDocumentStartedAtTop": true
+      }
+    },
+    {
+      "name": "position memory can be disabled without disabling layout anchors",
+      "status": "pass",
+      "elapsedMs": 1782,
+      "details": {
+        "reopenAtTop": true,
+        "layoutAnchorStillActive": true
+      }
+    },
+    {
+      "name": "stored positions are bounded metadata with no document content or raw file paths",
+      "status": "pass",
+      "elapsedMs": 3,
+      "details": {
+        "entries": 5,
+        "noRawTextOrPaths": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "pass": true
+}

@@ -1,0 +1,323 @@
+{
+  "generatedAt": "2026-10-25T10:55:13.060Z",
+  "platform": "linux",
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": true,
+    "path": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/Moye"
+  },
+  "purpose": "Independent reading/paging/image-viewer behavior; original Telari runtime and native OS IME are not tested",
+  "results": [
+    {
+      "name": "reading is a separate non-editable semantic document and keeps source, dirty and editable DOM unchanged",
+      "status": "pass",
+      "elapsedMs": 627,
+      "details": {
+        "editable": false,
+        "role": "document",
+        "bold": "bold",
+        "checks": [
+          {
+            "disabled": true,
+            "checked": true
+          },
+          {
+            "disabled": true,
+            "checked": false
+          }
+        ],
+        "sourceMarkers": 0,
+        "underlyingInert": true
+      }
+    },
+    {
+      "name": "leaving reading restores an IR backward selection and existing undo/redo history",
+      "status": "pass",
+      "elapsedMs": 1236,
+      "details": {
+        "backwardRange": true,
+        "undoRedo": true
+      }
+    },
+    {
+      "name": "source-mode reading preserves source selection direction and latest source content",
+      "status": "pass",
+      "elapsedMs": 976,
+      "details": {
+        "latestSource": true,
+        "backwardRange": true,
+        "historyUnchanged": true
+      }
+    },
+    {
+      "name": "Space and PageDown page by complete visual lines with two-line overlap",
+      "status": "pass",
+      "elapsedMs": 806,
+      "details": {
+        "viewportHeight": 766,
+        "firstPage": 665,
+        "nextPage": 1347,
+        "previousPage": 602
+      }
+    },
+    {
+      "name": "paging is bounded, respects Reduce Motion and does not intercept input-field spaces",
+      "status": "pass",
+      "elapsedMs": 37,
+      "details": {
+        "bounded": true,
+        "reduceMotion": true,
+        "inputSpacePreserved": true
+      }
+    },
+    {
+      "name": "editing Space still inserts a literal space",
+      "status": "pass",
+      "elapsedMs": 503,
+      "details": {
+        "noReadingShortcutInEditor": true
+      }
+    },
+    {
+      "name": "headings and footnote links navigate inside reading and Back restores the previous position",
+      "status": "pass",
+      "elapsedMs": 760,
+      "details": {
+        "localAnchors": true,
+        "footnotes": true,
+        "return": true
+      }
+    },
+    {
+      "name": "external links use the explicit callback and cannot navigate the application frame",
+      "status": "pass",
+      "elapsedMs": 650,
+      "details": {
+        "noFrameNavigation": true
+      }
+    },
+    {
+      "name": "reading sanitizes active HTML, event attributes and duplicate SVG IDs while retaining rendered math and diagrams",
+      "status": "pass",
+      "elapsedMs": 3090,
+      "details": {
+        "math": 2,
+        "diagrams": 1,
+        "activeNodes": 0,
+        "duplicateIds": 0,
+        "bad": 0,
+        "independentDiagramsFromLatestSource": [
+          {
+            "language": "flowchart",
+            "ready": true,
+            "error": "",
+            "images": 1
+          },
+          {
+            "language": "graphviz",
+            "ready": true,
+            "error": "",
+            "images": 1
+          },
+          {
+            "language": "echarts",
+            "ready": true,
+            "error": "",
+            "images": 1
+          },
+          {
+            "language": "mindmap",
+            "ready": true,
+            "error": "",
+            "images": 1
+          },
+          {
+            "language": "markmap",
+            "ready": true,
+            "error": "",
+            "images": 1
+          },
+          {
+            "language": "abc",
+            "ready": true,
+            "error": "",
+            "images": 1
+          },
+          {
+            "language": "wavedrom",
+            "ready": true,
+            "error": "",
+            "images": 1
+          },
+          {
+            "language": "smiles",
+            "ready": true,
+            "error": "",
+            "images": 1
+          }
+        ],
+        "sourceMermaidAwaited": true
+      }
+    },
+    {
+      "name": "reading copy preserves table cells as TSV and rendered formulas as Markdown source",
+      "status": "pass",
+      "elapsedMs": 807,
+      "details": {
+        "tsv": "\n\nA\tB\n\n\n\none\ttwo\n\nempty\t",
+        "formula": "$$\nx=2\n$$"
+      }
+    },
+    {
+      "name": "display-only refresh retains reading DOM, backward range and current visible paragraph",
+      "status": "pass",
+      "elapsedMs": 899,
+      "details": {
+        "sameNode": true,
+        "selected": "ragraph 03",
+        "anchor": 12,
+        "y": 34.984375
+      }
+    },
+    {
+      "name": "immersive controls overlay without moving text and remain keyboard accessible",
+      "status": "pass",
+      "elapsedMs": 510,
+      "details": {
+        "overlay": true,
+        "focusReveals": true
+      }
+    },
+    {
+      "name": "refresh switches documents without retaining old text and leaves underlying document clean",
+      "status": "pass",
+      "elapsedMs": 119,
+      "details": {
+        "documentIsolation": true
+      }
+    },
+    {
+      "name": "image viewer supports fit, 100 percent, zoom, pan and Escape with focus restored",
+      "status": "pass",
+      "elapsedMs": 346,
+      "details": {
+        "fit": 0.4928571428571429,
+        "original": 1,
+        "zoom": 1.25,
+        "pan": true,
+        "escape": true
+      }
+    },
+    {
+      "name": "image and linked image distinguish opening a link from viewing the original",
+      "status": "pass",
+      "elapsedMs": 739,
+      "details": {
+        "plainPreview": true,
+        "linkedOpensLink": true,
+        "altPreviewsLinkedImage": true
+      }
+    },
+    {
+      "name": "Escape exits reading while preserving the document and editable focus",
+      "status": "pass",
+      "elapsedMs": 14,
+      "details": {
+        "escaped": true,
+        "unchanged": true
+      }
+    },
+    {
+      "name": "TXT auto mode shows literal Markdown and HTML while detecting Chinese and English chapters",
+      "status": "pass",
+      "elapsedMs": 776,
+      "details": {
+        "chapters": [
+          "第一章 开始",
+          "Chapter IV: Next"
+        ],
+        "literalMarkup": true,
+        "originalCRLFPreserved": true
+      }
+    },
+    {
+      "name": "composition blocks entering reading and composition-tagged paging keys remain untouched",
+      "status": "pass",
+      "elapsedMs": 605,
+      "details": {
+        "entryBlockedDuringComposition": true,
+        "taggedKeyPreserved": true,
+        "realSystemIME": "not exercised"
+      }
+    },
+    {
+      "name": "TXT paragraph rules and chapter toggle affect only its reading presentation",
+      "status": "pass",
+      "elapsedMs": 896,
+      "details": {
+        "before": {
+          "headings": 1,
+          "paragraphs": 2
+        },
+        "after": {
+          "headings": 0,
+          "paragraphs": 6
+        },
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "TXT can be read as Markdown and explicit plain-text override stays scoped to its document",
+      "status": "pass",
+      "elapsedMs": 1363,
+      "details": {
+        "markdownOption": true,
+        "perDocumentOverride": true
+      }
+    },
+    {
+      "name": "long TXT lines use bounded Unicode-safe display chunks and preserve complete source",
+      "status": "pass",
+      "elapsedMs": 3663,
+      "details": {
+        "chunks": 16,
+        "unicodeSafe": true,
+        "completeOriginal": true,
+        "offscreenLayout": "auto"
+      }
+    },
+    {
+      "name": "native Select All and Copy stay inside the read-only document",
+      "status": "pass",
+      "elapsedMs": 3491,
+      "details": {
+        "nativeMenuInput": true,
+        "localSelection": true,
+        "noUnderlyingEditorDuplicate": true
+      }
+    },
+    {
+      "name": "reading position survives leaving and reopening the same file independently from the editing caret",
+      "status": "pass",
+      "elapsedMs": 2324,
+      "details": {
+        "sameFileReadingMemory": true,
+        "viewportDelta": 0
+      }
+    },
+    {
+      "name": "reading semantic anchor holds the same text through font, column and viewport reflow",
+      "status": "pass",
+      "elapsedMs": 2053,
+      "details": {
+        "fontDelta": -0.125,
+        "viewportDelta": -0.0625,
+        "sourceUnchanged": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "pass": true
+}

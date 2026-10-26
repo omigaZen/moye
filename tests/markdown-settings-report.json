@@ -1,0 +1,269 @@
+{
+  "generatedAt": "2026-10-25T10:47:47.023Z",
+  "platform": "linux/x64",
+  "purpose": "Moye real-editor Markdown/math settings integration; not Typora differential acceptance",
+  "referenceSources": [
+    "https://support.typora.io/Line-Break/",
+    "https://support.typora.io/Math/"
+  ],
+  "limitations": [
+    "Typora runtime defaults, application timing and step-by-step behavior remain unverified.",
+    "This suite does not test Strict Mode, legacy inline math parsing or smart punctuation."
+  ],
+  "results": [
+    {
+      "name": "whitespace setting changes real paragraph geometry and preserves explicit breaks and code spacing",
+      "status": "pass",
+      "elapsedMs": 544,
+      "details": {
+        "stages": [
+          {
+            "preserve": true,
+            "whiteSpace": "pre-wrap",
+            "alpha": {
+              "x": 362,
+              "y": 162,
+              "width": 45.609375
+            },
+            "gap": {
+              "x": 407.59375,
+              "y": 162,
+              "width": 15.234375
+            },
+            "gamma": {
+              "x": 362,
+              "y": 193.4375,
+              "width": 62.34375
+            },
+            "explicitBreaks": 1,
+            "inlineCodeWhiteSpace": "pre-wrap",
+            "codeWhiteSpace": "pre-wrap"
+          },
+          {
+            "preserve": false,
+            "whiteSpace": "normal",
+            "alpha": {
+              "x": 362,
+              "y": 162,
+              "width": 45.609375
+            },
+            "gap": {
+              "x": 407.59375,
+              "y": 162,
+              "width": 3.8125
+            },
+            "gamma": {
+              "x": 451.078125,
+              "y": 162,
+              "width": 62.34375
+            },
+            "explicitBreaks": 1,
+            "inlineCodeWhiteSpace": "pre-wrap",
+            "codeWhiteSpace": "pre-wrap"
+          },
+          {
+            "preserve": true,
+            "whiteSpace": "pre-wrap",
+            "alpha": {
+              "x": 362,
+              "y": 162,
+              "width": 45.609375
+            },
+            "gap": {
+              "x": 407.59375,
+              "y": 162,
+              "width": 15.234375
+            },
+            "gamma": {
+              "x": 362,
+              "y": 193.4375,
+              "width": 62.34375
+            },
+            "explicitBreaks": 1,
+            "inlineCodeWhiteSpace": "pre-wrap",
+            "codeWhiteSpace": "pre-wrap"
+          }
+        ],
+        "cleanSourceSavedExactly": true
+      }
+    },
+    {
+      "name": "AMS and all-equation numbering produce different actual labels and none removes them",
+      "status": "pass",
+      "elapsedMs": 1425,
+      "details": {
+        "stages": [
+          {
+            "enabled": true,
+            "style": "all",
+            "labels": [
+              "(1)",
+              "(2)",
+              "(3)(4)"
+            ]
+          },
+          {
+            "enabled": true,
+            "style": "ams",
+            "labels": [
+              "",
+              "(1)",
+              "(2)(3)"
+            ]
+          },
+          {
+            "enabled": false,
+            "style": "ams",
+            "labels": [
+              "",
+              "",
+              ""
+            ]
+          },
+          {
+            "enabled": true,
+            "style": "all",
+            "labels": [
+              "(1)",
+              "(2)",
+              "(3)(4)"
+            ]
+          }
+        ],
+        "cleanSourceSavedExactly": true
+      }
+    },
+    {
+      "name": "physics package really enables derivative commands and OFF removes their stale expansion",
+      "status": "pass",
+      "elapsedMs": 1120,
+      "details": {
+        "stages": [
+          {
+            "enabled": false,
+            "fractions": [
+              0
+            ],
+            "glyphs": [
+              "\\dv𝑥⁢𝑡"
+            ]
+          },
+          {
+            "enabled": true,
+            "fractions": [
+              1
+            ],
+            "glyphs": [
+              "d⁢𝑥d⁢𝑡"
+            ]
+          },
+          {
+            "enabled": false,
+            "fractions": [
+              0
+            ],
+            "glyphs": [
+              "\\dv𝑥⁢𝑡"
+            ]
+          },
+          {
+            "enabled": true,
+            "fractions": [
+              1
+            ],
+            "glyphs": [
+              "d⁢𝑥d⁢𝑡"
+            ]
+          }
+        ],
+        "oldExpansionRemoved": true,
+        "cleanSourceSavedExactly": true
+      }
+    },
+    {
+      "name": "math code fence preview toggles independently of dollar block and inline math",
+      "status": "pass",
+      "elapsedMs": 661,
+      "details": {
+        "stages": [
+          {
+            "inline": true,
+            "block": true,
+            "fence": true,
+            "math": 3,
+            "normalCode": 1,
+            "fenceText": "z=3\n"
+          },
+          {
+            "inline": true,
+            "block": true,
+            "fence": false,
+            "math": 2,
+            "normalCode": 1,
+            "fenceText": "z=3\n"
+          },
+          {
+            "inline": false,
+            "block": false,
+            "fence": true,
+            "math": 1,
+            "normalCode": 1,
+            "fenceText": "z=3\n"
+          },
+          {
+            "inline": false,
+            "block": false,
+            "fence": false,
+            "math": 0,
+            "normalCode": 1,
+            "fenceText": "z=3\n"
+          },
+          {
+            "inline": true,
+            "block": true,
+            "fence": true,
+            "math": 3,
+            "normalCode": 1,
+            "fenceText": "z=3\n"
+          }
+        ],
+        "cleanSourceSavedExactly": true
+      }
+    },
+    {
+      "name": "combined parsing reload keeps dirty source, backward selection and disk bytes then saves the real edit",
+      "status": "pass",
+      "elapsedMs": 175,
+      "details": {
+        "sourcePreserved": true,
+        "dirtyPreserved": true,
+        "selection": [
+          2,
+          8,
+          "backward"
+        ],
+        "reloadDidNotWrite": true,
+        "editedSourceSavedExactly": true
+      }
+    },
+    {
+      "name": "disabled math fence remains editable in the real IR editor and saves the typed source",
+      "status": "pass",
+      "elapsedMs": 356,
+      "details": {
+        "irEdit": "z=3+4",
+        "disabledHasNoFormula": true,
+        "reenabledRendersEditedFormula": true,
+        "editedSourceSavedExactly": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": false,
+    "path": "/workspace/scratch/8a7610d50e71/moye"
+  },
+  "pass": true
+}

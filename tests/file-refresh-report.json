@@ -1,0 +1,151 @@
+{
+  "generatedAt": "2026-10-25T10:50:09.603Z",
+  "platform": "linux",
+  "purpose": "Real external file changes, protected reload, native close/restart and ordinary-document neighbor navigation; Moye feature evidence, not original-application differential certification.",
+  "results": [
+    {
+      "name": "real external prepends restore the same reading paragraph and reload resets obsolete undo history",
+      "status": "pass",
+      "details": {
+        "prependedParagraphs": 15,
+        "sameSemanticParagraph": true,
+        "verticalErrorPx": 0.125,
+        "exactReloadedSource": true,
+        "oldUndoDidNotRevive": true
+      }
+    },
+    {
+      "name": "clean source reload preserves SV mode and the existing viewport when external text is appended below it",
+      "status": "pass",
+      "details": {
+        "mode": "sv",
+        "viewportRetained": true,
+        "scrollErrorPx": 0
+      }
+    },
+    {
+      "name": "canceling dirty external reload leaves local source, reverse selection and undo intact",
+      "status": "pass",
+      "details": {
+        "nativeConfirmationObserved": true,
+        "diskDidNotOverwriteLocal": true,
+        "reverseSelectionExact": true,
+        "undoRetained": true,
+        "diskExternalVersionIntact": true
+      }
+    },
+    {
+      "name": "real deletion and rename disable reload while Save As preserves the in-memory document",
+      "status": "pass",
+      "details": {
+        "operations": [
+          {
+            "operation": "delete",
+            "reloadDisabled": true,
+            "memorySavedByteExact": true,
+            "renamedOriginalRetained": false
+          },
+          {
+            "operation": "rename",
+            "reloadDisabled": true,
+            "memorySavedByteExact": true,
+            "renamedOriginalRetained": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "ignoring or reloading one external change does not suppress the next actual disk change",
+      "status": "pass",
+      "details": {
+        "distinctNotifications": 3,
+        "afterIgnore": true,
+        "afterAcceptedReload": true,
+        "noSilentOverwrite": true
+      }
+    },
+    {
+      "name": "invalid UTF8 and oversized external files report reload errors without replacing the loaded source",
+      "status": "pass",
+      "details": {
+        "invalidUTF8Rejected": true,
+        "over32MiBRejected": true,
+        "exactInMemorySourceAndIdentityRetained": true
+      }
+    },
+    {
+      "name": "native app.quit flushes normal window bounds before exit and a full restart restores them",
+      "status": "pass",
+      "details": {
+        "nativeQuitUsed": true,
+        "closeFlushExact": true,
+        "restoredBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        },
+        "workArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        }
+      }
+    },
+    {
+      "name": "headless native fullscreen flags never replace the persisted normal size or reopen fullscreen",
+      "status": "pass",
+      "details": {
+        "nativeFullscreenEntered": false,
+        "nativeGeometryChanged": false,
+        "normalSizePersisted": true,
+        "reopenedFullscreen": false,
+        "physicalPlatformCertification": false
+      }
+    },
+    {
+      "name": "ordinary native document neighbors use natural Markdown order without a chosen workspace or TXT mixing",
+      "status": "pass",
+      "details": {
+        "withoutWorkspace": true,
+        "naturalSequence": [
+          "1.md",
+          "2.md",
+          "10.md",
+          "2.md",
+          "1.md"
+        ],
+        "textFilesExcluded": true
+      }
+    },
+    {
+      "name": "TXT native navigation stays in its own group and forged or stale neighbor capabilities cannot replace content",
+      "status": "pass",
+      "details": {
+        "rejectedCapabilities": 4,
+        "sourceProtected": true,
+        "textSequence": [
+          "3.txt",
+          "12.txt",
+          "3.txt",
+          "2.txt"
+        ],
+        "originalFilesUnchanged": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "limitations": [
+    "One headless host. Synthetic native window flag/geometry checks do not certify physical fullscreen, multi-display hardware, touch or OS input methods.",
+    "The native fullscreen API did not enter fullscreen on this headless host. Only normal-size persistence and non-fullscreen reopening were observed; actual fullscreen-size substitution remains for native-host validation."
+  ],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": false,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "pass": true
+}

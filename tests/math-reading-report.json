@@ -1,0 +1,391 @@
+{
+  "generatedAt": "2026-10-25T10:49:27.403Z",
+  "platform": "linux/x64",
+  "purpose": "Read-only extra TeX delimiters with isolated current-engine rendering, exact delimiter copy and shared editor counter protection",
+  "results": [
+    {
+      "name": "extra TeX delimiters render real inline/display SVG while preserving exact source and clipboard delimiters",
+      "status": "pass",
+      "elapsedMs": 518,
+      "details": {
+        "report": {
+          "engine": "MathJax",
+          "rendered": 2,
+          "errors": [],
+          "skipped": 0,
+          "isolated": true,
+          "budget": {
+            "maximumFormulaCharacters": 4096,
+            "maximumRenderFormulas": 512,
+            "maximumRenderCharacters": 65536,
+            "attempted": 2,
+            "characters": 18,
+            "rejected": 0
+          }
+        },
+        "count": 2,
+        "aliases": [
+          {
+            "original": "\\(x^2+1\\)",
+            "rendered": true,
+            "fractions": 0,
+            "glyphs": "𝑥2+1",
+            "error": false
+          },
+          {
+            "original": "\\[\n\\frac{a}{b}\n\\]",
+            "rendered": true,
+            "fractions": 1,
+            "glyphs": "𝑎𝑏",
+            "error": false
+          }
+        ],
+        "labels": [
+          "",
+          ""
+        ],
+        "text": "公式  。\n\n",
+        "source": "公式 \\(x^2+1\\)。\n\n\\[\n\\frac{a}{b}\n\\]\n",
+        "dirty": false,
+        "copied": "公式 \\(x^2+1\\)。\n\n\\[\n\\frac{a}{b}\n\\]",
+        "exactDiskSource": true
+      }
+    },
+    {
+      "name": "standard and extra formulas share one isolated numbering sequence without changing editor counters or SVG references",
+      "status": "pass",
+      "elapsedMs": 1585,
+      "details": {
+        "labels": [
+          "(1)",
+          "(2)",
+          "(3)",
+          ""
+        ],
+        "beforeCounter": 2,
+        "afterCounter": 2,
+        "uniqueSvgIdsAndValidReferences": true,
+        "ordinaryOnly": {
+          "report": {
+            "engine": "MathJax",
+            "rendered": 3,
+            "errors": [],
+            "skipped": 0,
+            "isolated": true,
+            "budget": {
+              "maximumFormulaCharacters": 4096,
+              "maximumRenderFormulas": 512,
+              "maximumRenderCharacters": 65536,
+              "attempted": 3,
+              "characters": 8,
+              "rejected": 0
+            }
+          },
+          "originals": [
+            {
+              "source": "$x$",
+              "fenceChrome": false
+            },
+            {
+              "source": "$$\n  y=2  \n$$",
+              "fenceChrome": false
+            },
+            {
+              "source": "~~~math\nz=3\n~~~",
+              "fenceChrome": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "macros and the active physics package work in isolated extra-delimiter formulas and disabling physics removes stale expansion",
+      "status": "pass",
+      "elapsedMs": 970,
+      "details": {
+        "stages": [
+          {
+            "physics": true,
+            "aliases": [
+              {
+                "original": "\\(\\RR\\)",
+                "rendered": true,
+                "fractions": 0,
+                "glyphs": "ℝ",
+                "error": false
+              },
+              {
+                "original": "\\[\\dv{x}{t}\\]",
+                "rendered": true,
+                "fractions": 1,
+                "glyphs": "d⁢𝑥d⁢𝑡",
+                "error": false
+              }
+            ],
+            "mathReport": {
+              "engine": "MathJax",
+              "rendered": 2,
+              "errors": [],
+              "skipped": 0,
+              "isolated": true,
+              "budget": {
+                "maximumFormulaCharacters": 4096,
+                "maximumRenderFormulas": 512,
+                "maximumRenderCharacters": 65536,
+                "attempted": 2,
+                "characters": 12,
+                "rejected": 0
+              }
+            }
+          },
+          {
+            "physics": false,
+            "aliases": [
+              {
+                "original": "\\(\\RR\\)",
+                "rendered": true,
+                "fractions": 0,
+                "glyphs": "ℝ",
+                "error": false
+              },
+              {
+                "original": "\\[\\dv{x}{t}\\]",
+                "rendered": false,
+                "fractions": 0,
+                "glyphs": "",
+                "error": true
+              }
+            ],
+            "mathReport": {
+              "engine": "MathJax",
+              "rendered": 1,
+              "errors": [
+                {
+                  "index": 1,
+                  "message": "Undefined control sequence \\dv"
+                }
+              ],
+              "skipped": 0,
+              "isolated": true,
+              "budget": {
+                "maximumFormulaCharacters": 4096,
+                "maximumRenderFormulas": 512,
+                "maximumRenderCharacters": 65536,
+                "attempted": 2,
+                "characters": 12,
+                "rejected": 0
+              }
+            }
+          },
+          {
+            "physics": true,
+            "aliases": [
+              {
+                "original": "\\(\\RR\\)",
+                "rendered": true,
+                "fractions": 0,
+                "glyphs": "ℝ",
+                "error": false
+              },
+              {
+                "original": "\\[\\dv{x}{t}\\]",
+                "rendered": true,
+                "fractions": 1,
+                "glyphs": "d⁢𝑥d⁢𝑡",
+                "error": false
+              }
+            ],
+            "mathReport": {
+              "engine": "MathJax",
+              "rendered": 2,
+              "errors": [],
+              "skipped": 0,
+              "isolated": true,
+              "budget": {
+                "maximumFormulaCharacters": 4096,
+                "maximumRenderFormulas": 512,
+                "maximumRenderCharacters": 65536,
+                "attempted": 2,
+                "characters": 12,
+                "rejected": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "KaTeX renders extra delimiters with the selected macro configuration using only local resources",
+      "status": "pass",
+      "elapsedMs": 118,
+      "details": {
+        "report": {
+          "engine": "KaTeX",
+          "rendered": 2,
+          "errors": [],
+          "skipped": 0,
+          "isolated": true,
+          "budget": {
+            "maximumFormulaCharacters": 4096,
+            "maximumRenderFormulas": 512,
+            "maximumRenderCharacters": 65536,
+            "attempted": 2,
+            "characters": 16,
+            "rejected": 0
+          }
+        },
+        "count": 2,
+        "aliases": [
+          {
+            "original": "\\(\\RR+x\\)",
+            "rendered": true,
+            "fractions": 0,
+            "glyphs": "",
+            "error": false
+          },
+          {
+            "original": "\\[\\frac{1}{2}\\]",
+            "rendered": true,
+            "fractions": 1,
+            "glyphs": "",
+            "error": false
+          }
+        ],
+        "labels": [],
+        "text": "R+x\n21​\n",
+        "source": "\\(\\RR+x\\)\n\n\\[\\frac{1}{2}\\]\n",
+        "dirty": false
+      }
+    },
+    {
+      "name": "code, HTML, URL destinations and escaped literal delimiters are never promoted into math or leaked token strings",
+      "status": "pass",
+      "elapsedMs": 299,
+      "details": {
+        "report": {
+          "engine": "MathJax",
+          "rendered": 1,
+          "errors": [],
+          "skipped": 0,
+          "isolated": true,
+          "budget": {
+            "maximumFormulaCharacters": 4096,
+            "maximumRenderFormulas": 512,
+            "maximumRenderCharacters": 65536,
+            "attempted": 1,
+            "characters": 3,
+            "rejected": 0
+          }
+        },
+        "count": 1,
+        "aliases": [
+          {
+            "original": "\\(x+1\\)",
+            "rendered": true,
+            "fractions": 0,
+            "glyphs": "𝑥+1",
+            "error": false
+          }
+        ],
+        "labels": [
+          ""
+        ],
+        "text": "普通 (x+1) [a,b] 价格 $5 和 $6。\n<span> \\(code\\)\n\\[fence\\]\n\n\\(html\\)\nlink\n\\(escaped\\)\n真实  。\n",
+        "source": "普通 (x+1) [a,b] 价格 $5 和 $6。\n\n`<span> \\(code\\)`\n\n```text\n\\[fence\\]\n```\n\n<div>\\(html\\)</div>\n\n[link](https://example.test/\\(url\\))\n\n\\\\(escaped\\\\)\n\n真实 \\(x+1\\)。\n",
+        "dirty": false
+      }
+    },
+    {
+      "name": "invalid TeX retains copyable original delimiters while valid sibling formulas still render",
+      "status": "pass",
+      "elapsedMs": 245,
+      "details": {
+        "report": {
+          "engine": "MathJax",
+          "rendered": 1,
+          "errors": [
+            {
+              "index": 0,
+              "message": "Undefined control sequence \\unknownCommandForMoye"
+            }
+          ],
+          "skipped": 0,
+          "isolated": true,
+          "budget": {
+            "maximumFormulaCharacters": 4096,
+            "maximumRenderFormulas": 512,
+            "maximumRenderCharacters": 65536,
+            "attempted": 2,
+            "characters": 28,
+            "rejected": 0
+          }
+        },
+        "count": 1,
+        "aliases": [
+          {
+            "original": "\\(\\unknownCommandForMoye{x}\\)",
+            "rendered": false,
+            "fractions": 0,
+            "glyphs": "",
+            "error": true
+          },
+          {
+            "original": "\\(x+1\\)",
+            "rendered": true,
+            "fractions": 0,
+            "glyphs": "𝑥+1",
+            "error": false
+          }
+        ],
+        "labels": [
+          ""
+        ],
+        "text": "\\(\\unknownCommandForMoye{x}\\) 与  。\n",
+        "source": "\\(\\unknownCommandForMoye{x}\\) 与 \\(x+1\\)。\n",
+        "dirty": false
+      }
+    },
+    {
+      "name": "inline and block parsing switches independently control extra delimiters without modifying clean source",
+      "status": "pass",
+      "elapsedMs": 871,
+      "details": {
+        "stages": [
+          {
+            "inline": true,
+            "block": false,
+            "count": 1
+          },
+          {
+            "inline": false,
+            "block": true,
+            "count": 1
+          },
+          {
+            "inline": false,
+            "block": false,
+            "count": 0
+          },
+          {
+            "inline": true,
+            "block": true,
+            "count": 2
+          }
+        ]
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "limitations": [
+    "Not Telari or Typora runtime differential acceptance.",
+    "Input-method checks remain synthetic; parser budgets and conservative HTML/code protection are explicit."
+  ],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": false,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "pass": true
+}

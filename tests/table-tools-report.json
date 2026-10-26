@@ -1,0 +1,129 @@
+{
+  "platform": "linux/x64",
+  "engine": "Electron 45",
+  "results": [
+    {
+      "name": "toolbar follows the selected table cell and protects the header",
+      "status": "pass",
+      "elapsedMs": 600,
+      "details": {
+        "headerProtected": true,
+        "sourceHidden": true
+      }
+    },
+    {
+      "name": "add rows above and below preserves all existing cells and undoes",
+      "status": "pass",
+      "elapsedMs": 566,
+      "details": {
+        "rowsRestored": true
+      }
+    },
+    {
+      "name": "delete a data row preserves the header and undo restores Chinese text",
+      "status": "pass",
+      "elapsedMs": 481,
+      "details": {
+        "restored": [
+          [
+            "左",
+            "中",
+            "右"
+          ],
+          [
+            "甲",
+            "乙",
+            "丙"
+          ],
+          [
+            "丁",
+            "戊",
+            "己"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "adding below the header creates a data row without changing the header",
+      "status": "pass",
+      "elapsedMs": 486,
+      "details": {
+        "headerPreserved": true
+      }
+    },
+    {
+      "name": "deleting the last data row keeps a valid blank row and can be undone",
+      "status": "pass",
+      "elapsedMs": 476,
+      "details": {
+        "validTablePreserved": true
+      }
+    },
+    {
+      "name": "add columns left and right preserves text and column alignment",
+      "status": "pass",
+      "elapsedMs": 532,
+      "details": {
+        "alignment": [
+          "left",
+          "center",
+          "center",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "delete a column removes its cells consistently and supports undo",
+      "status": "pass",
+      "elapsedMs": 468,
+      "details": {
+        "restored": true
+      }
+    },
+    {
+      "name": "left center right alignment affects the full column and persists on save",
+      "status": "pass",
+      "elapsedMs": 592,
+      "details": {
+        "content": "| 左 | 中 | 右 |\n| :- | -: | -: |\n| 甲 | 乙 | 丙 |\n| 丁 | 戊 | 己 |\n\n尾部正文\n"
+      }
+    },
+    {
+      "name": "delete the entire table preserves surrounding text and is undoable",
+      "status": "pass",
+      "elapsedMs": 473,
+      "details": {
+        "restored": true
+      }
+    },
+    {
+      "name": "delete the last column removes the table and can be undone",
+      "status": "pass",
+      "elapsedMs": 481,
+      "details": {
+        "restored": true
+      }
+    },
+    {
+      "name": "new cells accept Chinese and saved Markdown contains no editor artifacts",
+      "status": "pass",
+      "elapsedMs": 2874,
+      "details": {
+        "content": "| 左 | 中 |          | 右 |\n| :- | :-: | :------: | -: |\n| 甲 | 乙 | 新增中文 | 丙 |\n| 丁 | 戊 |          | 己 |\n\n尾部正文\n"
+      }
+    },
+    {
+      "name": "toolbar wraps inside a narrow editor without horizontal overflow",
+      "status": "pass",
+      "elapsedMs": 438,
+      "details": {
+        "left": 14,
+        "right": 466,
+        "parentLeft": 0,
+        "parentRight": 480,
+        "height": 65
+      }
+    }
+  ],
+  "pageErrors": []
+}

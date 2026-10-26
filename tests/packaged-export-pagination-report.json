@@ -1,0 +1,157 @@
+{
+  "generatedAt": "2026-10-25T10:56:16.005Z",
+  "platform": "linux",
+  "purpose": "Real PDF pagination, complete detached export, local links, images and formula fit; not Telari print-engine equivalence",
+  "results": [
+    {
+      "name": "detached complete TXT export includes every block and keeps the live document unchanged",
+      "status": "pass",
+      "details": {
+        "completeParagraphs": 240,
+        "exactText": true,
+        "connected": false,
+        "txtBookContextPreserved": true
+      }
+    },
+    {
+      "name": "a virtual reading window is rejected rather than silently exporting a partial book",
+      "status": "pass",
+      "details": {
+        "rejected": true,
+        "name": "TypeError",
+        "message": "请先生成完整阅读快照，不能只导出当前章节窗口。"
+      }
+    },
+    {
+      "name": "encoded Chinese and literal-percent footnote links resolve to namespaced exported targets",
+      "status": "pass",
+      "details": {
+        "resolvedInternalLinks": 3,
+        "ambiguousEscapesUseDecodedTarget": true
+      }
+    },
+    {
+      "name": "reading line boxes and stale formula scales do not freeze exported page geometry",
+      "status": "pass",
+      "details": {
+        "exactText": true,
+        "beforeBoxes": 12,
+        "optimized": {
+          "algorithm": "Knuth–Plass-style box/glue/penalty dynamic programming with DOM-shaped inline metrics; bounded, not TeX-identical",
+          "optimizedParagraphs": 1,
+          "compressedParagraphs": 0,
+          "compressedMarks": 0,
+          "fallbackParagraphs": 0,
+          "reasons": {},
+          "maximumTokens": 700,
+          "maximumParagraphCharacters": 4096,
+          "maximumDocumentCharacters": 18000,
+          "maximumApplyMilliseconds": 100,
+          "maximumParagraphMilliseconds": 45
+        },
+        "lineBoxes": 0,
+        "strong": "Inline text",
+        "mathScale": "",
+        "authorIndent": "2em"
+      }
+    },
+    {
+      "name": "ignored and responsive images do not corrupt retained images and failed images have readable fallbacks",
+      "status": "pass",
+      "details": {
+        "retainedImages": 6,
+        "responsiveCurrentSourcesPreserved": 2,
+        "ignoredImageDidNotShiftSources": true,
+        "failedImageFallback": true,
+        "noReserved5000pxBox": true,
+        "externalFileStillDenied": true,
+        "externalReference": "loaded pixels reused"
+      }
+    },
+    {
+      "name": "actual wide KaTeX HTML is captured as a scalable passive vector viewport",
+      "status": "pass",
+      "details": {
+        "rendered": 2,
+        "vectorWidth": 5716,
+        "passiveForeignObject": true,
+        "inlineSvgRatios": [
+          1.279843893480257,
+          0.5473771808999082,
+          0.5473771808999082,
+          0.5473771808999082
+        ],
+        "lazyExportIsEagerWithoutSourceMutation": true
+      }
+    },
+    {
+      "name": "native PDF keeps heading with body and fully paginates a long footnote with working internal links",
+      "status": "pass",
+      "details": {
+        "pdfPages": 15,
+        "headingAndBodyPage": 2,
+        "completeFootnoteParagraphs": 100,
+        "workingInternalLinks": 2,
+        "localImagePixels": 11805,
+        "externalReferencePixels": 2725,
+        "externalReferenceNotSilentlyDropped": true,
+        "failedImageTextVisible": true,
+        "wideTableColumns": 12,
+        "rightmostCellsWithinPage": 3,
+        "unshrunkBodyFontPt": 13.5,
+        "preservedTxtBookIndentPt": 27,
+        "nativeOrientationAndMarginUI": [
+          {
+            "direction": "landscape",
+            "marginMm": 30,
+            "width": 841.9199829101562,
+            "height": 594.9599609375,
+            "left": 111.75
+          },
+          {
+            "direction": "portrait",
+            "marginMm": 8,
+            "width": 594.9599609375,
+            "height": 841.9199829101562,
+            "left": 49.5
+          }
+        ],
+        "invalidMarginsRejectedBeforeSave": true,
+        "sizeBytes": 100535
+      }
+    },
+    {
+      "name": "native narrow PNG and PDF scale the entire formula instead of cropping its right side",
+      "status": "pass",
+      "details": {
+        "width": 800,
+        "height": 3790,
+        "naturalFormulaWidth": 5716,
+        "drawnFormulaWidth": 351.65625,
+        "mainWidth": 352,
+        "preservedAspectRatio": true,
+        "inlineSqrtAndBraceHeightRatios": [
+          1.2799873737373737,
+          0.5476641414141414,
+          0.5476641414141414,
+          0.5476641414141414
+        ],
+        "lowerLazyImagePixels": 28668,
+        "nativePdfFormulaTerms": {
+          "x": 46,
+          "y": 46,
+          "pages": 3
+        }
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": true,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/Moye"
+  },
+  "pass": true
+}

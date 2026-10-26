@@ -1,0 +1,17 @@
+{
+  "reason": "Pre-release integration failures subsequently being fixed; not a final pass report",
+  "failures": [
+    {
+      "name": "remaining: diagram toggle leaves source visible, preserves ordinary code highlighting, and restores diagrams",
+      "status": "fail",
+      "elapsedMs": 223,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 0\n\n    at /workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:453:14\n    at async probe (/workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:87:27)\n    at async main (/workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:446:5)"
+    },
+    {
+      "name": "remaining: code theme loads local styles and changes the actual keyword colour",
+      "status": "fail",
+      "elapsedMs": 193,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at /workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:579:16\n    at async probe (/workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:87:27)\n    at async main (/workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:563:5)"
+    }
+  ]
+}

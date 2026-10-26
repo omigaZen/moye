@@ -1,0 +1,177 @@
+{
+  "generatedAt": "2026-10-25T10:48:57.549Z",
+  "platform": "linux",
+  "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron",
+  "application": {
+    "version": "0.0",
+    "isPackaged": false,
+    "path": "/workspace/scratch/8a7610d50e71/moye/electron",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "purpose": "Actual worker code rendering, bounded Mermaid fallback and formula overflow; no Telari original-runtime parity claim",
+  "results": [
+    {
+      "name": "real dedicated worker highlights local code without calling the main-thread grammar engine",
+      "status": "pass",
+      "elapsedMs": 324,
+      "details": {
+        "jobs": 2,
+        "results": 2,
+        "messages": 1,
+        "mainCalls": 0,
+        "content": "```csharp\npublic int Count = 3;\n// 中文注释\n```\n\nAfter code.\n",
+        "dirty": false
+      }
+    },
+    {
+      "name": "plain code is readable before the delayed real worker response arrives",
+      "status": "pass",
+      "elapsedMs": 280,
+      "details": {
+        "plainBeforeResult": true,
+        "eventuallyHighlighted": true,
+        "renderBarrierTimeoutIsBounded": true
+      }
+    },
+    {
+      "name": "highlight preference toggles generated colour while preserving source, dirty state and selection",
+      "status": "pass",
+      "elapsedMs": 322,
+      "details": {
+        "off": {
+          "content": "```csharp\npublic int Count = 3;\n// 中文注释\n```\n\nAfter code.\n",
+          "dirty": false,
+          "selected": "fter",
+          "pending": false
+        },
+        "colourRestored": true
+      }
+    },
+    {
+      "name": "language badge is display-only and code copy excludes decorations",
+      "status": "pass",
+      "elapsedMs": 421,
+      "details": {
+        "badge": "csharp",
+        "copiedExactly": true
+      }
+    },
+    {
+      "name": "wrapped line numbers track rendered line heights and retain exact code text",
+      "status": "pass",
+      "elapsedMs": 539,
+      "details": {
+        "text": "public string Long = \"word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 word 中文 \";\nreturn Long;\n",
+        "lines": [
+          150.0625,
+          21.4375
+        ],
+        "numbers": [
+          150.0625,
+          21.4375
+        ],
+        "lineHeight": 21.45
+      }
+    },
+    {
+      "name": "unknown grammars preserve Unicode and escape markup as plain code",
+      "status": "pass",
+      "elapsedMs": 122,
+      "details": {
+        "sourceExact": true,
+        "noExecutableMarkup": true
+      }
+    },
+    {
+      "name": "a late response from a replaced document cannot overwrite the newer preview",
+      "status": "pass",
+      "elapsedMs": 750,
+      "details": {
+        "visible": "const newDocument = 2;\n",
+        "staleCannotOverwrite": true
+      }
+    },
+    {
+      "name": "invalid Mermaid displays exact editable source and a concrete reason",
+      "status": "pass",
+      "elapsedMs": 41,
+      "details": {
+        "sourcePreserved": true,
+        "reason": "图表无法绘制：Parse error on line 2: flowchart TDA --> [broken ------------------^ Expecting 'AMP', 'COLON', 'PIPE', 'TESTSTR', 'DOWN', 'DEFAULT', 'NUM', 'COMMA', 'NODE_STRING', 'BRKT', 'MINUS',"
+      }
+    },
+    {
+      "name": "correcting a failed Mermaid block renders the current diagram",
+      "status": "pass",
+      "elapsedMs": 131,
+      "details": {
+        "sourceMatchesCorrection": true,
+        "renderedLabels": [
+          "Start",
+          "Finish"
+        ]
+      }
+    },
+    {
+      "name": "oversized Mermaid is rejected before calling the renderer and remains readable",
+      "status": "pass",
+      "elapsedMs": 131,
+      "details": {
+        "calls": 0,
+        "reason": "图表超过 180 行，已保留源码预览。",
+        "sourceExact": true
+      }
+    },
+    {
+      "name": "block formula overflow is local and fit mode scales it without a syntax reload",
+      "status": "pass",
+      "elapsedMs": 960,
+      "details": {
+        "wide": {
+          "width": 736,
+          "scrollWidth": 2350,
+          "overflow": "auto"
+        },
+        "fit": {
+          "width": 736,
+          "renderedWidth": 682.265625,
+          "scale": 0.3131914893617021,
+          "overflow": "hidden"
+        },
+        "rawUnchanged": true,
+        "fitFormulaClickKeepsEditorFocus": true
+      }
+    },
+    {
+      "name": "an in-flight worker result waits until synthetic composition commits",
+      "status": "pass",
+      "elapsedMs": 682,
+      "details": {
+        "deferredUntilCompositionEnd": true,
+        "systemIME": "not exercised"
+      }
+    },
+    {
+      "name": "a late worker response preserves an active code-text selection until the selection moves away",
+      "status": "pass",
+      "elapsedMs": 462,
+      "details": {
+        "selectedTextPreserved": "public",
+        "highlightedAfterSelectionCleared": true
+      }
+    },
+    {
+      "name": "read-only reading surface receives the same worker highlighting",
+      "status": "pass",
+      "elapsedMs": 163,
+      "details": {
+        "readonlyCodeColoured": true,
+        "copyButtonBoundAfterClone": true,
+        "documentUnchanged": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "pass": true
+}

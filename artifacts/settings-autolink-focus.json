@@ -1,0 +1,21 @@
+{
+  "platform": "linux/x64",
+  "application": {
+    "version": "0.0",
+    "isPackaged": false,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye/electron",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "kind": "Moye settings feature regression, not Typora differential acceptance",
+  "network": "HTTP(S) blocked",
+  "remoteRequests": [],
+  "results": [
+    {
+      "name": "remaining: automatic-link setting changes parsed links without rewriting the source",
+      "status": "fail",
+      "elapsedMs": 868,
+      "error": "AssertionError [ERR_ASSERTION]: [{\"enabled\":true,\"links\":0,\"actualIR\":\"<p data-block=\\\"0\\\">Visit https://example.com/path today.</p>\",\"getHTML\":\"<p>Visit https://example.com/path today.</p>\\n\",\"parsed\":[{\"url\":\"https://example.com/path\",\"Md2HTML\":\"<p>Visit https://example.com/path today.</p>\\n\",\"Md2VditorIRDOM\":\"<p data-block=\\\"0\\\">Visit https://example.com/path today.</p>\"},{\"url\":\"www.example.com\",\"Md2HTML\":\"<p>Visit www.example.com today.</p>\\n\",\"Md2VditorIRDOM\":\"<p data-block=\\\"0\\\">Visit www.example.com today.</p>\"},{\"url\":\"https://example.test/path\",\"Md2HTML\":\"<p>Visit https://example.test/path today.</p>\\n\",\"Md2VditorIRDOM\":\"<p data-block=\\\"0\\\">Visit https://example.test/path today.</p>\"}]},{\"enabled\":false,\"links\":0,\"actualIR\":\"<p data-block=\\\"0\\\">Visit https://example.com/path today.</p>\",\"getHTML\":\"<p>Visit https://example.com/path today.</p>\\n\",\"parsed\":[{\"url\":\"https://example.com/path\",\"Md2HTML\":\"<p>Visit https://example.com/path today.</p>\\n\",\"Md2VditorIRDOM\":\"<p data-block=\\\"0\\\">Visit https://example.com/path today.</p>\"},{\"url\":\"www.example.com\",\"Md2HTML\":\"<p>Visit www.example.com today.</p>\\n\",\"Md2VditorIRDOM\":\"<p data-block=\\\"0\\\">Visit www.example.com today.</p>\"},{\"url\":\"https://example.test/path\",\"Md2HTML\":\"<p>Visit https://example.test/path today.</p>\\n\",\"Md2VditorIRDOM\":\"<p data-block=\\\"0\\\">Visit https://example.test/path today.</p>\"}]},{\"enabled\":true,\"links\":0,\"actualIR\":\"<p data-block=\\\"0\\\">Visit https://example.com/path today.</p>\",\"getHTML\":\"<p>Visit https://example.com/path today.</p>\\n\",\"parsed\":[{\"url\":\"https://example.com/path\",\"Md2HTML\":\"<p>Visit https://example.com/path today.</p>\\n\",\"Md2VditorIRDOM\":\"<p data-block=\\\"0\\\">Visit https://example.com/path today.</p>\"},{\"url\":\"www.example.com\",\"Md2HTML\":\"<p>Visit www.example.com today.</p>\\n\",\"Md2VditorIRDOM\":\"<p data-block=\\\"0\\\">Visit www.example.com today.</p>\"},{\"url\":\"https://example.test/path\",\"Md2HTML\":\"<p>Visit https://example.test/path today.</p>\\n\",\"Md2VditorIRDOM\":\"<p data-block=\\\"0\\\">Visit https://example.test/path today.</p>\"}]}]\n\n0 !== 1\n\n    at /workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:485:14\n    at async probe (/workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:86:27)\n    at async main (/workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:469:5)"
+    }
+  ],
+  "pageErrors": []
+}

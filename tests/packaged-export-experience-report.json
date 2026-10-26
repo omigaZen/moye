@@ -1,0 +1,91 @@
+{
+  "generatedAt": "2026-10-25T10:55:32.425Z",
+  "platform": "linux",
+  "purpose": "Export snapshot content and isolation; not TeX/Telari print equivalence",
+  "results": [
+    {
+      "name": "reading export retains actual Mermaid labels and mathematical SVG without changing source",
+      "status": "pass",
+      "details": {
+        "sourcePreserved": true,
+        "formulaCount": 6,
+        "svgCount": 17,
+        "foreignObjectLabels": 37
+      }
+    },
+    {
+      "name": "task table and passive code text survive while active elements are removed from snapshot",
+      "status": "pass",
+      "details": {
+        "taskStatesRetained": true,
+        "diagramLabelRetained": true,
+        "activeContentRemoved": true,
+        "sourcePreserved": true
+      }
+    },
+    {
+      "name": "snapshot uses resolved local font URLs and current text geometry",
+      "status": "pass",
+      "details": {
+        "fontSize": "17px",
+        "localFonts": true
+      }
+    },
+    {
+      "name": "actual native PDF is multi-page, retains diagram labels and exports dark reading as readable paper",
+      "status": "pass",
+      "details": {
+        "pages": 9,
+        "sizeBytes": 124454,
+        "selectableText": true,
+        "tableRows": 80,
+        "tableHeaderPages": 4,
+        "firstAndLastRowSelectable": true,
+        "darkToPaper": {
+          "whiteRatio": 0.9462050919377653,
+          "inkRatio": 0.0324002828854314
+        }
+      }
+    },
+    {
+      "name": "actual full-document PNG uses requested width and scale and contains drawn text",
+      "status": "pass",
+      "details": {
+        "width": 800,
+        "height": 19404,
+        "sizeBytes": 1487943,
+        "pixels": {
+          "colors": 195,
+          "dark": 104
+        }
+      }
+    },
+    {
+      "name": "oversized native image export rejects before creating destination",
+      "status": "pass",
+      "details": {
+        "rejected": true,
+        "message": "Error invoking remote method 'document:export': Error: 整篇图片过大，请降低宽度或倍率，或改用 PDF 导出。"
+      }
+    },
+    {
+      "name": "native export blocks remote image requests and preserves dirty source and undo",
+      "status": "pass",
+      "details": {
+        "isolatedWindows": 4,
+        "outgoingRequests": 0,
+        "sourceDirtyUndoPreserved": true,
+        "exportBusyCloseEscapeProtected": true,
+        "normalClosePromptRestored": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": true,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar"
+  },
+  "pass": true
+}

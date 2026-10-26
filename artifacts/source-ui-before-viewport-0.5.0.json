@@ -1,0 +1,367 @@
+{
+  "reason": "Early full source run stopped: headless workArea is 1x1; legacy suites did not explicitly set their viewport after window-state clamping was introduced. Test assertions and latency gates are unchanged.",
+  "reports": {
+    "edge": {
+      "platform": "linux/x64",
+      "engine": "Electron 45",
+      "systemIME": "not tested; composition events synthetic",
+      "results": [
+        {
+          "name": "rapid live input -> source keeps trailing characters",
+          "status": "pass",
+          "elapsedMs": 565,
+          "details": {
+            "state": {
+              "path": "/tmp/moye-edge-pa8dZ2/case-1.md",
+              "documentId": "fd4732d0-3ef8-4a5a-b0f2-45a8fd26cbe7",
+              "name": "case-1.md",
+              "content": "plain尾字\n",
+              "baseUrl": "file:///tmp/moye-edge-pa8dZ2/",
+              "encoding": "UTF-8",
+              "encodingId": "utf-8",
+              "encodingGuessed": false,
+              "encodingWarning": "",
+              "encodingRemembered": false,
+              "availableEncodings": [
+                {
+                  "id": "utf-8",
+                  "label": "UTF-8"
+                },
+                {
+                  "id": "utf-16le",
+                  "label": "UTF-16 LE"
+                },
+                {
+                  "id": "utf-16be",
+                  "label": "UTF-16 BE"
+                },
+                {
+                  "id": "gb18030",
+                  "label": "GB18030"
+                },
+                {
+                  "id": "big5",
+                  "label": "Big5"
+                },
+                {
+                  "id": "shift_jis",
+                  "label": "Shift_JIS"
+                },
+                {
+                  "id": "euc-kr",
+                  "label": "EUC-KR"
+                }
+              ],
+              "eol": "LF",
+              "recentWarning": "",
+              "dirty": true,
+              "mode": "sv",
+              "reading": false
+            },
+            "source": "plain尾字\n"
+          }
+        },
+        {
+          "name": "rapid live input -> native save includes trailing characters",
+          "status": "fail",
+          "elapsedMs": 486,
+          "error": "The input did not match the regular expression /save尾字/. Input:\n\n'尾字save\\n'\n"
+        },
+        {
+          "name": "synthetic composition guards switching and new document (not system IME)",
+          "status": "pass",
+          "elapsedMs": 932,
+          "details": {
+            "path": "/tmp/moye-edge-pa8dZ2/case-3.md",
+            "documentId": "66d54f81-0f1f-4269-a0a4-0d79528e4194",
+            "name": "case-3.md",
+            "content": "中文开始输入\n",
+            "baseUrl": "file:///tmp/moye-edge-pa8dZ2/",
+            "encoding": "UTF-8",
+            "encodingId": "utf-8",
+            "encodingGuessed": false,
+            "encodingWarning": "",
+            "encodingRemembered": false,
+            "availableEncodings": [
+              {
+                "id": "utf-8",
+                "label": "UTF-8"
+              },
+              {
+                "id": "utf-16le",
+                "label": "UTF-16 LE"
+              },
+              {
+                "id": "utf-16be",
+                "label": "UTF-16 BE"
+              },
+              {
+                "id": "gb18030",
+                "label": "GB18030"
+              },
+              {
+                "id": "big5",
+                "label": "Big5"
+              },
+              {
+                "id": "shift_jis",
+                "label": "Shift_JIS"
+              },
+              {
+                "id": "euc-kr",
+                "label": "EUC-KR"
+              }
+            ],
+            "eol": "LF",
+            "recentWarning": "",
+            "dirty": true,
+            "mode": "ir",
+            "reading": false
+          }
+        },
+        {
+          "name": "copy selected strong text as Markdown preserves style",
+          "status": "pass",
+          "elapsedMs": 484,
+          "details": {
+            "copied": "**bold**"
+          }
+        },
+        {
+          "name": "copy selected link text as Markdown preserves the destination",
+          "status": "pass",
+          "elapsedMs": 475,
+          "details": {
+            "copied": "[link](https://example.com)",
+            "partial": "[ink](https://example.com)"
+          }
+        },
+        {
+          "name": "source roundtrip preserves repeated paragraph caret and selection",
+          "status": "pass",
+          "elapsedMs": 490,
+          "details": {
+            "before": {
+              "text": "重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落",
+              "selected": ""
+            },
+            "source": {
+              "start": 132,
+              "end": 139
+            },
+            "after": {
+              "selected": "",
+              "paragraphIndex": 1
+            }
+          }
+        },
+        {
+          "name": "source edit -> live edit -> undo preserves unsaved source text",
+          "status": "pass",
+          "elapsedMs": 1441,
+          "details": {
+            "content": "new  \nline\n"
+          }
+        },
+        {
+          "name": "unknown HTML and comments survive unrelated edit and save",
+          "status": "pass",
+          "elapsedMs": 959,
+          "details": {
+            "content": "editable changed\n\n<!-- keep 中文 -->\n\n<moye-custom data-note=\"keep\">原始内容</moye-custom>\n"
+          }
+        },
+        {
+          "name": "single replace uses fresh match positions after earlier source edit",
+          "status": "fail",
+          "elapsedMs": 30512,
+          "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#find-next')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"find-next\" title=\"下一个 Enter\">↓</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    14 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - element is outside of the viewport\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n"
+        },
+        {
+          "name": "immediate undo and redo include the latest un-debounced edit",
+          "status": "fail",
+          "elapsedMs": 481,
+          "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '尾字before\\n'\n- 'before尾字\\n'\n"
+        },
+        {
+          "name": "source roundtrip preserves backward selection direction",
+          "status": "fail",
+          "elapsedMs": 479,
+          "error": "Expected values to be strictly equal:\n\n'' !== '重复文字第二段'\n"
+        }
+      ],
+      "pageErrors": []
+    },
+    "extras": {
+      "platform": "linux/x64",
+      "engine": "Electron 45",
+      "network": "all HTTP(S) requests blocked",
+      "requests": [],
+      "results": [
+        {
+          "name": "complete sample renders 8 Mermaid diagrams and 5 formulae offline",
+          "status": "pass",
+          "elapsedMs": 2354,
+          "details": {
+            "diagrams": 8,
+            "math": 5,
+            "errors": []
+          }
+        },
+        {
+          "name": "live replace-all changes visible text and preserves hidden link URL",
+          "status": "fail",
+          "elapsedMs": 30619,
+          "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#toggle-replace')\u001b[22m\n\u001b[2m    - locator resolved to <button title=\"展开替换\" id=\"toggle-replace\">替换</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    14 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - element is outside of the viewport\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n"
+        },
+        {
+          "name": "code block source remains searchable while syntax markers stay excluded",
+          "status": "fail",
+          "elapsedMs": 30493,
+          "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#toggle-replace')\u001b[22m\n\u001b[2m    - locator resolved to <button title=\"展开替换\" id=\"toggle-replace\">替换</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    14 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - element is outside of the viewport\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n"
+        },
+        {
+          "name": "literal replacement preserves angle brackets as text",
+          "status": "fail",
+          "elapsedMs": 30483,
+          "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#toggle-replace')\u001b[22m\n\u001b[2m    - locator resolved to <button title=\"展开替换\" id=\"toggle-replace\">替换</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    14 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - element is outside of the viewport\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <html lang=\"zh-CN\" data-ui-language=\"zh-CN\">…</html> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n"
+        },
+        {
+          "name": "table Tab/Shift+Tab navigate cells and text does not bleed",
+          "status": "fail",
+          "elapsedMs": 492,
+          "error": "Expected values to be strictly equal:\n\n-1 !== 1\n"
+        },
+        {
+          "name": "table Enter inserts a cell line break and undo preserves table",
+          "status": "pass",
+          "elapsedMs": 948,
+          "details": {
+            "tables": 1,
+            "cells": [
+              "one<br>line",
+              "two"
+            ],
+            "content": "| A             | B   |\n| ------------- | --- |\n| one<br />line | two |\n"
+          }
+        },
+        {
+          "name": "local image chooser creates relative asset and reloads from disk",
+          "status": "pass",
+          "elapsedMs": 1000,
+          "details": {
+            "saved": "image here![书写 测试](./extra-6.assets/%E4%B9%A6%E5%86%99%20%E6%B5%8B%E8%AF%95.svg)\n",
+            "asset": "书写 测试.svg"
+          }
+        },
+        {
+          "name": "empty list Enter exits to an ordinary paragraph",
+          "status": "fail",
+          "elapsedMs": 931,
+          "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+        },
+        {
+          "name": "list Tab and Shift+Tab indent and outdent without text loss",
+          "status": "pass",
+          "elapsedMs": 491,
+          "details": {
+            "nested": 0,
+            "items": [
+              "first",
+              "second"
+            ]
+          }
+        },
+        {
+          "name": "list indentation preserves a backward text selection and supports undo",
+          "status": "fail",
+          "elapsedMs": 476,
+          "error": "Expected values to be strictly equal:\n\n'' !== 'eco'\n"
+        },
+        {
+          "name": "code block Tab still inserts spaces when nested in a list",
+          "status": "pass",
+          "elapsedMs": 929,
+          "details": {
+            "content": "- first\n- second\n\n  ```csharp\n  abc\n      \n  ```\n",
+            "nestedLists": 0,
+            "code": "abc\n    "
+          }
+        },
+        {
+          "name": "table Shift+Enter inside text preserves both sides and the line break",
+          "status": "pass",
+          "elapsedMs": 945,
+          "details": {
+            "html": "o<br>Xne",
+            "content": "| A          | B   |\n| ---------- | --- |\n| o<br />Xne | two |\n"
+          }
+        },
+        {
+          "name": "table Ctrl+Enter inserts a row and undo restores the previous rows",
+          "status": "pass",
+          "elapsedMs": 968,
+          "details": {
+            "rows": [
+              [
+                "one",
+                "two"
+              ],
+              [
+                "new row",
+                ""
+              ]
+            ],
+            "content": "| A       | B   |\n| ------- | --- |\n| one     | two |\n| new row |     |\n"
+          }
+        },
+        {
+          "name": "Tab from the last table cell appends a new row",
+          "status": "pass",
+          "elapsedMs": 939,
+          "details": {
+            "rows": [
+              [
+                "one",
+                "two"
+              ],
+              [
+                "added",
+                ""
+              ]
+            ],
+            "content": "| A     | B   |\n| ----- | --- |\n| one   | two |\n| added |     |\n"
+          }
+        },
+        {
+          "name": "invalid Mermaid source remains editable and recovers after correction",
+          "status": "pass",
+          "elapsedMs": 573,
+          "details": {
+            "content": "```mermaid\nflowchart TD\nA[Start] --> B[Finish]\n```\n\nafter\n",
+            "graph": "StartFinish"
+          }
+        },
+        {
+          "name": "invalid formula source survives error and recovers after correction",
+          "status": "pass",
+          "elapsedMs": 556,
+          "details": {
+            "content": "$$\n\\frac{1}{2}\n$$\n\nafter\n",
+            "errors": 0
+          }
+        },
+        {
+          "name": "quote start Backspace removes quote structure without losing text",
+          "status": "pass",
+          "elapsedMs": 926,
+          "details": {
+            "content": "quoted\n\nplain\n",
+            "quotes": 0
+          }
+        }
+      ],
+      "pageErrors": []
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-10-25T10:56:47.443Z",
+  "platform": "linux",
+  "purpose": "Real contextual close shortcut, native whole-window close and dirty tab data protection; not a Telari original-runtime differential.",
+  "results": [
+    {
+      "name": "real close shortcut closes only the active tab with multiple tabs and closes the window at the final-tab boundary",
+      "status": "pass",
+      "details": {
+        "realShortcut": "Control+w",
+        "multipleTabsKeptWindowOpen": true,
+        "nextTabSourceExact": true,
+        "finalTabShortcutClosedWindow": true
+      }
+    },
+    {
+      "name": "canceling dirty tab close preserves reverse source selection and undo, then discard confirms exactly once",
+      "status": "pass",
+      "details": {
+        "cancelKeptSourceAndReverseSelection": true,
+        "undoRedoSurvived": true,
+        "discardConfirmationCount": 1,
+        "discardedChangesNotWritten": true
+      }
+    },
+    {
+      "name": "closing an inactive tab leaves the active dirty document, selection and disk bytes unchanged",
+      "status": "pass",
+      "details": {
+        "activeDirtySourceExact": true,
+        "reverseSelectionRetained": true,
+        "confirmations": 0,
+        "diskBytesUnchanged": true,
+        "saveAsAssociatedNewTab": true,
+        "originalTabReopenedOriginalDisk": true,
+        "headerPathAndActiveTabConsistent": true,
+        "recentExistingTabReused": true,
+        "nativeOpenExistingTabReloadedFresh": true,
+        "sameRecentFileKeptDirtySourceAndUndo": true
+      }
+    },
+    {
+      "name": "actual native BrowserWindow.close keeps whole-window semantics with multiple tabs, including cancel and discard",
+      "status": "pass",
+      "details": {
+        "nativeWindowCloseUsed": true,
+        "cancelKeptAllTabsAndSource": true,
+        "discardClosedWholeWindow": true,
+        "discardConfirmationCount": 1,
+        "discardedChangesNotWritten": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "limitations": [
+    "Headless keyboard/native API checks do not certify physical desktop window controls, OS IME or multiple monitors."
+  ],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": true,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/Moye"
+  },
+  "pass": true
+}

@@ -1,0 +1,85 @@
+{
+  "generatedAt": "2026-10-25T10:37:09.224Z",
+  "viewport": {
+    "width": 740,
+    "height": 520
+  },
+  "checks": [
+    {
+      "name": "small viewport menu bounded, scrollable and keyboard accessible",
+      "pass": true,
+      "details": {
+        "top": 53,
+        "bottom": 507,
+        "left": 454,
+        "right": 724,
+        "scrollHeight": 839,
+        "clientHeight": 452,
+        "focused": true
+      }
+    },
+    {
+      "name": "PDF options and close action fit a 740 by 520 viewport",
+      "pass": true,
+      "details": {
+        "top": 29.03125,
+        "bottom": 490.953125,
+        "left": 150,
+        "right": 590,
+        "scrollHeight": 460,
+        "clientHeight": 460
+      }
+    },
+    {
+      "name": "English settings small viewport visual review",
+      "pass": true
+    },
+    {
+      "name": "English recent files small viewport visual review",
+      "pass": true
+    }
+  ],
+  "pageErrors": [],
+  "menu": {
+    "top": 53,
+    "bottom": 507,
+    "left": 454,
+    "right": 724,
+    "scrollHeight": 839,
+    "clientHeight": 452,
+    "focused": true
+  },
+  "focusTrace": [
+    {
+      "kind": "focusin",
+      "target": "BUTTON",
+      "id": "more-button",
+      "className": "icon-button",
+      "hidden": true,
+      "at": 918.3000000007451
+    },
+    {
+      "kind": "click",
+      "target": "svg",
+      "id": "",
+      "className": {},
+      "hidden": true,
+      "at": 918.8000000007451
+    },
+    {
+      "kind": "focus-call",
+      "target": "BUTTON",
+      "className": "",
+      "stack": "Error\n    at HTMLElement.focus (eval at evaluate (:311:30), <anonymous>:1:620)\n    at HTMLButtonElement.<anonymous> (file:///workspace/scratch/8a7610d50e71/moye/src/renderer.js:1204:307)"
+    },
+    {
+      "kind": "focusin",
+      "target": "BUTTON",
+      "id": "",
+      "className": "",
+      "hidden": false,
+      "at": 922.8000000007451
+    }
+  ],
+  "pass": true
+}

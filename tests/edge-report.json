@@ -1,0 +1,201 @@
+{
+  "platform": "linux/x64",
+  "engine": "Electron 45",
+  "systemIME": "not tested; composition events synthetic",
+  "results": [
+    {
+      "name": "rapid live input -> source keeps trailing characters",
+      "status": "pass",
+      "elapsedMs": 615,
+      "details": {
+        "state": {
+          "path": "/tmp/moye-edge-Ty6eqC/case-1.md",
+          "documentId": "ffcc75af-eace-4ebb-b7dd-251031a33933",
+          "name": "case-1.md",
+          "content": "plain尾字\n",
+          "baseUrl": "file:///tmp/moye-edge-Ty6eqC/",
+          "encoding": "UTF-8",
+          "encodingId": "utf-8",
+          "encodingGuessed": false,
+          "encodingWarning": "",
+          "encodingRemembered": false,
+          "availableEncodings": [
+            {
+              "id": "utf-8",
+              "label": "UTF-8"
+            },
+            {
+              "id": "utf-16le",
+              "label": "UTF-16 LE"
+            },
+            {
+              "id": "utf-16be",
+              "label": "UTF-16 BE"
+            },
+            {
+              "id": "gb18030",
+              "label": "GB18030"
+            },
+            {
+              "id": "big5",
+              "label": "Big5"
+            },
+            {
+              "id": "shift_jis",
+              "label": "Shift_JIS"
+            },
+            {
+              "id": "euc-kr",
+              "label": "EUC-KR"
+            }
+          ],
+          "eol": "LF",
+          "recentWarning": "",
+          "dirty": true,
+          "mode": "sv",
+          "reading": false
+        },
+        "source": "plain尾字\n"
+      }
+    },
+    {
+      "name": "rapid live input -> native save includes trailing characters",
+      "status": "pass",
+      "elapsedMs": 484,
+      "details": {
+        "saved": "save尾字\n"
+      }
+    },
+    {
+      "name": "synthetic composition guards switching and new document (not system IME)",
+      "status": "pass",
+      "elapsedMs": 933,
+      "details": {
+        "path": "/tmp/moye-edge-Ty6eqC/case-3.md",
+        "documentId": "2290fde3-a45a-4a0b-a6bf-d24a1d9cdcca",
+        "name": "case-3.md",
+        "content": "中文开始输入\n",
+        "baseUrl": "file:///tmp/moye-edge-Ty6eqC/",
+        "encoding": "UTF-8",
+        "encodingId": "utf-8",
+        "encodingGuessed": false,
+        "encodingWarning": "",
+        "encodingRemembered": false,
+        "availableEncodings": [
+          {
+            "id": "utf-8",
+            "label": "UTF-8"
+          },
+          {
+            "id": "utf-16le",
+            "label": "UTF-16 LE"
+          },
+          {
+            "id": "utf-16be",
+            "label": "UTF-16 BE"
+          },
+          {
+            "id": "gb18030",
+            "label": "GB18030"
+          },
+          {
+            "id": "big5",
+            "label": "Big5"
+          },
+          {
+            "id": "shift_jis",
+            "label": "Shift_JIS"
+          },
+          {
+            "id": "euc-kr",
+            "label": "EUC-KR"
+          }
+        ],
+        "eol": "LF",
+        "recentWarning": "",
+        "dirty": true,
+        "mode": "ir",
+        "reading": false
+      }
+    },
+    {
+      "name": "copy selected strong text as Markdown preserves style",
+      "status": "pass",
+      "elapsedMs": 484,
+      "details": {
+        "copied": "**bold**"
+      }
+    },
+    {
+      "name": "copy selected link text as Markdown preserves the destination",
+      "status": "pass",
+      "elapsedMs": 485,
+      "details": {
+        "copied": "[link](https://example.com)",
+        "partial": "[ink](https://example.com)"
+      }
+    },
+    {
+      "name": "source roundtrip preserves repeated paragraph caret and selection",
+      "status": "pass",
+      "elapsedMs": 485,
+      "details": {
+        "before": {
+          "text": "重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落重复段落",
+          "selected": "段落重复段落重"
+        },
+        "source": {
+          "start": 132,
+          "end": 139
+        },
+        "after": {
+          "selected": "段落重复段落重",
+          "paragraphIndex": 1
+        }
+      }
+    },
+    {
+      "name": "source edit -> live edit -> undo preserves unsaved source text",
+      "status": "pass",
+      "elapsedMs": 1455,
+      "details": {
+        "content": "new  \nline\n"
+      }
+    },
+    {
+      "name": "unknown HTML and comments survive unrelated edit and save",
+      "status": "pass",
+      "elapsedMs": 973,
+      "details": {
+        "content": "editable changed\n\n<!-- keep 中文 -->\n\n<moye-custom data-note=\"keep\">原始内容</moye-custom>\n"
+      }
+    },
+    {
+      "name": "single replace uses fresh match positions after earlier source edit",
+      "status": "pass",
+      "elapsedMs": 620,
+      "details": {
+        "content": "XXXaaa BAR\n"
+      }
+    },
+    {
+      "name": "immediate undo and redo include the latest un-debounced edit",
+      "status": "pass",
+      "elapsedMs": 479,
+      "details": {
+        "undone": "before\n",
+        "redone": "before尾字\n"
+      }
+    },
+    {
+      "name": "source roundtrip preserves backward selection direction",
+      "status": "pass",
+      "elapsedMs": 476,
+      "details": {
+        "text": "重复文字第二段",
+        "backward": true
+      }
+    }
+  ],
+  "pageErrors": []
+}

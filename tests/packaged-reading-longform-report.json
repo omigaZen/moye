@@ -1,0 +1,200 @@
+{
+  "generatedAt": "2026-10-25T10:55:59.079Z",
+  "platform": "linux",
+  "purpose": "Bounded TXT windows, full-source copying, chapter navigation and next-document UI; not Telari differential or real IME acceptance",
+  "fixture": {
+    "characters": 2239862,
+    "bytes": 4726022,
+    "chapters": 180,
+    "sha256": "42f6b95c47073767c441eb106810ec1f3d0a70ce20fb334397b80fa511bac646"
+  },
+  "results": [
+    {
+      "name": "large TXT opens into the bounded reader without constructing a full rich-editor DOM",
+      "status": "pass",
+      "elapsedMs": 1570,
+      "details": {
+        "virtualized": true,
+        "windows": 72,
+        "currentWindow": 0,
+        "sourceLength": 2239862,
+        "mountedCharacters": 30870,
+        "mountedElements": 8,
+        "mode": "sv",
+        "irElements": 234,
+        "dirty": false,
+        "source": 2239862,
+        "outline": 180,
+        "openToReadMs": 643.5752540000001
+      }
+    },
+    {
+      "name": "a distant chapter mounts its source window and Back restores the previous window",
+      "status": "pass",
+      "elapsedMs": 223,
+      "details": {
+        "absentBefore": true,
+        "targetChapter": 151,
+        "navigationMs": 28.593765000000076,
+        "wholeSourceFindVisible": true
+      }
+    },
+    {
+      "name": "native reading Select All copies the entire exact source across unmounted windows",
+      "status": "pass",
+      "elapsedMs": 237,
+      "details": {
+        "characters": 2239862,
+        "sha256": "42f6b95c47073767c441eb106810ec1f3d0a70ce20fb334397b80fa511bac646",
+        "exact": true
+      }
+    },
+    {
+      "name": "a partial paragraph selection copies only the exact selected source, never the entire virtual document",
+      "status": "pass",
+      "elapsedMs": 5,
+      "details": {
+        "exactPartialSelection": true,
+        "length": 13
+      }
+    },
+    {
+      "name": "TXT presets affect only the reader and keep source, edit selection and undo intact",
+      "status": "pass",
+      "elapsedMs": 5197,
+      "details": {
+        "font": "18px",
+        "sourceSelectionUndoIntact": true
+      }
+    },
+    {
+      "name": "whole-document End and Home mount bounded last and first windows without automatic next-file navigation",
+      "status": "pass",
+      "elapsedMs": 280,
+      "details": {
+        "windows": 72,
+        "last": 71,
+        "explicitSegments": true
+      }
+    },
+    {
+      "name": "complete detached export includes distant and final content while current-window capture is clearly marked",
+      "status": "pass",
+      "elapsedMs": 150,
+      "details": {
+        "detached": true,
+        "complete": "true",
+        "virtual": "",
+        "first": "第1章 测试章节 00:0 这是一段中文与 English 混排，用于真正的大型",
+        "last": "证 😀。这是一段中文与 English 混排，用于真正的大型 TXT 阅读验证 😀。这是一段中文与 English 混排，用于真正的大型 TXT 阅读验证 ",
+        "characters": 399903,
+        "liveCharacters": 30870
+      }
+    },
+    {
+      "name": "over-budget whole-document TXT export refuses explicitly instead of silently exporting one window",
+      "status": "pass",
+      "elapsedMs": 35,
+      "details": {
+        "explicitRefusal": true
+      }
+    },
+    {
+      "name": "large-TXT source positions survive a full application restart using bounded content-free metadata",
+      "status": "pass",
+      "elapsedMs": 4241,
+      "details": {
+        "beforeWindow": 47,
+        "afterWindow": 47,
+        "offsetDifference": 0,
+        "metadataBytes": 279
+      }
+    },
+    {
+      "name": "next-document prompt uses the authorized natural neighbor, opens explicitly, and can be permanently disabled",
+      "status": "pass",
+      "elapsedMs": 821,
+      "details": {
+        "explicitNaturalNext": true,
+        "nonWorkspaceNextAndPrevious": true,
+        "settingDisabled": true,
+        "noNeighborNoPrompt": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": true,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/Moye"
+  },
+  "baselineMemory": {
+    "available": true,
+    "unit": "KiB",
+    "processes": [
+      {
+        "type": "Browser",
+        "rssKiB": 161644,
+        "pssKiB": 91269
+      },
+      {
+        "type": "Utility",
+        "rssKiB": 84316,
+        "pssKiB": 30466
+      },
+      {
+        "type": "Tab",
+        "rssKiB": 254064,
+        "pssKiB": 196684
+      },
+      {
+        "type": "GPU",
+        "rssKiB": 60304,
+        "pssKiB": 19642
+      }
+    ],
+    "totalRssKiB": 560328,
+    "totalPssKiB": 338061,
+    "note": "One settled process snapshot, not peak memory. RSS double-counts shared pages; PSS apportions them. No memory threshold was invented."
+  },
+  "openToReadMs": 643.5752540000001,
+  "settledLargeTextMemory": {
+    "available": true,
+    "unit": "KiB",
+    "processes": [
+      {
+        "type": "Browser",
+        "rssKiB": 181724,
+        "pssKiB": 110650
+      },
+      {
+        "type": "Utility",
+        "rssKiB": 84360,
+        "pssKiB": 30432
+      },
+      {
+        "type": "Tab",
+        "rssKiB": 358452,
+        "pssKiB": 299941
+      },
+      {
+        "type": "GPU",
+        "rssKiB": 60388,
+        "pssKiB": 19697
+      }
+    ],
+    "totalRssKiB": 684924,
+    "totalPssKiB": 460720,
+    "note": "One settled process snapshot, not peak memory. RSS double-counts shared pages; PSS apportions them. No memory threshold was invented."
+  },
+  "rendererHeap": {
+    "usedSize": 60525248,
+    "totalSize": 71720960,
+    "embedderHeapUsedSize": 20974032,
+    "backingStorageSize": 14981835
+  },
+  "distantChapterMs": 28.593765000000076,
+  "pass": true
+}

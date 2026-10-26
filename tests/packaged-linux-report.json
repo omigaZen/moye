@@ -1,0 +1,43 @@
+{
+  "initial": {
+    "title": "欢迎.md — 墨页",
+    "mode": "ir",
+    "text": "# 墨页\n\n把想法写下来，让文字慢慢成形。\n\n墨页是一张安静的 Markdown 书桌。你可以像平常一样输入中文，也可以用熟悉的符号整理结构。输入 `**重要的"
+  },
+  "render": {
+    "diagrams": 8,
+    "formulas": 5,
+    "font": true,
+    "fontFaces": 6,
+    "diagramFonts": [
+      "\"Noto Sans SC\", sans-serif",
+      "\"Noto Sans SC\", sans-serif",
+      "\"Noto Sans SC\", sans-serif",
+      "\"Noto Sans SC\", sans-serif",
+      "\"Noto Sans SC\", sans-serif",
+      "\"Noto Sans SC\", sans-serif",
+      "\"Noto Sans SC\", sans-serif",
+      "\"Noto Sans SC\", sans-serif"
+    ],
+    "images": [
+      {
+        "src": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/samples/assets/书写%20测试.svg",
+        "complete": true,
+        "width": 640
+      },
+      {
+        "src": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/samples/assets/书写%20测试.svg",
+        "complete": true,
+        "width": 640
+      }
+    ],
+    "errors": []
+  },
+  "binary": {
+    "version": "0.5.0",
+    "packaged": true,
+    "path": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar"
+  },
+  "errors": [],
+  "remote": []
+}

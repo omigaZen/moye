@@ -1,0 +1,20 @@
+/* All decoration is confined to generated, readonly previews. */
+.moye-code-preview{position:relative!important}
+.moye-code-preview[data-code-language]::before{content:attr(data-code-language);position:absolute;right:54px;top:7px;max-width:45%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:11px/20px var(--mono-font,monospace);color:var(--muted,#79857d);pointer-events:none;user-select:none;z-index:1}
+.moye-code-preview>.moye-code-copy{position:absolute;right:9px;top:7px;width:38px;height:22px;border:1px solid transparent;border-radius:5px;background:var(--paper,#fff);color:var(--muted,#79857d);cursor:pointer;opacity:0;z-index:2;padding:0;font:11px/20px inherit}
+.moye-code-preview>.moye-code-copy::after{content:'复制'}
+.moye-code-preview>.moye-code-copy[data-copied=true]::after{content:'已复制'}
+.moye-code-preview:hover>.moye-code-copy,.moye-code-preview:focus-within>.moye-code-copy,.moye-code-preview>.moye-code-copy:focus-visible{opacity:1}
+.moye-code-preview>.moye-code-copy:focus-visible{outline:2px solid var(--accent,#477563);outline-offset:2px}
+.moye-code-preview>code.hljs{padding-top:26px!important;min-width:0}
+.moye-code-preview[data-content-note]::after,.moye-diagram-preview[data-content-note]::after{content:attr(data-content-note);display:block;padding:7px 12px;font:12px/1.6 var(--body-font,sans-serif);color:var(--muted,#79857d);white-space:normal;overflow-wrap:anywhere}
+.moye-code-preview .moye-code-line{display:block;min-height:1lh}
+.moye-code-preview code.vditor-linenumber{position:relative;padding-left:3.5em!important}
+.moye-code-preview .vditor-linenumber__rows{position:absolute;left:0;top:26px;width:2.5em!important;pointer-events:none;user-select:none;counter-reset:moye-line}
+.moye-code-preview .vditor-linenumber__rows>span{display:block;min-height:1lh;counter-increment:moye-line}
+.moye-code-preview .vditor-linenumber__rows>span::before{content:counter(moye-line);display:block;text-align:right;padding-right:.75em;color:var(--muted,#79857d)}
+.moye-diagram-preview .moye-diagram-source{margin:0;padding:14px 16px;white-space:pre-wrap;text-align:left;font:inherit;overflow-wrap:anywhere;max-height:420px;overflow:auto}
+.moye-block-math{max-width:100%;min-width:0;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:thin}
+.moye-block-math[data-math-overflow=fit]{overflow-x:hidden}
+.moye-block-math mjx-container[display=true],.moye-block-math .katex-display{min-width:0!important}
+@media(prefers-reduced-motion:reduce){.moye-code-copy{transition:none!important}}

@@ -1,0 +1,136 @@
+{
+  "generatedAt": "2026-10-25T10:47:57.726Z",
+  "platform": "linux",
+  "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron",
+  "application": {
+    "version": "0.0",
+    "isPackaged": false,
+    "path": "/workspace/scratch/8a7610d50e71/moye/electron",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "evidence": "Moye regression checks; no original Typora comparison or performance certification",
+  "results": [
+    {
+      "name": "ordinary trusted editor input reuses unchanged outline while preserving text and undo",
+      "status": "pass",
+      "details": {
+        "cacheHits": 1,
+        "extraGenerations": 0,
+        "undoPreserved": true
+      }
+    },
+    {
+      "name": "trusted heading rename regenerates TOC labels and retains navigable IDs",
+      "status": "pass",
+      "details": {
+        "misses": 1,
+        "sameAsUpstream": true,
+        "navigationTargetsResolved": true
+      }
+    },
+    {
+      "name": "heading inline Markdown formatting invalidates cached generation",
+      "status": "pass",
+      "details": {
+        "misses": 1,
+        "sameAsUpstream": true
+      }
+    },
+    {
+      "name": "trusted deletion removes a heading from generated navigation",
+      "status": "pass",
+      "details": {
+        "misses": 1,
+        "sameAsUpstream": true
+      }
+    },
+    {
+      "name": "inserting a body block before headings regenerates their index-derived IDs",
+      "status": "pass",
+      "details": {
+        "misses": 1,
+        "sameAsUpstream": true
+      }
+    },
+    {
+      "name": "reordering headings regenerates outline order and index-derived IDs",
+      "status": "pass",
+      "details": {
+        "misses": 1,
+        "sameAsUpstream": true
+      }
+    },
+    {
+      "name": "heading level, ID and style changes are cache inputs",
+      "status": "pass",
+      "details": [
+        {
+          "misses": 1,
+          "sameAsUpstream": true
+        },
+        {
+          "misses": 1,
+          "sameAsUpstream": true
+        },
+        {
+          "misses": 1,
+          "sameAsUpstream": true
+        }
+      ]
+    },
+    {
+      "name": "transient heading selection bookmarks reuse identical generated outline",
+      "status": "pass",
+      "details": {
+        "extraGenerations": 0
+      }
+    },
+    {
+      "name": "Markdown and math option changes invalidate generation",
+      "status": "pass",
+      "details": [
+        {
+          "misses": 1,
+          "sameAsUpstream": true
+        },
+        {
+          "misses": 1,
+          "sameAsUpstream": true
+        }
+      ]
+    },
+    {
+      "name": "source/live mode changes retain equivalent generated outline",
+      "status": "pass",
+      "details": {
+        "sameAsUpstream": true
+      }
+    },
+    {
+      "name": "reloading identical Markdown with fresh heading nodes regenerates",
+      "status": "pass",
+      "details": {
+        "freshHeadingNodes": true
+      }
+    },
+    {
+      "name": "replacing content root or outline target invalidates even identical HTML",
+      "status": "pass",
+      "details": {
+        "sameAsUpstream": true
+      }
+    },
+    {
+      "name": "uncacheable configuration falls back to upstream and destroy restores it",
+      "status": "pass",
+      "details": {
+        "sameAsUpstream": true,
+        "fallback": true,
+        "destroyRestoresUpstream": true,
+        "installIdempotent": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": []
+}

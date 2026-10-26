@@ -1,0 +1,50 @@
+/* Default values preserve the existing Moye document geometry. */
+#editor.moye-typography .vditor-ir .vditor-reset,
+#editor.moye-typography .vditor-wysiwyg .vditor-reset{font-family:var(--moye-prose-font,var(--body-font))!important}
+.moye-typography[data-settings-preview],.moye-typography .moye-typography-sample{font-family:var(--moye-prose-font,var(--body-font));font-size:var(--font-size,17px);line-height:var(--body-line-height,1.85)}
+.moye-typography[data-moye-cjk-spacing="true"] .vditor-ir .vditor-reset,
+.moye-typography[data-settings-preview][data-moye-cjk-spacing="true"]{text-autospace:normal}
+.moye-typography[data-moye-cjk-spacing="false"] .vditor-ir .vditor-reset,
+.moye-typography[data-settings-preview][data-moye-cjk-spacing="false"]{text-autospace:no-autospace}
+.moye-typography .vditor-ir .vditor-reset :is(code,pre,[data-type="math-inline"],[data-type="math-block"],[data-type="yaml-front-matter"],a),
+.moye-typography[data-settings-preview] :is(code,pre,math,a){text-autospace:no-autospace;hanging-punctuation:none;text-indent:0;text-align:start}
+.moye-typography[data-moye-hanging-punctuation="true"] .vditor-ir .vditor-reset>p,
+.moye-typography[data-settings-preview][data-moye-hanging-punctuation="true"]>p{hanging-punctuation:first last}
+.moye-typography[data-moye-paragraph-style="indented"] .vditor-ir .vditor-reset>p,
+.moye-typography[data-settings-preview][data-moye-paragraph-style="indented"]>p{text-indent:2em;margin-block:0!important}
+.moye-typography[data-moye-text-align="justify"] .vditor-ir .vditor-reset>p,
+.moye-typography[data-settings-preview][data-moye-text-align="justify"]>p{text-align:justify;text-justify:inter-character}
+.moye-typography[data-moye-text-align="start"] .vditor-ir .vditor-reset>p,
+.moye-typography[data-settings-preview][data-moye-text-align="start"]>p{text-align:start}
+.moye-typography[data-moye-text-align="optimal"] .vditor-ir .vditor-reset>p,
+.moye-typography[data-settings-preview][data-moye-text-align="optimal"]>p{text-align:start}
+/* Read-only HTML receives the same presentation as editable IR. */
+#editor.moye-typography .moye-reading-content{font-family:var(--moye-prose-font,var(--body-font))!important}
+.moye-typography[data-moye-cjk-spacing="true"] .moye-reading-content{text-autospace:normal}
+.moye-typography[data-moye-cjk-spacing="false"] .moye-reading-content{text-autospace:no-autospace}
+.moye-typography .moye-reading-content :is(code,pre,math,a,mjx-container,.katex){text-autospace:no-autospace;hanging-punctuation:none;text-indent:0;text-align:start}
+.moye-typography[data-moye-paragraph-style="indented"] .moye-reading-content>p{text-indent:2em;margin-block:0!important}
+.moye-typography[data-moye-hanging-punctuation="true"] .moye-reading-content>p{hanging-punctuation:first last}
+.moye-typography[data-moye-text-align="justify"] .moye-reading-content>p{text-align:justify;text-justify:inter-character}
+.moye-typography[data-moye-text-align="start"] .moye-reading-content>p,
+.moye-typography[data-moye-text-align="optimal"] .moye-reading-content>p{text-align:start}
+.moye-typography[data-settings-preview] code{font-family:var(--mono-font,monospace);font-size:.85em}
+/* Palettes change colours only. Fonts, widths and paragraph geometry stay put. */
+[data-settings-preview][data-moye-color-theme="moye"]{--paper:#fff;--chrome:#fafaf8;--sidebar:#f6f7f5;--ink:#303833;--muted:#8b938d;--line:#e9ece7;--accent:#47705b;--accent-bg:#eaf0eb;--code:#f5f6f3}
+.dark [data-settings-preview][data-moye-color-theme="moye"]{--paper:#242925;--chrome:#202521;--sidebar:#202521;--ink:#d5ddd5;--muted:#859188;--line:#333d35;--accent:#a6c4ab;--accent-bg:#303e33;--code:#1e241f}
+[data-moye-color-theme="mono"]{--paper:#fafaf8;--chrome:#f3f3f1;--sidebar:#f0f0ee;--ink:#333;--muted:#777;--line:#dededb;--accent:#111;--accent-bg:#e9e9e5;--code:#efefeb}
+body.dark[data-moye-color-theme="mono"],.dark [data-moye-color-theme="mono"]{--paper:#262626;--chrome:#222;--sidebar:#222;--ink:#ddd;--muted:#999;--line:#404040;--accent:#fff;--accent-bg:#383838;--code:#202020}
+[data-moye-color-theme="solarized"]{--paper:#fdf6e3;--chrome:#f5edd8;--sidebar:#eee8d5;--ink:#586e75;--muted:#657b83;--line:#d9d2c0;--accent:#007f85;--accent-bg:#e6e7cf;--code:#eee8d5}
+body.dark[data-moye-color-theme="solarized"],.dark [data-moye-color-theme="solarized"]{--paper:#002b36;--chrome:#002731;--sidebar:#073642;--ink:#93a1a1;--muted:#839496;--line:#1a4650;--accent:#5dc2c0;--accent-bg:#12444b;--code:#073642}
+[data-moye-color-theme="nord"]{--paper:#eceff4;--chrome:#e5e9f0;--sidebar:#e5e9f0;--ink:#2e3440;--muted:#58657a;--line:#d0d6e0;--accent:#456d87;--accent-bg:#dbe4ee;--code:#e1e6ee}
+body.dark[data-moye-color-theme="nord"],.dark [data-moye-color-theme="nord"]{--paper:#2e3440;--chrome:#292e39;--sidebar:#3b4252;--ink:#eceff4;--muted:#b4becf;--line:#4c566a;--accent:#88c0d0;--accent-bg:#414e61;--code:#282e39}
+
+/* Native shaping for editable prose; read-only token geometry has its own
+   measured widths, so it disables additional native trimming on its boxes. */
+.moye-typography[data-moye-punctuation-compression="true"] .vditor-ir .vditor-reset :is(p,li,blockquote),
+.moye-typography[data-moye-punctuation-compression="true"] .vditor-wysiwyg .vditor-reset :is(p,li,blockquote),
+.moye-typography[data-moye-punctuation-compression="true"] .moye-reading-content :is(p,li,blockquote),
+.moye-typography[data-settings-preview][data-moye-punctuation-compression="true"] :is(p,li,blockquote){text-spacing-trim:var(--moye-punctuation-trim,normal)}
+.moye-typography[data-moye-punctuation-compression="true"] :is(code,pre,a,kbd,samp,math,mjx-container,.katex,[data-type="math-inline"],[data-type="math-block"]){text-spacing-trim:space-all}
+[data-moye-typeset] [data-moye-typeset-box],
+[data-moye-typeset] [data-moye-typeset-glyph]{text-spacing-trim:space-all;text-autospace:no-autospace}

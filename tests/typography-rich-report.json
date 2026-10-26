@@ -1,0 +1,271 @@
+{
+  "generatedAt": "2026-10-25T10:49:52.509Z",
+  "platform": "linux/x64",
+  "purpose": "Actual Chromium glyph advance/ink, shaped rich-inline paragraphs and source/copy integrity; not an original Telari differential.",
+  "results": [
+    {
+      "name": "full-width punctuation uses smaller actual advances and real raster ink remains inside its allocated box",
+      "status": "pass",
+      "details": {
+        "glyphs": [
+          {
+            "glyph": "「",
+            "naturalAdvance": 20,
+            "allocatedAdvance": 10,
+            "rasterInk": {
+              "first": 2,
+              "last": 7,
+              "pixels": 22
+            }
+          },
+          {
+            "glyph": "」",
+            "naturalAdvance": 20,
+            "allocatedAdvance": 10,
+            "rasterInk": {
+              "first": 2,
+              "last": 7,
+              "pixels": 22
+            }
+          },
+          {
+            "glyph": "，",
+            "naturalAdvance": 20,
+            "allocatedAdvance": 10,
+            "rasterInk": {
+              "first": 4,
+              "last": 6,
+              "pixels": 12
+            }
+          },
+          {
+            "glyph": "。",
+            "naturalAdvance": 20,
+            "allocatedAdvance": 10,
+            "rasterInk": {
+              "first": 3,
+              "last": 7,
+              "pixels": 14
+            }
+          },
+          {
+            "glyph": "（",
+            "naturalAdvance": 20,
+            "allocatedAdvance": 10,
+            "rasterInk": {
+              "first": 3,
+              "last": 6,
+              "pixels": 21
+            }
+          },
+          {
+            "glyph": "）",
+            "naturalAdvance": 20,
+            "allocatedAdvance": 10,
+            "rasterInk": {
+              "first": 3,
+              "last": 6,
+              "pixels": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Latin decimals, Windows and URL paths, and Japanese/Korean letters keep exact text and display advance",
+      "status": "pass",
+      "details": {
+        "result": {
+          "algorithm": "Knuth–Plass-style box/glue/penalty dynamic programming with DOM-shaped inline metrics; bounded, not TeX-identical",
+          "optimizedParagraphs": 0,
+          "compressedParagraphs": 0,
+          "compressedMarks": 0,
+          "fallbackParagraphs": 1,
+          "reasons": {
+            "noCompressibleMarks": 1
+          },
+          "maximumTokens": 700,
+          "maximumParagraphCharacters": 4096,
+          "maximumDocumentCharacters": 18000,
+          "maximumApplyMilliseconds": 100,
+          "maximumParagraphMilliseconds": 45
+        },
+        "before": 811.8125,
+        "after": 811.8125,
+        "text": "v1.2.3, A/B: C:\\目录（旧）\\file.md https://example.test/资源（旧）/a.md 日本語かな 한글",
+        "glyphBoxes": 0
+      }
+    },
+    {
+      "name": "DOM-shaped nested emphasis, deletion, marks and super/subscripts optimise in prose, quotes and list paragraphs",
+      "status": "pass",
+      "details": {
+        "paragraphs": 3,
+        "report": {
+          "algorithm": "Knuth–Plass-style box/glue/penalty dynamic programming with DOM-shaped inline metrics; bounded, not TeX-identical",
+          "optimizedParagraphs": 3,
+          "compressedParagraphs": 3,
+          "compressedMarks": 38,
+          "fallbackParagraphs": 0,
+          "reasons": {},
+          "maximumTokens": 700,
+          "maximumParagraphCharacters": 4096,
+          "maximumDocumentCharacters": 18000,
+          "maximumApplyMilliseconds": 100,
+          "maximumParagraphMilliseconds": 45
+        },
+        "formats": {
+          "em strong": 20,
+          "del": 10,
+          "mark": 10,
+          "sup": 5,
+          "sub": 5
+        },
+        "copyKeepsOneOriginalLink": true,
+        "exactText": true
+      }
+    },
+    {
+      "name": "copy merges only fragments of one original inline and preserves adjacent independent footnotes and same-URL links",
+      "status": "pass",
+      "details": {
+        "report": {
+          "algorithm": "Knuth–Plass-style box/glue/penalty dynamic programming with DOM-shaped inline metrics; bounded, not TeX-identical",
+          "optimizedParagraphs": 1,
+          "compressedParagraphs": 1,
+          "compressedMarks": 24,
+          "fallbackParagraphs": 0,
+          "reasons": {},
+          "maximumTokens": 700,
+          "maximumParagraphCharacters": 4096,
+          "maximumDocumentCharacters": 18000,
+          "maximumApplyMilliseconds": 100,
+          "maximumParagraphMilliseconds": 45
+        },
+        "links": [
+          "独立甲",
+          "独立乙"
+        ],
+        "footnotes": [
+          "1",
+          "2"
+        ],
+        "style": "text-indent:3px",
+        "exactRestoration": true,
+        "forgedStateIgnored": true
+      }
+    },
+    {
+      "name": "punctuation hanging has actual overflow beyond the chosen line end without changing source characters",
+      "status": "pass",
+      "details": {
+        "report": {
+          "algorithm": "Knuth–Plass-style box/glue/penalty dynamic programming with DOM-shaped inline metrics; bounded, not TeX-identical",
+          "optimizedParagraphs": 1,
+          "compressedParagraphs": 1,
+          "compressedMarks": 12,
+          "fallbackParagraphs": 0,
+          "reasons": {},
+          "maximumTokens": 700,
+          "maximumParagraphCharacters": 4096,
+          "maximumDocumentCharacters": 18000,
+          "maximumApplyMilliseconds": 100,
+          "maximumParagraphMilliseconds": 45
+        },
+        "text": "中文中文中文中文中文。中文中文中文中文中文。中文中文中文中文中文。中文中文中文中文中文。中文中文中文中文中文。中文中文中文中文中文。中文中文中文中文中文。中文中文中文中文中文。中文中文中文中文中文。中文中文中文中文中文。中文中文中文中文中文。中文中文中文中文中文。",
+        "width": 205,
+        "hangs": [
+          4.984375,
+          4.84375,
+          4.84375,
+          4.84375,
+          4.84375,
+          4.84375,
+          4.84375,
+          4.84375,
+          4.84375,
+          4.84375,
+          4.84375,
+          5.15625
+        ],
+        "clip": {
+          "x": 40,
+          "y": 75,
+          "width": 221,
+          "height": 32
+        },
+        "rasterOverflowPixels": 3
+      }
+    },
+    {
+      "name": "native editing trim is capability-detected and view changes never mutate editable text or nodes",
+      "status": "pass",
+      "details": {
+        "capabilities": {
+          "textAutospace": true,
+          "hangingPunctuation": false,
+          "textSpacingTrim": "trim-start",
+          "punctuationCompressionEditing": true,
+          "punctuationCompressionReading": true,
+          "punctuationCompressionLimit": "Native editing trim depends on browser support. Read-only full-width marks use bounded, measured glyph geometry; Latin punctuation, code and URL/path text are excluded.",
+          "roleFonts": true,
+          "roleFontLimit": "Named local fonts with unicode ranges, followed by the existing document font; unavailable fonts fall back. Generic families do not create a local font face.",
+          "justification": "Browser line justification; this is not Knuth–Plass paragraph optimisation."
+        },
+        "changes": 0,
+        "exactDOM": true,
+        "font": "20px / 32px \"Noto Sans SC\", sans-serif",
+        "lang": "zh-CN",
+        "fullAdvance": 80,
+        "nativeAdvance": 70,
+        "nativeValue": "trim-start",
+        "skippedEditable": true
+      }
+    },
+    {
+      "name": "unsupported inline geometry, generated quotes, math/code and excessive paragraphs fall back intact",
+      "status": "pass",
+      "details": {
+        "algorithm": "Knuth–Plass-style box/glue/penalty dynamic programming with DOM-shaped inline metrics; bounded, not TeX-identical",
+        "optimizedParagraphs": 0,
+        "compressedParagraphs": 0,
+        "compressedMarks": 0,
+        "fallbackParagraphs": 7,
+        "reasons": {
+          "unsupportedInlineContent": 3,
+          "complexInlineGeometry": 1,
+          "unsupportedWritingDirection": 1,
+          "generatedInlineContent": 1,
+          "boundedDocumentBudget": 1
+        },
+        "maximumTokens": 700,
+        "maximumParagraphCharacters": 4096,
+        "maximumDocumentCharacters": 18000,
+        "maximumApplyMilliseconds": 100,
+        "maximumParagraphMilliseconds": 45
+      }
+    },
+    {
+      "name": "actual settings toggle preserves backward source selection, pending input and a meaningful undo step",
+      "status": "pass",
+      "details": {
+        "backwardSelection": [
+          1,
+          5,
+          "backward"
+        ],
+        "inputPreserved": true,
+        "undoExact": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": false,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "pass": true
+}

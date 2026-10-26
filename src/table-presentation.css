@@ -1,0 +1,4 @@
+/* Per-table book-style rules are generated outside the editable DOM by
+   table-presentation.js. Transparent borders preserve the grid's geometry. */
+#editor .vditor-reset table{scrollbar-width:thin;scrollbar-color:var(--muted) transparent}
+@media print{#editor .vditor-reset.moye-tables-booktabs table{break-inside:auto}}

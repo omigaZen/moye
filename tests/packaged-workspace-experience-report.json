@@ -1,0 +1,121 @@
+{
+  "generatedAt": "2026-10-25T10:55:26.229Z",
+  "platform": "linux",
+  "purpose": "Authorized workspace, preview tabs and encoding UI; Moye feature tests, not Telari differential acceptance",
+  "results": [
+    {
+      "name": "native authorized folder opens a file tree without arbitrary path capability",
+      "status": "pass",
+      "details": {
+        "names": [
+          "caps",
+          "deep",
+          "1.md",
+          "2.md",
+          "3.txt",
+          "10.md"
+        ]
+      }
+    },
+    {
+      "name": "single-click preview reuses globally across pinned navigation and never exceeds 20 tabs",
+      "status": "pass",
+      "details": {
+        "tabs": [
+          "2.md",
+          "10.md"
+        ],
+        "globalPreviewReplacement": true,
+        "twentyTabCap": true,
+        "directPinnedAttempts": 3
+      }
+    },
+    {
+      "name": "workspace search finds a document inside a still-collapsed directory",
+      "status": "pass",
+      "details": {
+        "nestedSearch": true
+      }
+    },
+    {
+      "name": "same-directory next and previous follow numeric Markdown order and skip TXT",
+      "status": "pass",
+      "details": {
+        "sequence": [
+          "1.md",
+          "2.md",
+          "10.md",
+          "2.md"
+        ]
+      }
+    },
+    {
+      "name": "unknown file token is rejected without replacing current document",
+      "status": "pass",
+      "details": {
+        "rejected": true,
+        "unchanged": true
+      }
+    },
+    {
+      "name": "expanded nested directory refreshes after an external add and removal",
+      "status": "pass",
+      "details": {
+        "expandedStateKept": true,
+        "externalAddRemove": true
+      }
+    },
+    {
+      "name": "workspace header chooses through the document controller and hiding returns focus to the editor",
+      "status": "pass",
+      "details": {
+        "staleTokensCleared": true,
+        "visibleEditorFocus": true
+      }
+    },
+    {
+      "name": "slow native file reading locks real input until the replacement document is ready",
+      "status": "pass",
+      "details": {
+        "slowReadMs": 600,
+        "nativeInputLocked": true,
+        "replacementExact": true
+      }
+    },
+    {
+      "name": "GB18030 guessed encoding is visible and explicitly confirmable",
+      "status": "pass",
+      "details": {
+        "confirmed": true,
+        "noOpBytesPreserved": true
+      }
+    },
+    {
+      "name": "UTF16 BOM opens correctly and explicit conversion persists UTF8 bytes",
+      "status": "pass",
+      "details": {
+        "converted": true,
+        "noImplicitFinalLF": true,
+        "explicitLFInsertAndDeletePreserved": true
+      }
+    },
+    {
+      "name": "explicit Big5 selection survives a full application restart without exposing the filename in preferences",
+      "status": "pass",
+      "details": {
+        "restartRestored": true,
+        "abandonedConversionReload": true,
+        "hashedPathOnly": true,
+        "encoding": "big5"
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": true,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar"
+  },
+  "pass": true
+}

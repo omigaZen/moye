@@ -1,0 +1,10 @@
+.moye-table-tools{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);z-index:45;display:flex;flex-wrap:wrap;justify-content:center;gap:3px;max-width:calc(100% - 28px);width:max-content;padding:7px 9px;border:1px solid var(--line,#dce1d9);border-radius:9px;background:var(--paper,#fff);color:var(--ink,#394139);box-shadow:0 5px 22px #00000013;user-select:none}
+.moye-table-tools[hidden]{display:none!important}
+.reading-mode .moye-table-tools.moye-table-tools--reading:not([hidden]){display:flex!important}
+.moye-table-tools button{font:inherit;font-size:11px;line-height:1.4;padding:7px 9px;border:0;border-radius:5px;background:transparent;color:inherit;white-space:nowrap;cursor:pointer}
+.moye-table-tools button:hover,.moye-table-tools button[aria-pressed="true"]{background:var(--accent-bg,#edf3e9);color:var(--accent,#527b48)}
+.moye-table-tools button:focus-visible{outline:2px solid var(--accent,#527b48);outline-offset:1px}
+.moye-table-tools button:disabled{opacity:.35;cursor:default;background:transparent;color:inherit}
+.moye-table-tools button.moye-table-tools__group-start{border-left:1px solid var(--line,#dce1d9);border-top-left-radius:0;border-bottom-left-radius:0;margin-left:3px;padding-left:12px}
+.moye-table-tools button.moye-table-tools__delete:hover{color:#ad514b;background:#f6e9e6}
+@media(max-width:760px){.moye-table-tools{bottom:10px;padding:5px;gap:1px}.moye-table-tools button{font-size:10px;padding:6px}}

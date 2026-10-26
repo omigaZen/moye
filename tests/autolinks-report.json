@@ -1,0 +1,75 @@
+{
+  "generatedAt": "2026-10-25T10:47:13.990Z",
+  "purpose": "Moye autolink overlay regressions, not Typora equivalence proof",
+  "results": [
+    {
+      "name": "overlay accepts normal-parser URLs and excludes explicit links/code/math/markers without DOM or selection changes",
+      "status": "pass",
+      "details": {
+        "htmlUnchanged": true,
+        "selection": "Visit",
+        "expectedSelection": "Visit",
+        "highlight": true,
+        "links": [
+          {
+            "url": "https://example.com/a_(b)",
+            "text": "https://example.com/a_(b)",
+            "rangeText": "https://example.com/a_(b)"
+          },
+          {
+            "url": "mailto:x@example.com",
+            "text": "x@example.com",
+            "rangeText": "x@example.com"
+          },
+          {
+            "url": "http://www.example.com",
+            "text": "www.example.com",
+            "rangeText": "www.example.com"
+          }
+        ]
+      }
+    },
+    {
+      "name": "only modified URLs reparse, candidate-free long prose bypasses Lute",
+      "status": "pass",
+      "details": {
+        "cached": 0,
+        "extraParseCalls": 0,
+        "textLength": 100000
+      }
+    },
+    {
+      "name": "Ctrl click follows URL through callback and ordinary click leaves it editable",
+      "status": "pass",
+      "details": {
+        "callbackOnly": true,
+        "immediateEditedURL": "https://fresh.example.org/new",
+        "staleCachedURLBeforeClick": "https://example.com/a_(b)",
+        "rawDOMPreserved": true
+      }
+    },
+    {
+      "name": "disabled clears highlights and composition defers refresh until commit",
+      "status": "pass",
+      "details": {
+        "disabled": true,
+        "during": [
+          "https://fresh.example.org/new"
+        ],
+        "after": [
+          "https://changed.example.org/path"
+        ]
+      }
+    },
+    {
+      "name": "debounced observer follows text edits and destroy removes its overlay",
+      "status": "pass",
+      "details": {
+        "links": 0,
+        "highlight": false,
+        "text": "https://observer.example.org/new"
+      }
+    }
+  ],
+  "pageErrors": []
+}

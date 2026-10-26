@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2026-10-25T10:49:19.741Z",
+  "platform": "linux/x64",
+  "purpose": "Independent Moye custom colour theme regression; restricted TOML, not Telari theme-format parity",
+  "application": {
+    "version": "0.0",
+    "isPackaged": false,
+    "path": "/workspace/scratch/8a7610d50e71/moye/electron",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "results": [
+    {
+      "name": "copying and editing a theme previews safe colours without applying the draft to the app",
+      "status": "pass",
+      "elapsedMs": 666,
+      "details": {
+        "preview": "rgb(18, 52, 86)",
+        "appThemeUnchanged": true
+      }
+    },
+    {
+      "name": "saving and applying a custom theme updates real UI colours without rewriting or relaying out content",
+      "status": "pass",
+      "elapsedMs": 201,
+      "details": {
+        "actualBodyColour": "#123456",
+        "layoutUnchanged": true,
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "custom themes inherit base colours and skip individual invalid colour keys offline",
+      "status": "pass",
+      "elapsedMs": 77,
+      "details": {
+        "inheritedBody": "#123456",
+        "heading": "#654321",
+        "link": "#47705b",
+        "ignoredKeyDiagnostics": 1
+      }
+    },
+    {
+      "name": "external atomic file replacement live-updates an inherited active theme",
+      "status": "pass",
+      "elapsedMs": 131,
+      "details": {
+        "hotReloadedBody": "#204060",
+        "documentUnchanged": true
+      }
+    },
+    {
+      "name": "an external edit preserves the in-panel draft and stale save cannot overwrite disk",
+      "status": "pass",
+      "elapsedMs": 336,
+      "details": {
+        "draftPreserved": true,
+        "externalVersionNotOverwritten": true
+      }
+    },
+    {
+      "name": "malformed external files are isolated and remain editable through diagnostics",
+      "status": "pass",
+      "elapsedMs": 235,
+      "details": {
+        "invalidFileIsolated": true,
+        "repairedThroughEditor": true
+      }
+    },
+    {
+      "name": "switching theme files retains unsaved per-file drafts without writing them",
+      "status": "pass",
+      "elapsedMs": 194,
+      "details": {
+        "unsavedDraftRetained": true,
+        "diskNotChangedBySelection": true
+      }
+    },
+    {
+      "name": "appearance mismatch is explicit and becomes usable after switching the app appearance",
+      "status": "pass",
+      "elapsedMs": 370,
+      "details": {
+        "mismatchVisible": true,
+        "appliedAfterMatchingAppearance": true
+      }
+    },
+    {
+      "name": "custom theme files and selected theme survive an actual app restart",
+      "status": "pass",
+      "elapsedMs": 920,
+      "details": {
+        "theme": "custom:night",
+        "persistedFile": true
+      }
+    },
+    {
+      "name": "deleting the active theme is confirmed, leaves the document intact and reports missing selection safely",
+      "status": "pass",
+      "elapsedMs": 670,
+      "details": {
+        "confirmedDelete": true,
+        "sourceUnchanged": true,
+        "safeFallback": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "pass": true
+}

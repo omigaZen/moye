@@ -1,0 +1,272 @@
+{
+  "generatedAt": "2026-10-25T10:48:14.252Z",
+  "platform": "linux/x64",
+  "purpose": "Moye table presentation and structured copying regression; public Telari behavior inspired, not native Telari differential evidence",
+  "results": [
+    {
+      "name": "natural tables shrink to content without altering source or clean state",
+      "status": "pass",
+      "elapsedMs": 409,
+      "details": {
+        "table": {
+          "left": 442,
+          "right": 653,
+          "width": 211,
+          "height": 144.71875,
+          "scrollWidth": 211,
+          "clientWidth": 211
+        },
+        "bodyWidth": 780,
+        "region": {
+          "left": 224,
+          "right": 1440
+        },
+        "editorWidth": 1216,
+        "editorScrollWidth": 1216,
+        "alignment": [
+          [
+            "left",
+            "center",
+            "right"
+          ],
+          [
+            "left",
+            "center",
+            "right"
+          ],
+          [
+            "left",
+            "center",
+            "right"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "window tables borrow body margins while staying inside the editor",
+      "status": "pass",
+      "elapsedMs": 119,
+      "details": {
+        "table": {
+          "left": 300.546875,
+          "right": 1363.453125,
+          "width": 1062.90625,
+          "height": 96.8125,
+          "scrollWidth": 1063,
+          "clientWidth": 1063
+        },
+        "bodyWidth": 780,
+        "region": {
+          "left": 224,
+          "right": 1440
+        },
+        "editorWidth": 1216,
+        "editorScrollWidth": 1216,
+        "alignment": [
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "name": "narrow tables scroll locally without a horizontally scrolling document",
+      "status": "pass",
+      "elapsedMs": 56,
+      "details": {
+        "table": {
+          "left": 24,
+          "right": 456,
+          "width": 432,
+          "height": 106.8125,
+          "scrollWidth": 1063,
+          "clientWidth": 432
+        },
+        "bodyWidth": 432,
+        "region": {
+          "left": 0,
+          "right": 480
+        },
+        "editorWidth": 480,
+        "editorScrollWidth": 480,
+        "alignment": [
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "localScrollLeft": 100
+      }
+    },
+    {
+      "name": "booktabs changes visible rules without moving cells or column alignment",
+      "status": "pass",
+      "elapsedMs": 200,
+      "details": {
+        "geometryStable": true,
+        "borders": {
+          "body": "rgba(0, 0, 0, 0)",
+          "header": "rgb(48, 56, 51)"
+        }
+      }
+    },
+    {
+      "name": "whole-table visual alignment does not rewrite per-column Markdown alignment",
+      "status": "pass",
+      "elapsedMs": 244,
+      "details": {
+        "start": 442,
+        "center": 726.5,
+        "end": 1011
+      }
+    },
+    {
+      "name": "dedicated whole-table copy writes TSV and safe HTML through the native clipboard",
+      "status": "pass",
+      "elapsedMs": 139,
+      "details": {
+        "text": "左\t中\t右\r\n甲\t\t丙\r\n丁\t戊\t己",
+        "structuredHtml": true,
+        "documentUnchanged": true
+      }
+    },
+    {
+      "name": "reverse rectangle copy preserves its shape and empty cells independently of normal Markdown copy",
+      "status": "pass",
+      "elapsedMs": 140,
+      "details": {
+        "text": "\t丙\r\n戊\t己",
+        "backwardSelectionRetained": true
+      }
+    },
+    {
+      "name": "cell serialization keeps spaces, line breaks and literal markup without executable HTML",
+      "status": "pass",
+      "elapsedMs": 1,
+      "details": {
+        "text": "  padded  \t\t\"a\nb\"\t<img onerror=x>",
+        "html": "<table><tbody><tr><td style=\"white-space: pre-wrap;\">  padded  </td><td style=\"white-space: pre-wrap;\"></td><td style=\"white-space: pre-wrap;\">a<br>b</td><td style=\"white-space: pre-wrap;\">&lt;img onerror=x&gt;</td></tr></tbody></table>",
+        "rows": 1,
+        "columns": 4
+      }
+    },
+    {
+      "name": "copy failure leaves source, selection and dirty state unchanged",
+      "status": "pass",
+      "elapsedMs": 88,
+      "details": {
+        "failureHandled": true,
+        "editorUnchanged": true
+      }
+    },
+    {
+      "name": "composition guards table changes and structured copy until text is committed",
+      "status": "pass",
+      "elapsedMs": 88,
+      "details": {
+        "edit": false,
+        "copy": false,
+        "unchanged": true
+      }
+    },
+    {
+      "name": "reading header hover offers copy actions while mutation commands stay unavailable",
+      "status": "pass",
+      "elapsedMs": 165,
+      "details": {
+        "copyOnly": true,
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "readonly rectangular selection copies the selected cells after leaving the header",
+      "status": "pass",
+      "elapsedMs": 87,
+      "details": {
+        "selectedCellsCopied": true,
+        "text": "\t丙\r\n戊\t己"
+      }
+    },
+    {
+      "name": "the edit toolbar moves away from a cell at the bottom of the viewport",
+      "status": "pass",
+      "elapsedMs": 125,
+      "details": {
+        "cell": {
+          "top": 779.515625,
+          "bottom": 827.421875
+        },
+        "toolbar": {
+          "top": 67,
+          "bottom": 112.390625
+        }
+      }
+    },
+    {
+      "name": "presentation and copying preserve the prior real edit undo step",
+      "status": "pass",
+      "elapsedMs": 574,
+      "details": {
+        "realEditUndoRetained": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": false,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "pass": true
+}

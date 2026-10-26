@@ -1,0 +1,124 @@
+{
+  "generatedAt": "2026-10-25T10:47:52.478Z",
+  "platform": "linux/x64",
+  "purpose": "Moye real-application image preferences regression; not Typora differential acceptance",
+  "results": [
+    {
+      "name": "default copy keeps document asset folder, escaped relative syntax and real image preview",
+      "status": "pass",
+      "elapsedMs": 171,
+      "details": {
+        "markdown": "![原图 空格 (1)#%20](./%E5%9B%BE%E7%89%87%20%E6%96%87%E6%A1%A3%201.assets/%E5%8E%9F%E5%9B%BE%20%E7%A9%BA%E6%A0%BC%20%281%29%23%2520.svg)",
+        "rendered": {
+          "markdown": "# 图片\n\n![原图 空格 (1)#%20](./%E5%9B%BE%E7%89%87%20%E6%96%87%E6%A1%A3%201.assets/%E5%8E%9F%E5%9B%BE%20%E7%A9%BA%E6%A0%BC%20%281%29%23%2520.svg)\n",
+          "image": {
+            "src": "file:///tmp/moye-image-settings-LX741J/%E5%9B%BE%E7%89%87%20%E6%96%87%E6%A1%A3%201.assets/%E5%8E%9F%E5%9B%BE%20%E7%A9%BA%E6%A0%BC%20%281%29%23%2520.svg",
+            "width": 640
+          }
+        }
+      }
+    },
+    {
+      "name": "nested filename folder template produces actual assets and survives Save As and reopening",
+      "status": "pass",
+      "elapsedMs": 336,
+      "details": {
+        "folder": "图片/图片 文档 2.assets/原图 空格 (1)#%20.svg",
+        "migrated": true,
+        "reopenedPreview": true
+      }
+    },
+    {
+      "name": "reference action honors explicit relative syntax and relative prefix changes",
+      "status": "pass",
+      "elapsedMs": 90,
+      "details": {
+        "withoutPrefix": "![原图 空格 (1)#%20](%E5%8E%9F%E5%9B%BE%20%E7%A9%BA%E6%A0%BC%20%281%29%23%2520.svg)",
+        "withPrefix": "![原图 空格 (1)#%20](./%E5%8E%9F%E5%9B%BE%20%E7%A9%BA%E6%A0%BC%20%281%29%23%2520.svg)"
+      }
+    },
+    {
+      "name": "absolute syntax for copies creates a separate file and a round-trippable file URI",
+      "status": "pass",
+      "elapsedMs": 74,
+      "details": {
+        "markdown": "![原图 空格 (1)#%20](file:///tmp/moye-image-settings-LX741J/%E5%9B%BE%E7%89%87%20%E6%96%87%E6%A1%A3%204.assets/%E5%8E%9F%E5%9B%BE%20%E7%A9%BA%E6%A0%BC%20%281%29%23%2520.svg)",
+        "rendered": {
+          "markdown": "# 图片\n\n![原图 空格 (1)#%20](file:///tmp/moye-image-settings-LX741J/%E5%9B%BE%E7%89%87%20%E6%96%87%E6%A1%A3%204.assets/%E5%8E%9F%E5%9B%BE%20%E7%A9%BA%E6%A0%BC%20%281%29%23%2520.svg)\n",
+          "image": {
+            "src": "file:///tmp/moye-image-settings-LX741J/%E5%9B%BE%E7%89%87%20%E6%96%87%E6%A1%A3%204.assets/%E5%8E%9F%E5%9B%BE%20%E7%A9%BA%E6%A0%BC%20%281%29%23%2520.svg",
+            "width": 640
+          }
+        }
+      }
+    },
+    {
+      "name": "disabled optional escaping keeps readable Unicode and spaces with valid image rendering",
+      "status": "pass",
+      "elapsedMs": 62,
+      "details": {
+        "markdown": "![原图 空格 (1)#%20](<图片/原图 空格 (1)%23%2520.svg>)",
+        "rendered": {
+          "markdown": "# 图片\n\n![原图 空格 (1)#%20](图片/原图 空格 (1)%23%2520.svg)\n",
+          "image": {
+            "src": "file:///tmp/moye-image-settings-LX741J/%E5%9B%BE%E7%89%87/%E5%8E%9F%E5%9B%BE%20%E7%A9%BA%E6%A0%BC%20(1)%23%2520.svg",
+            "width": 640
+          }
+        }
+      }
+    },
+    {
+      "name": "local source scope bypasses file copy while bitmap bytes are materialized using selected folder",
+      "status": "pass",
+      "elapsedMs": 129,
+      "details": {
+        "localReferenced": true,
+        "bitmapCopied": true,
+        "markdown": "![粘贴](./%E5%89%AA%E8%B4%B4%E6%9D%BF/%E5%9B%BE%E7%89%87%20%E6%96%87%E6%A1%A3%206/%E7%B2%98%E8%B4%B4.svg)",
+        "rendered": {
+          "markdown": "# 图片\n\n![原图 空格 (1)#%20](file:///tmp/moye-image-settings-LX741J/%E5%8E%9F%E5%9B%BE%20%E7%A9%BA%E6%A0%BC%20%281%29%23%2520.svg)![粘贴](./%E5%89%AA%E8%B4%B4%E6%9D%BF/%E5%9B%BE%E7%89%87%20%E6%96%87%E6%A1%A3%206/%E7%B2%98%E8%B4%B4.svg)\n",
+          "image": {
+            "src": "file:///tmp/moye-image-settings-LX741J/%E5%89%AA%E8%B4%B4%E6%9D%BF/%E5%9B%BE%E7%89%87%20%E6%96%87%E6%A1%A3%206/%E7%B2%98%E8%B4%B4.svg",
+            "width": 640
+          }
+        }
+      }
+    },
+    {
+      "name": "invalid copy folder preferences fail validation without replacing existing setting",
+      "status": "pass",
+      "elapsedMs": 75,
+      "details": {
+        "rejected": [
+          "../outside",
+          "/tmp/outside",
+          "C:\\outside",
+          "safe/../../outside",
+          "${unknown}"
+        ],
+        "preservedValue": "安全目录"
+      }
+    },
+    {
+      "name": "readable paths survive settings reload, Save As, reopening and source/live mode round trips",
+      "status": "pass",
+      "elapsedMs": 270,
+      "details": {
+        "migratedReadablePath": true,
+        "reopenedPreview": true,
+        "sourceLiveRoundTrips": 2,
+        "sourceUnchanged": true,
+        "unmatchedParenthesisAndCodeDelimiter": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": false,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "pass": true
+}

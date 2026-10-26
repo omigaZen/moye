@@ -1,0 +1,131 @@
+{
+  "platform": "linux/x64",
+  "application": {
+    "version": "0.0",
+    "isPackaged": false,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye/electron",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "kind": "Moye settings feature regression, not Typora differential acceptance",
+  "network": "HTTP(S) blocked",
+  "remoteRequests": [],
+  "results": [
+    {
+      "name": "remaining: disabled block-math preview shows editable formula source and restores rendering after an edit",
+      "status": "pass",
+      "elapsedMs": 664,
+      "details": {
+        "sourceVisible": {
+          "width": 59.953125,
+          "height": 19,
+          "editable": true
+        },
+        "editRetained": true,
+        "renderingRestored": true
+      }
+    },
+    {
+      "name": "remaining: diagram toggle leaves source visible, preserves ordinary code highlighting, and restores diagrams",
+      "status": "pass",
+      "elapsedMs": 210,
+      "details": {
+        "diagramCodeVisible": true,
+        "ordinaryCodeHighlighted": true,
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "remaining: code default language applies to toolbar creation without duplicating an unselected document",
+      "status": "pass",
+      "elapsedMs": 327,
+      "details": {
+        "defaultLanguageInCreatedFence": "python",
+        "unselectedParagraphCopied": false,
+        "selectedBodyWrappedExactlyOnce": true
+      }
+    },
+    {
+      "name": "remaining: code theme loads local styles and changes the actual keyword colour",
+      "status": "pass",
+      "elapsedMs": 166,
+      "details": [
+        {
+          "theme": "monokai",
+          "colour": "rgb(249, 38, 114)",
+          "stylesheet": "file:///workspace/scratch/8a7610d50e71/moye/src/vendor/vditor/dist/js/highlight.js/styles/monokai.min.css",
+          "keywords": 3,
+          "lineNumbers": 0
+        },
+        {
+          "theme": "github",
+          "colour": "rgb(215, 58, 73)",
+          "stylesheet": "file:///workspace/scratch/8a7610d50e71/moye/src/vendor/vditor/dist/js/highlight.js/styles/github.min.css",
+          "keywords": 3,
+          "lineNumbers": 1
+        },
+        {
+          "theme": "monokai",
+          "colour": "rgb(249, 38, 114)",
+          "stylesheet": "file:///workspace/scratch/8a7610d50e71/moye/src/vendor/vditor/dist/js/highlight.js/styles/monokai.min.css",
+          "keywords": 3,
+          "lineNumbers": 1
+        },
+        {
+          "theme": "github",
+          "colour": "rgb(215, 58, 73)",
+          "stylesheet": "file:///workspace/scratch/8a7610d50e71/moye/src/vendor/vditor/dist/js/highlight.js/styles/github.min.css",
+          "keywords": 3,
+          "lineNumbers": 0
+        }
+      ]
+    },
+    {
+      "name": "remaining: monospace setting changes both rendered code and source-editor computed fonts",
+      "status": "pass",
+      "elapsedMs": 135,
+      "details": {
+        "codeFonts": [
+          "\"Liberation Mono\", monospace"
+        ],
+        "sourceFont": "\"Liberation Mono\", monospace"
+      }
+    },
+    {
+      "name": "remaining: typewriter mode centres the caret after Enter in the middle of a long document",
+      "status": "pass",
+      "elapsedMs": 497,
+      "details": [
+        {
+          "enabled": false,
+          "caretTop": 256.46875,
+          "centre": 465,
+          "distance": 208.53125,
+          "scrollTop": 1662
+        },
+        {
+          "enabled": true,
+          "caretTop": 470.46875,
+          "centre": 465,
+          "distance": 5.46875,
+          "scrollTop": 1448
+        }
+      ]
+    },
+    {
+      "name": "remaining: selected indent width changes actual Tab insertion inside an IR code block",
+      "status": "pass",
+      "elapsedMs": 1017,
+      "details": [
+        {
+          "width": 2,
+          "source": "```csharp\n  Call();\n```\n"
+        },
+        {
+          "width": 8,
+          "source": "```csharp\n        Call();\n```\n"
+        }
+      ]
+    }
+  ],
+  "pageErrors": []
+}

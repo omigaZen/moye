@@ -1,0 +1,137 @@
+{
+  "generatedAt": "2026-10-25T08:59:37.626Z",
+  "platform": "linux",
+  "purpose": "Bounded TXT windows, full-source copying, chapter navigation and next-document UI; not Telari differential or real IME acceptance",
+  "fixture": {
+    "characters": 2239862,
+    "bytes": 4726022,
+    "chapters": 180,
+    "sha256": "42f6b95c47073767c441eb106810ec1f3d0a70ce20fb334397b80fa511bac646"
+  },
+  "results": [
+    {
+      "name": "large TXT opens into the bounded reader without constructing a full rich-editor DOM",
+      "status": "pass",
+      "elapsedMs": 116639,
+      "details": {
+        "virtualized": true,
+        "windows": 72,
+        "currentWindow": 0,
+        "sourceLength": 2239862,
+        "mountedCharacters": 30870,
+        "mountedElements": 8,
+        "mode": "sv",
+        "irElements": 159,
+        "dirty": false,
+        "source": 2239862,
+        "outline": 180,
+        "openToReadMs": 116610.775088
+      }
+    },
+    {
+      "name": "a distant chapter mounts its source window and Back restores the previous window",
+      "status": "pass",
+      "elapsedMs": 259,
+      "details": {
+        "absentBefore": true,
+        "targetChapter": 151,
+        "navigationMs": 19.229441000003135,
+        "wholeSourceFindVisible": true
+      }
+    },
+    {
+      "name": "native reading Select All copies the entire exact source across unmounted windows",
+      "status": "pass",
+      "elapsedMs": 294,
+      "details": {
+        "characters": 2239862,
+        "sha256": "42f6b95c47073767c441eb106810ec1f3d0a70ce20fb334397b80fa511bac646",
+        "exact": true
+      }
+    },
+    {
+      "name": "a partial paragraph selection copies only the exact selected source, never the entire virtual document",
+      "status": "pass",
+      "elapsedMs": 4,
+      "details": {
+        "exactPartialSelection": true,
+        "length": 13
+      }
+    },
+    {
+      "name": "TXT presets affect only the reader and keep source, edit selection and undo intact",
+      "status": "fail",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'17px' !== '18px'\n\n    at /workspace/scratch/8a7610d50e71/moye/tests/editor-reading-longform.cjs:24:806\n    at async check (/workspace/scratch/8a7610d50e71/moye/tests/editor-reading-longform.cjs:15:76)\n    at async main (/workspace/scratch/8a7610d50e71/moye/tests/editor-reading-longform.cjs:24:5)"
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": false,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "baselineMemory": {
+    "available": true,
+    "unit": "KiB",
+    "processes": [
+      {
+        "type": "Browser",
+        "rssKiB": 168440,
+        "pssKiB": 95319
+      },
+      {
+        "type": "Utility",
+        "rssKiB": 84452,
+        "pssKiB": 29896
+      },
+      {
+        "type": "Tab",
+        "rssKiB": 254492,
+        "pssKiB": 196469
+      },
+      {
+        "type": "GPU",
+        "rssKiB": 60460,
+        "pssKiB": 19571
+      }
+    ],
+    "totalRssKiB": 567844,
+    "totalPssKiB": 341255,
+    "note": "One settled process snapshot, not peak memory. RSS double-counts shared pages; PSS apportions them. No memory threshold was invented."
+  },
+  "openToReadMs": 116610.775088,
+  "settledLargeTextMemory": {
+    "available": true,
+    "unit": "KiB",
+    "processes": [
+      {
+        "type": "Browser",
+        "rssKiB": 178888,
+        "pssKiB": 104829
+      },
+      {
+        "type": "Utility",
+        "rssKiB": 84624,
+        "pssKiB": 29917
+      },
+      {
+        "type": "Tab",
+        "rssKiB": 1391212,
+        "pssKiB": 1330250
+      },
+      {
+        "type": "GPU",
+        "rssKiB": 60668,
+        "pssKiB": 19759
+      }
+    ],
+    "totalRssKiB": 1715392,
+    "totalPssKiB": 1484755,
+    "note": "One settled process snapshot, not peak memory. RSS double-counts shared pages; PSS apportions them. No memory threshold was invented."
+  },
+  "distantChapterMs": 19.229441000003135,
+  "pass": false,
+  "fatalError": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'17px' !== '18px'\n\n    at /workspace/scratch/8a7610d50e71/moye/tests/editor-reading-longform.cjs:24:806\n    at async check (/workspace/scratch/8a7610d50e71/moye/tests/editor-reading-longform.cjs:15:76)\n    at async main (/workspace/scratch/8a7610d50e71/moye/tests/editor-reading-longform.cjs:24:5)"
+}

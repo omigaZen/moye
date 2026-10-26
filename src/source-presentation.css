@@ -1,0 +1,18 @@
+/* Paint below the transparent native textarea, keeping its selection and caret
+   in the foreground. An opaque paint background preserves LCD glyph rendering. */
+.moye-source-presentation{position:fixed;z-index:7;overflow:hidden;pointer-events:none!important;user-select:none;background:transparent}
+.moye-source-presentation[hidden]{display:none!important}
+.moye-source-paint{position:absolute;left:0;top:0;box-sizing:border-box;height:auto;min-height:100%;margin:0;border:0;background:transparent;color:var(--ink);overflow:visible;transform-origin:top left}
+.moye-source-paint .moye-source-token{font-family:inherit;font-size:inherit;font-weight:inherit;font-style:inherit;font-variant:inherit;font-stretch:inherit;font-kerning:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-optical-sizing:inherit;letter-spacing:inherit;word-spacing:inherit;line-height:inherit}
+.moye-source-token--marker,.moye-source-token--fence{color:var(--muted)}
+.moye-source-token--heading,.moye-source-token--strong{color:var(--accent)}
+.moye-source-token--emphasis{color:color-mix(in srgb,var(--accent) 80%,var(--ink))}
+.moye-source-token--link{color:var(--accent);text-decoration:underline;text-underline-offset:.15em}
+.moye-source-token--code{color:var(--ink)}
+.moye-source-token--meta,.moye-source-token--comment{color:var(--muted)}
+.moye-source-token--strike{color:var(--muted);text-decoration:line-through}
+.moye-source-token--mark{color:var(--accent);text-decoration:underline;text-decoration-color:#c9ae39}
+#editor textarea.vditor-sv.moye-source-colorized{position:relative;z-index:8;background:transparent!important;color:transparent!important;-webkit-text-fill-color:transparent!important;caret-color:var(--accent)!important}
+#editor textarea.vditor-sv.moye-source-colorized::selection{color:transparent!important;-webkit-text-fill-color:transparent!important;background:#b4ccb38c}
+@media(forced-colors:active){.moye-source-presentation{display:none!important}#editor textarea.vditor-sv.moye-source-colorized{color:CanvasText!important;-webkit-text-fill-color:CanvasText!important;caret-color:CanvasText!important}}
+@media print{.moye-source-presentation{display:none!important}#editor textarea.vditor-sv.moye-source-colorized{color:CanvasText!important;-webkit-text-fill-color:CanvasText!important}}

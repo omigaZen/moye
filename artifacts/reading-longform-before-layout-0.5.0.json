@@ -1,0 +1,197 @@
+{
+  "generatedAt": "2026-10-25T09:17:03.936Z",
+  "platform": "linux",
+  "purpose": "Bounded TXT windows, full-source copying, chapter navigation and next-document UI; not Telari differential or real IME acceptance",
+  "fixture": {
+    "characters": 2239862,
+    "bytes": 4726022,
+    "chapters": 180,
+    "sha256": "42f6b95c47073767c441eb106810ec1f3d0a70ce20fb334397b80fa511bac646"
+  },
+  "results": [
+    {
+      "name": "large TXT opens into the bounded reader without constructing a full rich-editor DOM",
+      "status": "pass",
+      "elapsedMs": 3314,
+      "details": {
+        "virtualized": true,
+        "windows": 72,
+        "currentWindow": 0,
+        "sourceLength": 2239862,
+        "mountedCharacters": 30870,
+        "mountedElements": 8,
+        "mode": "sv",
+        "irElements": 234,
+        "dirty": false,
+        "source": 2239862,
+        "outline": 180,
+        "openToReadMs": 2383.927662
+      }
+    },
+    {
+      "name": "a distant chapter mounts its source window and Back restores the previous window",
+      "status": "pass",
+      "elapsedMs": 230,
+      "details": {
+        "absentBefore": true,
+        "targetChapter": 151,
+        "navigationMs": 16.588192999999592,
+        "wholeSourceFindVisible": true
+      }
+    },
+    {
+      "name": "native reading Select All copies the entire exact source across unmounted windows",
+      "status": "pass",
+      "elapsedMs": 313,
+      "details": {
+        "characters": 2239862,
+        "sha256": "42f6b95c47073767c441eb106810ec1f3d0a70ce20fb334397b80fa511bac646",
+        "exact": true
+      }
+    },
+    {
+      "name": "a partial paragraph selection copies only the exact selected source, never the entire virtual document",
+      "status": "pass",
+      "elapsedMs": 4,
+      "details": {
+        "exactPartialSelection": true,
+        "length": 13
+      }
+    },
+    {
+      "name": "TXT presets affect only the reader and keep source, edit selection and undo intact",
+      "status": "pass",
+      "elapsedMs": 5814,
+      "details": {
+        "font": "18px",
+        "sourceSelectionUndoIntact": true
+      }
+    },
+    {
+      "name": "whole-document End and Home mount bounded last and first windows without automatic next-file navigation",
+      "status": "pass",
+      "elapsedMs": 483,
+      "details": {
+        "windows": 72,
+        "last": 71,
+        "explicitSegments": true
+      }
+    },
+    {
+      "name": "complete detached export includes distant and final content while current-window capture is clearly marked",
+      "status": "pass",
+      "elapsedMs": 221,
+      "details": {
+        "detached": true,
+        "complete": "true",
+        "virtual": "",
+        "first": "第1章 测试章节 00:0 这是一段中文与 English 混排，用于真正的大型",
+        "last": "证 😀。这是一段中文与 English 混排，用于真正的大型 TXT 阅读验证 😀。这是一段中文与 English 混排，用于真正的大型 TXT 阅读验证 ",
+        "characters": 399903,
+        "liveCharacters": 30870
+      }
+    },
+    {
+      "name": "over-budget whole-document TXT export refuses explicitly instead of silently exporting one window",
+      "status": "pass",
+      "elapsedMs": 35,
+      "details": {
+        "explicitRefusal": true
+      }
+    },
+    {
+      "name": "large-TXT source positions survive a full application restart using bounded content-free metadata",
+      "status": "pass",
+      "elapsedMs": 5647,
+      "details": {
+        "beforeWindow": 47,
+        "afterWindow": 47,
+        "offsetDifference": 0,
+        "metadataBytes": 280
+      }
+    },
+    {
+      "name": "next-document prompt uses the authorized natural neighbor, opens explicitly, and can be permanently disabled",
+      "status": "fail",
+      "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-reading-action=next-document]') to be visible\u001b[22m\n\u001b[2m    - locator resolved to hidden <button type=\"button\" data-reading-action=\"next-document\">下一篇</button>\u001b[22m\n\u001b[2m    62 × locator resolved to hidden <button type=\"button\" data-reading-action=\"next-document\">下一篇：2-next.txt</button>\u001b[22m\n\n    at /workspace/scratch/8a7610d50e71/moye/tests/editor-reading-longform.cjs:29:281\n    at async check (/workspace/scratch/8a7610d50e71/moye/tests/editor-reading-longform.cjs:15:115)\n    at async main (/workspace/scratch/8a7610d50e71/moye/tests/editor-reading-longform.cjs:29:5)"
+    }
+  ],
+  "pageErrors": [
+    "Failed to execute 'caretPositionFromPoint' on 'Document': The provided float value is non-finite."
+  ],
+  "remoteRequests": [],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": false,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "baselineMemory": {
+    "available": true,
+    "unit": "KiB",
+    "processes": [
+      {
+        "type": "Browser",
+        "rssKiB": 168164,
+        "pssKiB": 95591
+      },
+      {
+        "type": "Utility",
+        "rssKiB": 85336,
+        "pssKiB": 30300
+      },
+      {
+        "type": "Tab",
+        "rssKiB": 250968,
+        "pssKiB": 192270
+      },
+      {
+        "type": "GPU",
+        "rssKiB": 59540,
+        "pssKiB": 19087
+      }
+    ],
+    "totalRssKiB": 564008,
+    "totalPssKiB": 337248,
+    "note": "One settled process snapshot, not peak memory. RSS double-counts shared pages; PSS apportions them. No memory threshold was invented."
+  },
+  "openToReadMs": 2383.927662,
+  "settledLargeTextMemory": {
+    "available": true,
+    "unit": "KiB",
+    "processes": [
+      {
+        "type": "Browser",
+        "rssKiB": 188320,
+        "pssKiB": 114995
+      },
+      {
+        "type": "Utility",
+        "rssKiB": 85376,
+        "pssKiB": 30314
+      },
+      {
+        "type": "Tab",
+        "rssKiB": 775272,
+        "pssKiB": 715128
+      },
+      {
+        "type": "GPU",
+        "rssKiB": 59616,
+        "pssKiB": 19149
+      }
+    ],
+    "totalRssKiB": 1108584,
+    "totalPssKiB": 879586,
+    "note": "One settled process snapshot, not peak memory. RSS double-counts shared pages; PSS apportions them. No memory threshold was invented."
+  },
+  "rendererHeap": {
+    "usedSize": 121731588,
+    "totalSize": 173875200,
+    "embedderHeapUsedSize": 281634992,
+    "backingStorageSize": 14966759
+  },
+  "distantChapterMs": 16.588192999999592,
+  "pass": false,
+  "fatalError": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-reading-action=next-document]') to be visible\u001b[22m\n\u001b[2m    - locator resolved to hidden <button type=\"button\" data-reading-action=\"next-document\">下一篇</button>\u001b[22m\n\u001b[2m    62 × locator resolved to hidden <button type=\"button\" data-reading-action=\"next-document\">下一篇：2-next.txt</button>\u001b[22m\n\n    at /workspace/scratch/8a7610d50e71/moye/tests/editor-reading-longform.cjs:29:281\n    at async check (/workspace/scratch/8a7610d50e71/moye/tests/editor-reading-longform.cjs:15:115)\n    at async main (/workspace/scratch/8a7610d50e71/moye/tests/editor-reading-longform.cjs:29:5)"
+}

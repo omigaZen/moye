@@ -1,0 +1,95 @@
+{
+  "method": "Standalone Electron resource/helper integration with strict app CSP, isolated profile, all HTTP(S) aborted at session level including worker requests.",
+  "results": [
+    {
+      "name": "five formulae render through MathJax 4 offline under strict CSP",
+      "status": "pass",
+      "details": {
+        "version": "4.1.3",
+        "formulae": 5
+      }
+    },
+    {
+      "name": "runtime custom macro added and removed without stale expansion",
+      "status": "pass",
+      "details": {
+        "removed": true
+      }
+    },
+    {
+      "name": "macro argument arrays are applied",
+      "status": "pass",
+      "details": {
+        "count": 1
+      }
+    },
+    {
+      "name": "numbering can be enabled, reset for a new document and disabled",
+      "status": "pass",
+      "details": {
+        "enabledThenDisabled": true
+      }
+    },
+    {
+      "name": "invalid formula can be corrected without renderer errors",
+      "status": "pass",
+      "details": {
+        "corrected": true
+      }
+    },
+    {
+      "name": "all NewCM dynamic SVG data loads from local files",
+      "status": "pass",
+      "details": {
+        "dynamicChunks": 40
+      }
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "remoteRequests": [],
+  "localDynamicRequests": [
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/script.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/latin.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/latin-b.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/latin-i.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/latin-bi.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/double-struck.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/fraktur.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/sans-serif.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/sans-serif-r.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/sans-serif-b.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/sans-serif-i.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/sans-serif-bi.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/sans-serif-ex.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/monospace.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/monospace-l.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/monospace-ex.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/calligraphic.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/math.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/symbols.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/symbols-b-i.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/greek.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/greek-ss.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/cyrillic.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/cyrillic-ss.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/phonetics.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/phonetics-ss.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/hebrew.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/devanagari.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/cherokee.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/arabic.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/braille-d.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/braille.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/arrows.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/marrows.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/accents.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/accents-b-i.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/shapes.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/mshapes.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/variants.js",
+    "/dist/js/mathjax/fonts/mathjax-newcm-font/svg/dynamic/PUA.js"
+  ],
+  "version": "4.1.3",
+  "pass": true
+}

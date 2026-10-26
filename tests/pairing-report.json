@@ -1,0 +1,121 @@
+{
+  "generatedAt": "2026-10-25T10:47:11.253Z",
+  "purpose": "Moye pairing regressions, not Typora equivalence proof",
+  "results": [
+    {
+      "name": "IR exact selection survives wrapping Unicode 😀",
+      "status": "pass",
+      "elapsedMs": 356,
+      "details": {
+        "original": "😀",
+        "afterReplacement": "left (X) right\n"
+      }
+    },
+    {
+      "name": "IR exact selection survives wrapping Unicode é",
+      "status": "pass",
+      "elapsedMs": 114,
+      "details": {
+        "original": "é",
+        "afterReplacement": "left (X) right\n"
+      }
+    },
+    {
+      "name": "IR exact selection survives wrapping Unicode 👨‍👩‍👧‍👦",
+      "status": "pass",
+      "elapsedMs": 108,
+      "details": {
+        "original": "👨‍👩‍👧‍👦",
+        "afterReplacement": "left (X) right\n"
+      }
+    },
+    {
+      "name": "IR wrapping preserves selected bold markup",
+      "status": "pass",
+      "elapsedMs": 110,
+      "details": {
+        "wrapped": "left **(word)** right\n",
+        "replacement": "left **(X)** right\n"
+      }
+    },
+    {
+      "name": "IR wrapping preserves selected link markup",
+      "status": "pass",
+      "elapsedMs": 110,
+      "details": {
+        "wrapped": "left [(word)](https://example.test/path) right\n",
+        "replacement": "left [(X)](https://example.test/path) right\n"
+      }
+    },
+    {
+      "name": "IR Markdown wrapper preserves selected Unicode and backward direction",
+      "status": "pass",
+      "elapsedMs": 119,
+      "details": {
+        "actual": "left *😀 word* right\n",
+        "backward": true
+      }
+    },
+    {
+      "name": "IR inline code backspace stays literal and closed source fences resume pairing",
+      "status": "pass",
+      "elapsedMs": 202,
+      "details": {
+        "inlineCode": "`*`",
+        "sourceSuffix": "**",
+        "sourceHasNoInventedTrailingLF": true
+      }
+    },
+    {
+      "name": "SV code fences honor delimiter kind, length and up to three spaces",
+      "status": "pass",
+      "elapsedMs": 363,
+      "details": {
+        "scenarios": 4
+      }
+    },
+    {
+      "name": "Markdown backspace is inactive in source fenced and inline code",
+      "status": "pass",
+      "elapsedMs": 183,
+      "details": {
+        "scenarios": 2
+      }
+    },
+    {
+      "name": "disabled inline math does not skip an existing dollar in either mode",
+      "status": "pass",
+      "elapsedMs": 234,
+      "details": {
+        "modes": [
+          "sv",
+          "ir"
+        ]
+      }
+    },
+    {
+      "name": "IR adjacent letter checks work at an inline-element boundary",
+      "status": "pass",
+      "elapsedMs": 94,
+      "details": {
+        "actual": "left **word'** right\n"
+      }
+    },
+    {
+      "name": "empty bracket backspace in both modes has reversible undo/redo",
+      "status": "pass",
+      "elapsedMs": 213,
+      "details": [
+        {
+          "mode": "sv",
+          "undoneAndRedone": true
+        },
+        {
+          "mode": "ir",
+          "undoneAndRedone": true
+        }
+      ]
+    }
+  ],
+  "pageErrors": []
+}

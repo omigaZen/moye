@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-10-25T10:48:17.909Z",
+  "platform": "linux/x64",
+  "purpose": "Moye independent typography profiles, view-only mixed-script presentation and read-only paragraph optimisation; not Telari runtime differential acceptance",
+  "results": [
+    {
+      "name": "built-in profiles change actual typography and table settings without rewriting a clean document",
+      "status": "pass",
+      "elapsedMs": 614,
+      "details": {
+        "stages": [
+          {
+            "active": "daily",
+            "modified": false,
+            "fontSize": 17,
+            "lineHeight": 31.45,
+            "indent": 0,
+            "tableLayout": "body",
+            "tableStyle": "grid",
+            "source": "# 排版\n\n中文Unity开发文档与English text。\n\n| A | B |\n| --- | --- |\n| one | two |\n",
+            "dirty": false
+          },
+          {
+            "active": "technical",
+            "modified": false,
+            "fontSize": 17,
+            "lineHeight": 28.9,
+            "indent": 0,
+            "tableLayout": "window",
+            "tableStyle": "grid",
+            "source": "# 排版\n\n中文Unity开发文档与English text。\n\n| A | B |\n| --- | --- |\n| one | two |\n",
+            "dirty": false
+          },
+          {
+            "active": "book",
+            "modified": false,
+            "fontSize": 19,
+            "lineHeight": 37.05,
+            "indent": 38,
+            "tableLayout": "natural",
+            "tableStyle": "booktabs",
+            "source": "# 排版\n\n中文Unity开发文档与English text。\n\n| A | B |\n| --- | --- |\n| one | two |\n",
+            "dirty": false
+          },
+          {
+            "active": "compact",
+            "modified": false,
+            "fontSize": 15,
+            "lineHeight": 23.25,
+            "indent": 0,
+            "tableLayout": "body",
+            "tableStyle": "grid",
+            "source": "# 排版\n\n中文Unity开发文档与English text。\n\n| A | B |\n| --- | --- |\n| one | two |\n",
+            "dirty": false
+          },
+          {
+            "active": "daily",
+            "modified": false,
+            "fontSize": 17,
+            "lineHeight": 31.45,
+            "indent": 0,
+            "tableLayout": "body",
+            "tableStyle": "grid",
+            "source": "# 排版\n\n中文Unity开发文档与English text。\n\n| A | B |\n| --- | --- |\n| one | two |\n",
+            "dirty": false
+          }
+        ],
+        "cleanDiskSourceExact": true
+      }
+    },
+    {
+      "name": "custom profiles save and clone named current values, survive restart, and delete without resetting appearance",
+      "status": "pass",
+      "elapsedMs": 1193,
+      "details": {
+        "persistedProfile": "user-1",
+        "cloned": "user-2",
+        "deletedWithoutAppearanceReset": true
+      }
+    },
+    {
+      "name": "profile changes retain a backward source selection, pending edits and a meaningful undo step",
+      "status": "pass",
+      "elapsedMs": 1086,
+      "details": {
+        "backwardSelection": [
+          1,
+          5,
+          "backward"
+        ],
+        "unsavedEditsPreserved": true,
+        "undoRestoredPriorText": true
+      }
+    },
+    {
+      "name": "mixed-script view settings leave editable DOM intact and scope spacing away from code and formulas",
+      "status": "pass",
+      "elapsedMs": 86,
+      "details": {
+        "changes": 0,
+        "exactDOM": true,
+        "proseFont": "MoyeRole-Latin-7f1b97d3, MoyeRole-CJK-aa1bf226, \"Noto Sans SC\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "proseAutospace": "normal",
+        "codeAutospace": "no-autospace",
+        "capabilities": {
+          "textAutospace": true,
+          "hangingPunctuation": false,
+          "textSpacingTrim": "trim-start",
+          "punctuationCompressionEditing": true,
+          "punctuationCompressionReading": true,
+          "punctuationCompressionLimit": "Native editing trim depends on browser support. Read-only full-width marks use bounded, measured glyph geometry; Latin punctuation, code and URL/path text are excluded.",
+          "roleFonts": true,
+          "roleFontLimit": "Named local fonts with unicode ranges, followed by the existing document font; unavailable fonts fall back. Generic families do not create a local font face.",
+          "justification": "Browser line justification; this is not Knuth–Plass paragraph optimisation."
+        },
+        "unspacedWidth": 110.578125,
+        "spacedWidth": 114.828125
+      }
+    },
+    {
+      "name": "colour themes repaint without changing paragraph geometry or reading text",
+      "status": "pass",
+      "elapsedMs": 278,
+      "details": {
+        "stages": [
+          {
+            "width": 780,
+            "height": 31.4375,
+            "font": "",
+            "ink": "rgb(48, 56, 51)",
+            "paper": "rgba(0, 0, 0, 0)",
+            "source": "第一段中文English。\n\n第二段文字。\n"
+          },
+          {
+            "width": 780,
+            "height": 31.4375,
+            "font": "",
+            "ink": "rgb(51, 51, 51)",
+            "paper": "rgba(0, 0, 0, 0)",
+            "source": "第一段中文English。\n\n第二段文字。\n"
+          },
+          {
+            "width": 780,
+            "height": 31.4375,
+            "font": "",
+            "ink": "rgb(88, 110, 117)",
+            "paper": "rgba(0, 0, 0, 0)",
+            "source": "第一段中文English。\n\n第二段文字。\n"
+          },
+          {
+            "width": 780,
+            "height": 31.4375,
+            "font": "",
+            "ink": "rgb(46, 52, 64)",
+            "paper": "rgba(0, 0, 0, 0)",
+            "source": "第一段中文English。\n\n第二段文字。\n"
+          },
+          {
+            "width": 780,
+            "height": 31.4375,
+            "font": "",
+            "ink": "rgb(48, 56, 51)",
+            "paper": "rgba(0, 0, 0, 0)",
+            "source": "第一段中文English。\n\n第二段文字。\n"
+          }
+        ],
+        "geometryUnchanged": true
+      }
+    },
+    {
+      "name": "read-only paragraph optimisation uses chosen line breaks and preserves text, inline formatting and editable source",
+      "status": "pass",
+      "elapsedMs": 228,
+      "details": {
+        "lineCount": 11,
+        "exactTextAndSource": true,
+        "formattingAndCopyPreserved": true
+      }
+    },
+    {
+      "name": "paragraph optimisation reuses unchanged colour-only layouts and falls back for bounded or complex paragraphs",
+      "status": "pass",
+      "elapsedMs": 151,
+      "details": {
+        "first": {
+          "algorithm": "Knuth–Plass-style box/glue/penalty dynamic programming with DOM-shaped inline metrics; bounded, not TeX-identical",
+          "optimizedParagraphs": 1,
+          "compressedParagraphs": 1,
+          "compressedMarks": 40,
+          "fallbackParagraphs": 2,
+          "reasons": {
+            "unsupportedInlineContent": 1,
+            "boundedTokenBudget": 1
+          },
+          "maximumTokens": 700,
+          "maximumParagraphCharacters": 4096,
+          "maximumDocumentCharacters": 18000,
+          "maximumApplyMilliseconds": 100,
+          "maximumParagraphMilliseconds": 45,
+          "reused": true
+        },
+        "second": {
+          "algorithm": "Knuth–Plass-style box/glue/penalty dynamic programming with DOM-shaped inline metrics; bounded, not TeX-identical",
+          "optimizedParagraphs": 1,
+          "compressedParagraphs": 1,
+          "compressedMarks": 40,
+          "fallbackParagraphs": 2,
+          "reasons": {
+            "unsupportedInlineContent": 1,
+            "boundedTokenBudget": 1
+          },
+          "maximumTokens": 700,
+          "maximumParagraphCharacters": 4096,
+          "maximumDocumentCharacters": 18000,
+          "maximumApplyMilliseconds": 100,
+          "maximumParagraphMilliseconds": 45,
+          "reused": true
+        },
+        "sameNode": true,
+        "source": "适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。适合优化的中文段落，保持阅读位置。\n\n带有 `inline code` 的段落。\n\n超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落超长段落\n"
+      }
+    },
+    {
+      "name": "invalid imported display profiles have no partial renderer or durable setting effect",
+      "status": "pass",
+      "elapsedMs": 66,
+      "details": {
+        "rejected": "排版方案只能包含显示选项。",
+        "unchanged": true
+      }
+    },
+    {
+      "name": "typography view defers refresh during active composition and changes only noneditable ancestor state",
+      "status": "pass",
+      "elapsedMs": 2,
+      "details": {
+        "during": "spaced",
+        "after": "indented",
+        "text": "组合输入",
+        "syntheticCompositionOnly": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "limitations": [
+    "Headless Linux checks do not cover real system IME, every font or native Windows/macOS.",
+    "Browser justification and native hanging-punctuation capability are separate from the bounded read-only box/glue/penalty optimiser."
+  ],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": false,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "pass": true
+}

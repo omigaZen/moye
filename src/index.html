@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' file: data: blob:; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' file:; img-src 'self' file: data: blob: https: http:; font-src 'self' file: data:; connect-src 'self' file: data:; object-src 'none'; frame-src 'none'; base-uri 'none'">
+  <title>墨页</title>
+  <link rel="stylesheet" href="vendor/fonts/noto-sans-sc/400.css">
+  <link rel="stylesheet" href="vendor/vditor/dist/index.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="table-tools.css">
+  <link rel="stylesheet" href="settings-panel.css">
+  <link rel="stylesheet" href="preferences.css">
+  <link rel="stylesheet" href="editor-focus.css">
+  <link rel="stylesheet" href="typography.css">
+  <link rel="stylesheet" href="table-presentation.css">
+  <link rel="stylesheet" href="reading-experience.css">
+  <link rel="stylesheet" href="workspace-browser.css">
+  <link rel="stylesheet" href="color-themes.css">
+  <link rel="stylesheet" href="content-experience.css">
+  <link rel="stylesheet" href="source-presentation.css">
+  <link rel="stylesheet" href="recent-files.css">
+  <link rel="stylesheet" href="i18n.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 5h13l6 6v16H7z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M20 5v7h6M11 16h10M11 21h7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>墨页</span><span class="brand-divider"></span></div>
+    <button id="document-name" class="document-name" title="文档名称与路径">未命名.md</button><span id="dirty-dot" class="dirty-dot" hidden title="尚未保存"></span>
+    <div class="header-spacer"></div>
+    <div class="mode-tabs" role="group" aria-label="编辑模式"><button id="live-mode" aria-pressed="true" title="即时渲染">书写</button><button id="reading-mode" aria-pressed="false" title="只读阅读与整行翻页">阅读</button><button id="source-mode" aria-pressed="false" title="源码 Ctrl / ⌘ + /">源码</button></div>
+    <span class="header-divider"></span>
+    <button class="icon-button" data-action="open" title="打开文件 Ctrl / ⌘ + O" aria-label="打开文件"><svg viewBox="0 0 24 24"><path d="M3 7h7l2 2h9l-3 11H3V7zm0 0V4h7l2 3h7v2"/></svg></button>
+    <button class="icon-button" data-action="save" title="保存 Ctrl / ⌘ + S" aria-label="保存"><svg viewBox="0 0 24 24"><path d="M5 3h12l4 4v14H3V3h2zm2 0v6h10V3M7 21v-8h10v8"/></svg></button>
+    <button id="more-button" aria-controls="more-menu" class="icon-button" title="更多操作" aria-label="更多操作" aria-expanded="false"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button>
+  </header>
+  <main class="workspace">
+    <aside id="outline-sidebar" class="sidebar">
+      <div class="sidebar-heading"><span>文档大纲</span><button id="hide-outline" aria-label="收起大纲" title="收起大纲">‹</button></div>
+      <nav id="outline" aria-label="文档大纲"><p class="outline-empty">添加标题后，会在这里生成大纲。</p></nav>
+      <div class="sidebar-bottom"><span class="local-dot"></span>本地文档<span>安心书写</span></div>
+    </aside>
+    <section class="editor-region" aria-label="Markdown 编辑器">
+      <div id="workspace-tabs" class="workspace-tabs" role="tablist" aria-label="打开的文件" hidden></div>
+      <div id="find-bar" class="find-bar" hidden>
+        <input id="find-input" aria-label="查找文字" placeholder="查找文字…" autocomplete="off"><span id="find-count"></span><button id="find-prev" title="上一个 Shift + Enter">↑</button><button id="find-next" title="下一个 Enter">↓</button><button id="toggle-replace" title="展开替换">替换</button><button id="close-find" aria-label="关闭查找">×</button>
+        <div id="replace-row" hidden><input id="replace-input" aria-label="替换为" placeholder="替换为…"><button id="replace-one">替换</button><button id="replace-all">全部替换</button></div>
+      </div>
+      <div id="editor"><div class="loading">正在准备书写空间…</div></div>
+    </section>
+  </main>
+  <footer class="statusbar">
+    <button id="outline-toggle" title="显示或隐藏大纲">☰<span>大纲</span></button><span id="save-status">本地文档</span><button id="footnote-back" hidden>↩ 返回脚注引用</button>
+    <div class="status-spacer"></div><span id="selection-count"></span><button id="word-count" title="字符数与阅读时间">0 字</button><button id="encoding-button" title="查看或更改文件编码">UTF-8</button><span class="status-separator"></span><button id="zoom-out" title="缩小字号">−</button><button id="zoom-reset" title="重置字号">100%</button><button id="zoom-in" title="放大字号">+</button><span class="status-separator"></span><button id="theme-toggle" title="切换深浅主题">浅色</button>
+  </footer>
+  <div id="more-menu" class="more-menu" hidden>
+    <button data-action="new">新建文档 <kbd>Ctrl/⌘ N</kbd></button><button data-action="open">打开文档… <kbd>Ctrl/⌘ O</kbd></button><button data-action="save-as">另存为… <kbd>Ctrl/⌘ ⇧ S</kbd></button><hr>
+    <button data-action="recent">最近文件…</button>
+    <button id="system-preview-setup" data-action="system-preview" hidden>系统缩略图…</button>
+    <button data-action="workspace">打开文件夹…</button><button data-action="previous-file">同目录上一篇</button><button data-action="next-file">同目录下一篇</button><hr>
+    <button data-action="export-pdf">导出 PDF…</button><button data-action="export-image">导出图片…</button><hr>
+    <button data-action="find">查找与替换 <kbd>Ctrl/⌘ F</kbd></button><button data-action="image">插入本地图片…</button><button data-action="copy-markdown">复制为 Markdown</button><hr>
+    <button data-action="outline">显示 / 隐藏大纲</button><button data-action="reading">阅读模式</button><button data-action="focus">专注模式 <kbd>F8</kbd></button><button data-action="typewriter">打字机模式</button><button data-action="toolbar">显示 / 隐藏格式栏</button><button data-action="theme">切换深浅主题</button><hr>
+    <button data-action="preferences">偏好设置… <kbd>Ctrl/⌘ ,</kbd></button><button data-action="syntax">查看语法示例</button><button data-action="about">关于墨页 / 快捷键</button>
+  </div>
+  <dialog id="about-dialog"><button class="dialog-close" aria-label="关闭">×</button><div class="about-mark">墨</div><h2>墨页</h2><p>让思绪落在纸上。</p><p class="about-description">跨平台 · 本地 Markdown · 即时渲染<br>公式与图表均可离线使用</p><div class="shortcut-grid"><span>打开 / 保存</span><kbd>Ctrl / ⌘ + O / S</kbd><span>书写 / 源码</span><kbd>Ctrl / ⌘ + /</kbd><span>查找与替换</span><kbd>Ctrl / ⌘ + F</kbd><span>加粗 / 斜体 / 链接</span><kbd>Ctrl / ⌘ + B / I / K</kbd><span>专注模式</span><kbd>F8</kbd></div><p class="about-version">0.5.0 开发预览 · Vditor / MathJax 4 / Mermaid</p></dialog>
+  <div id="recovery-banner" hidden><span>发现上次未保存的草稿。</span><button id="restore-draft">恢复草稿</button><button id="dismiss-draft">忽略</button></div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <div id="external-change-banner" class="external-change-banner" role="status" hidden><span>文件已在外部更改。</span><button id="reload-external">重新载入</button><button id="ignore-external">保留当前内容</button></div>
+  <div id="settings-reload-banner" hidden role="status"><span>语法与公式设置已保存，重新载入后生效。当前文档内容会保留，撤销记录将重新开始。</span><button id="settings-reload">重新载入</button></div>
+  <script id="vditorIconScript" src="vendor/vditor/dist/js/icons/ant.js"></script>
+  <script src="vendor/vditor/dist/index.min.js"></script>
+  <script src="document-state.js"></script>
+  <script src="locales/en-US.js"></script>
+  <script src="i18n.js"></script>
+  <script src="table-tools.js"></script>
+  <script src="shortcut-config.js"></script>
+  <script src="image-policy.js"></script>
+  <script src="typography-config.js"></script>
+  <script src="settings-schema.js"></script>
+  <script src="color-theme-config.js"></script>
+  <script src="color-theme-editor.js"></script>
+  <script src="settings-panel.js"></script>
+  <script src="math-config.js"></script>
+  <script src="editor-pairing.js"></script>
+  <script src="editor-autolinks.js"></script>
+  <script src="markdown-config.js"></script>
+  <script src="editor-punctuation.js"></script>
+  <script src="editor-focus.js"></script>
+  <script src="editor-shortcuts.js"></script>
+  <script src="editor-outline-cache.js"></script>
+  <script src="typography-view.js"></script>
+  <script src="paragraph-typesetter.js"></script>
+  <script src="reading-anchor.js"></script>
+  <script src="table-presentation.js"></script>
+  <script src="math-reading-syntax.js"></script>
+  <script src="txt-chapters.js"></script>
+  <script src="reading-experience.js"></script>
+  <script src="workspace-browser.js"></script>
+  <script src="recent-files.js"></script>
+  <script src="export-snapshot.js"></script>
+  <script src="content-experience.js"></script>
+  <script src="source-presentation.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

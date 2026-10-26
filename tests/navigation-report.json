@@ -1,0 +1,44 @@
+{
+  "platform": "linux",
+  "results": [
+    {
+      "name": "TOC immediately after native open resolves actual unique heading IDs and scrolls",
+      "status": "pass",
+      "details": {
+        "resolved": true,
+        "top": 265.953125,
+        "viewport": 860
+      }
+    },
+    {
+      "name": "Ctrl-click footnote jumps to definition and return restores reference without editing",
+      "status": "pass",
+      "details": {
+        "definitionTop": 453.84375,
+        "referenceTop": 146.1875
+      }
+    },
+    {
+      "name": "live-to-source mode switch keeps the current caret inside the viewport",
+      "status": "pass",
+      "details": {
+        "scrollTop": 735,
+        "caretTop": 1081,
+        "height": 724,
+        "start": 376,
+        "fontSize": "14px"
+      }
+    },
+    {
+      "name": "source find scrolls an offscreen match into view",
+      "status": "pass",
+      "details": {
+        "selected": "第005行",
+        "caretTop": 304,
+        "scrollTop": 0,
+        "height": 724
+      }
+    }
+  ],
+  "pageErrors": []
+}

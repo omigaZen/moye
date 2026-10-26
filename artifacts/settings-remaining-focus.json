@@ -1,0 +1,99 @@
+{
+  "platform": "linux/x64",
+  "application": {
+    "version": "0.0",
+    "isPackaged": false,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye/electron",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "kind": "Moye settings feature regression, not Typora differential acceptance",
+  "network": "HTTP(S) blocked",
+  "remoteRequests": [],
+  "results": [
+    {
+      "name": "remaining: disabled block-math preview shows editable formula source and restores rendering after an edit",
+      "status": "pass",
+      "elapsedMs": 391,
+      "details": {
+        "sourceVisible": {
+          "width": 59.953125,
+          "height": 19,
+          "editable": true
+        },
+        "editRetained": true,
+        "renderingRestored": true
+      }
+    },
+    {
+      "name": "remaining: diagram toggle leaves source visible, preserves ordinary code highlighting, and restores diagrams",
+      "status": "pass",
+      "elapsedMs": 229,
+      "details": {
+        "diagramCodeVisible": true,
+        "ordinaryCodeHighlighted": true,
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "remaining: automatic-link setting changes parsed links without rewriting the source",
+      "status": "fail",
+      "elapsedMs": 123,
+      "error": "AssertionError [ERR_ASSERTION]: <p data-block=\"0\">Visit https://example.test/path today.</p>\n\n0 !== 1\n\n    at /workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:476:14\n    at async probe (/workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:86:27)\n    at async main (/workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:469:5)"
+    },
+    {
+      "name": "remaining: code default language applies to toolbar creation without duplicating an unselected document",
+      "status": "pass",
+      "elapsedMs": 340,
+      "details": {
+        "defaultLanguageInCreatedFence": "python",
+        "unselectedParagraphCopied": false,
+        "selectedBodyWrappedExactlyOnce": true
+      }
+    },
+    {
+      "name": "remaining: code theme loads local styles and changes the actual keyword colour",
+      "status": "fail",
+      "elapsedMs": 30140,
+      "error": "page.waitForFunction: Timeout 30000ms exceeded.\n    at /workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:507:18\n    at async probe (/workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:86:27)\n    at async main (/workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:502:5)"
+    },
+    {
+      "name": "remaining: monospace setting changes both rendered code and source-editor computed fonts",
+      "status": "pass",
+      "elapsedMs": 141,
+      "details": {
+        "codeFonts": [
+          "\"Liberation Mono\", monospace"
+        ],
+        "sourceFont": "\"Liberation Mono\", monospace"
+      }
+    },
+    {
+      "name": "remaining: typewriter mode centres the caret after Enter in the middle of a long document",
+      "status": "pass",
+      "elapsedMs": 530,
+      "details": [
+        {
+          "enabled": false,
+          "caretTop": 256.46875,
+          "centre": 465,
+          "distance": 208.53125,
+          "scrollTop": 1662
+        },
+        {
+          "enabled": true,
+          "caretTop": 470.46875,
+          "centre": 465,
+          "distance": 5.46875,
+          "scrollTop": 1448
+        }
+      ]
+    },
+    {
+      "name": "remaining: selected indent width changes actual Tab insertion inside an IR code block",
+      "status": "fail",
+      "elapsedMs": 172,
+      "error": "AssertionError [ERR_ASSERTION]: {\"before\":{\"html\":\"<code class=\\\"language-csharp\\\">Call();\\n</code>\",\"focused\":true,\"position\":0,\"container\":\"Call();\\n\"},\"after\":\"<div data-block=\\\"0\\\" data-type=\\\"code-block\\\" class=\\\"vditor-ir__node vditor-ir__node--expand\\\"><span data-type=\\\"code-block-open-marker\\\">```</span><span class=\\\"vditor-ir__marker vditor-ir__marker--info\\\" data-type=\\\"code-block-info\\\">​csharp</span><pre class=\\\"vditor-ir__marker--pre vditor-ir__marker\\\"><code class=\\\"language-csharp\\\">  Call();\\n</code></pre><pre class=\\\"vditor-ir__preview\\\" data-render=\\\"1\\\"><div class=\\\"vditor-copy\\\"><textarea></textarea><span aria-label=\\\"复制\\\" class=\\\"vditor-tooltipped vditor-tooltipped__w\\\"><svg><use xlink:href=\\\"#vditor-icon-copy\\\"></use></svg></span></div><code class=\\\"language-csharp hljs\\\" style=\\\"max-height: 480px;\\\">Call();\\n</code><span style=\\\"position: absolute\\\">​</span></pre><span data-type=\\\"code-block-close-marker\\\">```</span></div>\"}\n    at /workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:568:16\n    at async probe (/workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:86:27)\n    at async main (/workspace/scratch/8a7610d50e71/moye/tests/editor-settings.cjs:554:5)"
+    }
+  ],
+  "pageErrors": []
+}

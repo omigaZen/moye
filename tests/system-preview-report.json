@@ -1,0 +1,74 @@
+{
+  "generatedAt": "2026-10-25T10:50:07.138Z",
+  "platform": "linux",
+  "purpose": "Actual system-thumbnail CLI and isolated Linux registration, not Finder activation or original-application differential acceptance",
+  "results": [
+    {
+      "name": "actual one-shot thumbnail renders Markdown and math offline with valid cache metadata and unchanged source",
+      "status": "pass",
+      "details": {
+        "width": 193,
+        "height": 256,
+        "sizeBytes": 4237,
+        "inkPixels": 592,
+        "cacheMetadata": true,
+        "sourceUnchanged": true,
+        "requests": 0,
+        "security": {
+          "javascript": false,
+          "nodeIntegration": false,
+          "sandbox": true,
+          "contextIsolation": true
+        }
+      }
+    },
+    {
+      "name": "UTF16 TXT is previewed read-only and original BOM and CRLF bytes survive exactly",
+      "status": "pass",
+      "details": {
+        "height": 512,
+        "exactBytes": true,
+        "bom": true
+      }
+    },
+    {
+      "name": "system preview follows saved local palette and does not rewrite its settings file",
+      "status": "pass",
+      "details": {
+        "palettePixel": [
+          236,
+          239,
+          244
+        ],
+        "settingsPreserved": true
+      }
+    },
+    {
+      "name": "large Unicode source is explicitly excerpted while the original remains complete",
+      "status": "pass",
+      "details": {
+        "truncated": true,
+        "sourceCodePoints": 80000,
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "remote and over-budget files are rejected without creating a thumbnail or modifying input",
+      "status": "pass",
+      "details": {
+        "remoteRejected": true,
+        "byteBudgetRejected": true,
+        "noOutput": true
+      }
+    }
+  ],
+  "remoteRequests": [],
+  "pageErrors": [],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": false,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "pass": true
+}

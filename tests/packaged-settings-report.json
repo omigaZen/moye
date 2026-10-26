@@ -1,0 +1,519 @@
+{
+  "platform": "linux/x64",
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": true,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/Moye"
+  },
+  "kind": "Moye settings feature regression, not Typora differential acceptance",
+  "network": "HTTP(S) blocked",
+  "remoteRequests": [],
+  "results": [
+    {
+      "name": "native Preferences menu opens an accessible modal with real settings",
+      "status": "pass",
+      "elapsedMs": 1086,
+      "details": {
+        "controls": 70,
+        "accessibleName": "moye-preferences-1-title",
+        "menu": {
+          "label": "设置…",
+          "accelerator": "Ctrl+,"
+        }
+      }
+    },
+    {
+      "name": "settings search finds items outside the active category and clears cleanly",
+      "status": "pass",
+      "elapsedMs": 49,
+      "details": {
+        "found": "math.macros"
+      }
+    },
+    {
+      "name": "font size UI changes actual rendered font and survives closing the modal",
+      "status": "pass",
+      "elapsedMs": 173,
+      "details": {
+        "fontSize": "22px"
+      }
+    },
+    {
+      "name": "light/dark/system settings affect appearance and follow native theme changes",
+      "status": "pass",
+      "elapsedMs": 395,
+      "details": {
+        "dark": true,
+        "light": true,
+        "followsSystem": true
+      }
+    },
+    {
+      "name": "content width and line height affect measured layout without editing Markdown",
+      "status": "pass",
+      "elapsedMs": 179,
+      "details": {
+        "width": 620,
+        "lineHeight": "40px"
+      }
+    },
+    {
+      "name": "sidebar and format-toolbar settings change visible controls and remain independent",
+      "status": "pass",
+      "elapsedMs": 93,
+      "details": {
+        "sidebar": true,
+        "toolbar": true
+      }
+    },
+    {
+      "name": "Escape leaves focus mode and persists the changed setting",
+      "status": "pass",
+      "elapsedMs": 74,
+      "details": {
+        "persisted": true
+      }
+    },
+    {
+      "name": "changing text settings then pressing Escape flushes the pending edit",
+      "status": "pass",
+      "elapsedMs": 135,
+      "details": {
+        "value": "\"Noto Sans SC\", serif"
+      }
+    },
+    {
+      "name": "invalid multi-key updates have no partial renderer or durable effect",
+      "status": "pass",
+      "elapsedMs": 9,
+      "details": {
+        "rejected": "设置“公式宏（JSON）”的值无效。"
+      }
+    },
+    {
+      "name": "source Tab uses the selected two and eight-space indent widths",
+      "status": "pass",
+      "elapsedMs": 231,
+      "details": [
+        {
+          "width": 2,
+          "prefix": "  "
+        },
+        {
+          "width": 8,
+          "prefix": "        "
+        }
+      ]
+    },
+    {
+      "name": "bracket auto-pair can be enabled/disabled and keeps the caret between the pair",
+      "status": "pass",
+      "elapsedMs": 224,
+      "details": [
+        {
+          "enabled": true,
+          "text": "()",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "enabled": false,
+          "text": "(",
+          "start": 1,
+          "end": 1
+        }
+      ]
+    },
+    {
+      "name": "Markdown pairing wraps an existing selected word when enabled",
+      "status": "pass",
+      "elapsedMs": 32,
+      "details": {
+        "text": "=word="
+      }
+    },
+    {
+      "name": "highlight toggle changes rendered structure while retaining CRLF and clean document state",
+      "status": "pass",
+      "elapsedMs": 303,
+      "details": {
+        "sourcePreserved": true,
+        "crlfSavedExactly": true,
+        "markRestored": true
+      }
+    },
+    {
+      "name": "superscript and subscript settings independently change parsing",
+      "status": "pass",
+      "elapsedMs": 285,
+      "details": {
+        "independent": true
+      }
+    },
+    {
+      "name": "footnotes and TOC can be disabled and re-enabled without deleting their source",
+      "status": "pass",
+      "elapsedMs": 266,
+      "details": {
+        "restored": true,
+        "sourcePreserved": true
+      }
+    },
+    {
+      "name": "inline math setting removes rendering and restores the original expression offline",
+      "status": "pass",
+      "elapsedMs": 270,
+      "details": {
+        "offlineRenderRestored": true
+      }
+    },
+    {
+      "name": "formula numbering control is disabled for KaTeX and enabled for MathJax",
+      "status": "pass",
+      "elapsedMs": 118,
+      "details": {
+        "KaTeX": "disabled",
+        "MathJax": "enabled"
+      }
+    },
+    {
+      "name": "live appearance settings preserve an existing source selection and undo history",
+      "status": "pass",
+      "elapsedMs": 1121,
+      "details": {
+        "selection": [
+          2,
+          5,
+          "backward"
+        ],
+        "undoSequences": [
+          [
+            "before\n"
+          ],
+          [
+            "before\n"
+          ]
+        ],
+        "undoPreserved": true
+      }
+    },
+    {
+      "name": "explicit parsing reload retains unsaved edits and does not write the document to disk",
+      "status": "pass",
+      "elapsedMs": 188,
+      "details": {
+        "unsavedTextPreserved": true,
+        "notAutoSavedByReload": true
+      }
+    },
+    {
+      "name": "configuration updates are rejected during active composition and can succeed after it ends",
+      "status": "pass",
+      "elapsedMs": 58,
+      "details": {
+        "syntheticCompositionGuard": true,
+        "realSystemIMEStillUntested": true
+      }
+    },
+    {
+      "name": "asynchronous parsing reload blocks editing and mode changes, serializes new-document actions, and retains newer pending settings",
+      "status": "pass",
+      "elapsedMs": 295,
+      "details": {
+        "editingBlocked": true,
+        "modeChangeBlocked": true,
+        "queuedNewDocumentIsEmpty": true,
+        "newerSettingPending": true
+      }
+    },
+    {
+      "name": "code-wrap and line-number settings affect the displayed code block",
+      "status": "pass",
+      "elapsedMs": 184,
+      "details": {
+        "before": "pre",
+        "whiteSpace": "pre-wrap",
+        "lineNumbers": 2
+      }
+    },
+    {
+      "name": "remaining: disabled block-math preview shows editable formula source and restores rendering after an edit",
+      "status": "pass",
+      "elapsedMs": 374,
+      "details": {
+        "sourceVisible": {
+          "width": 59.953125,
+          "height": 19,
+          "editable": true
+        },
+        "editRetained": true,
+        "renderingRestored": true
+      }
+    },
+    {
+      "name": "remaining: diagram toggle leaves source visible, preserves ordinary code highlighting, and restores diagrams",
+      "status": "pass",
+      "elapsedMs": 331,
+      "details": {
+        "diagramCodeVisible": true,
+        "ordinaryCodeHighlighted": true,
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "remaining: automatic-link setting changes parsed links without rewriting the source",
+      "status": "pass",
+      "elapsedMs": 1090,
+      "details": {
+        "expectedFromIndependentLute": [
+          {
+            "text": "https://example.com/path",
+            "url": "https://example.com/path"
+          },
+          {
+            "text": "www.example.com",
+            "url": "http://www.example.com"
+          }
+        ],
+        "highlighted": {
+          "links": [
+            {
+              "text": "https://example.com/path",
+              "url": "https://example.com/path",
+              "selectedText": "https://example.com/path",
+              "connected": true
+            },
+            {
+              "text": "www.example.com",
+              "url": "http://www.example.com",
+              "selectedText": "www.example.com",
+              "connected": true
+            }
+          ],
+          "highlightCount": 2,
+          "allRangesHighlighted": true
+        },
+        "normalClickOpensNothing": true,
+        "ctrlClickOpened": [
+          "https://example.com/path"
+        ],
+        "disabledHighlights": 0,
+        "editingAndUndoTracked": true,
+        "sourceUnchangedByHighlighting": true,
+        "typoraTldComparison": "not executed; independent Lute output is a parser reference, not proof of Typora parity"
+      }
+    },
+    {
+      "name": "remaining: code default language applies to toolbar creation without duplicating an unselected document",
+      "status": "pass",
+      "elapsedMs": 399,
+      "details": {
+        "defaultLanguageInCreatedFence": "python",
+        "unselectedParagraphCopied": false,
+        "selectedBodyWrappedExactlyOnce": true
+      }
+    },
+    {
+      "name": "remaining: code theme loads local styles and changes the actual keyword colour",
+      "status": "pass",
+      "elapsedMs": 337,
+      "details": [
+        {
+          "theme": "monokai",
+          "colour": "rgb(249, 38, 114)",
+          "stylesheet": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/vditor/dist/js/highlight.js/styles/monokai.min.css",
+          "keywords": 3,
+          "lineNumbers": 0
+        },
+        {
+          "theme": "github",
+          "colour": "rgb(215, 58, 73)",
+          "stylesheet": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/vditor/dist/js/highlight.js/styles/github.min.css",
+          "keywords": 3,
+          "lineNumbers": 1
+        },
+        {
+          "theme": "monokai",
+          "colour": "rgb(249, 38, 114)",
+          "stylesheet": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/vditor/dist/js/highlight.js/styles/monokai.min.css",
+          "keywords": 3,
+          "lineNumbers": 1
+        },
+        {
+          "theme": "github",
+          "colour": "rgb(215, 58, 73)",
+          "stylesheet": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/vditor/dist/js/highlight.js/styles/github.min.css",
+          "keywords": 3,
+          "lineNumbers": 0
+        }
+      ]
+    },
+    {
+      "name": "remaining: monospace setting changes both rendered code and source-editor computed fonts",
+      "status": "pass",
+      "elapsedMs": 176,
+      "details": {
+        "codeFonts": [
+          "\"Liberation Mono\", monospace"
+        ],
+        "sourceFont": "\"Liberation Mono\", monospace"
+      }
+    },
+    {
+      "name": "remaining: typewriter mode centres the caret after Enter in the middle of a long document",
+      "status": "pass",
+      "elapsedMs": 621,
+      "details": [
+        {
+          "enabled": false,
+          "caretTop": 256.46875,
+          "centre": 465,
+          "distance": 208.53125,
+          "scrollTop": 1662
+        },
+        {
+          "enabled": true,
+          "caretTop": 464.734375,
+          "centre": 465,
+          "distance": 0.265625,
+          "scrollTop": 1744
+        }
+      ]
+    },
+    {
+      "name": "remaining: selected indent width changes actual Tab insertion inside an IR code block",
+      "status": "pass",
+      "elapsedMs": 1144,
+      "details": [
+        {
+          "width": 2,
+          "source": "```csharp\n  Call();\n```\n"
+        },
+        {
+          "width": 8,
+          "source": "```csharp\n        Call();\n```\n"
+        }
+      ]
+    },
+    {
+      "name": "copying may use Markdown in the plain-text clipboard while retaining HTML",
+      "status": "pass",
+      "elapsedMs": 183,
+      "details": [
+        {
+          "enabled": false,
+          "plain": "Bold and Link",
+          "htmlPresent": true
+        },
+        {
+          "enabled": true,
+          "plain": "**Bold** and [Link](https://example.test)",
+          "htmlPresent": true
+        }
+      ]
+    },
+    {
+      "name": "cutting uses the selected clipboard format, removes only the selection, and undo restores formatted source",
+      "status": "pass",
+      "elapsedMs": 351,
+      "details": [
+        {
+          "enabled": false,
+          "plain": "Bold and Link",
+          "semanticHtml": true,
+          "remaining": "# Keep\n\n\nTail 中文\n",
+          "undoRestoredExactSource": true
+        },
+        {
+          "enabled": true,
+          "plain": "**Bold** and [Link](https://example.test)",
+          "semanticHtml": true,
+          "remaining": "# Keep\n\n\nTail 中文\n",
+          "undoRestoredExactSource": true
+        }
+      ]
+    },
+    {
+      "name": "copy-image policy creates a document-owned image and reference policy retains the original location",
+      "status": "pass",
+      "elapsedMs": 179,
+      "details": {
+        "copiedToDocumentAssets": true,
+        "referencedOriginal": true
+      }
+    },
+    {
+      "name": "automatic save writes committed edits on its configured timer without opening a save dialog",
+      "status": "pass",
+      "elapsedMs": 231,
+      "details": {
+        "configuredMinutes": 1,
+        "committedSourceWritten": true,
+        "dirtyWhenDiskWriteObserved": false,
+        "rendererAcknowledgementWaitMs": 39
+      }
+    },
+    {
+      "name": "invalid settings import is rejected atomically and leaves the open document intact",
+      "status": "pass",
+      "elapsedMs": 132,
+      "details": {
+        "rejected": true,
+        "documentPreserved": true
+      }
+    },
+    {
+      "name": "exported settings round-trip through native import and change actual appearance",
+      "status": "pass",
+      "elapsedMs": 119,
+      "details": {
+        "exported": true,
+        "imported": true,
+        "renderedFontSize": "23px"
+      }
+    },
+    {
+      "name": "restarting the actual Electron process restores durable settings and appearance",
+      "status": "pass",
+      "elapsedMs": 1039,
+      "details": {
+        "durableFontSize": "21px",
+        "durableTabSize": 2
+      }
+    },
+    {
+      "name": "legacy theme, outline, and zoom migrate atomically once and cannot override newer native settings",
+      "status": "pass",
+      "elapsedMs": 4186,
+      "details": {
+        "migratedRevision": 1,
+        "migratedFont": "19px",
+        "laterRevision": 2,
+        "laterNativeFontRetained": "16px"
+      }
+    },
+    {
+      "name": "narrow preferences layout fits the viewport and all controls stay reachable",
+      "status": "pass",
+      "elapsedMs": 186,
+      "details": {
+        "dialog": {
+          "left": 24,
+          "right": 496,
+          "top": 26,
+          "bottom": 674
+        },
+        "control": {
+          "left": 190,
+          "right": 475
+        },
+        "viewport": {
+          "width": 520,
+          "height": 700
+        }
+      }
+    }
+  ],
+  "pageErrors": []
+}

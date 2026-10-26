@@ -1,0 +1,108 @@
+{
+  "generatedAt": "2026-10-25T10:48:08.561Z",
+  "platform": "linux/x64",
+  "purpose": "Moye typography profile and settings experience regression, not original-app parity",
+  "results": [
+    {
+      "name": "built-in profile changes real typography as one durable display operation and preserves CRLF document",
+      "status": "pass",
+      "elapsedMs": 489,
+      "details": {
+        "profile": "book",
+        "fontSize": "19px",
+        "documentUnchanged": true
+      }
+    },
+    {
+      "name": "each typography field restores the selected profile baseline instead of global defaults",
+      "status": "pass",
+      "elapsedMs": 248,
+      "details": {
+        "restoredFontSize": 19,
+        "globalDefault": 17
+      }
+    },
+    {
+      "name": "draft sample previews immediately and before/current comparison does not revert durable settings",
+      "status": "pass",
+      "elapsedMs": 217,
+      "details": {
+        "durable": 19,
+        "current": "24px",
+        "before": "19px"
+      }
+    },
+    {
+      "name": "current settings can be saved as a named profile and duplicate names fail without partial changes",
+      "status": "pass",
+      "elapsedMs": 181,
+      "details": {
+        "id": "user-1",
+        "name": "我的中文方案",
+        "invalidSaveAtomic": true
+      }
+    },
+    {
+      "name": "copy and confirmed delete manage profiles while preserving current typography",
+      "status": "pass",
+      "elapsedMs": 356,
+      "details": {
+        "copyRetainsValues": true,
+        "deleteRetainsValues": true
+      }
+    },
+    {
+      "name": "search keeps unrelated results focused and profile cards can be found by typography words",
+      "status": "pass",
+      "elapsedMs": 61,
+      "details": {
+        "dedicatedTypographySearch": true
+      }
+    },
+    {
+      "name": "settings input composition is not saved mid-composition and closes only after committed text",
+      "status": "pass",
+      "elapsedMs": 553,
+      "details": {
+        "syntheticCompositionGuard": true,
+        "realSystemIMEUntested": true
+      }
+    },
+    {
+      "name": "profile operations retain disabled formula controls for the selected engine",
+      "status": "pass",
+      "elapsedMs": 178,
+      "details": {
+        "engineDependenciesRetained": true
+      }
+    },
+    {
+      "name": "profiles persist across an actual application restart",
+      "status": "pass",
+      "elapsedMs": 988,
+      "details": {
+        "activeProfile": "user-1",
+        "fontSize": 24
+      }
+    },
+    {
+      "name": "compact settings remain usable with profile controls and comparison on a narrow viewport",
+      "status": "pass",
+      "elapsedMs": 1114,
+      "details": {
+        "width": 460,
+        "viewport": 480,
+        "overflow": false
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "application": {
+    "version": "0.0",
+    "isPackaged": false,
+    "path": "/workspace/scratch/8a7610d50e71/moye/electron",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "pass": true
+}

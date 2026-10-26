@@ -1,0 +1,152 @@
+{
+  "generatedAt": "2026-10-25T10:55:20.213Z",
+  "platform": "linux/x64",
+  "purpose": "Native textarea syntax-paint regression, including independent native-vs-overlay glyph screenshots; not Telari runtime differential acceptance",
+  "results": [
+    {
+      "name": "source syntax coloring preserves exact native text, reverse selection and a visible caret",
+      "status": "pass",
+      "elapsedMs": 537,
+      "details": {
+        "selection": [
+          2,
+          15,
+          "backward"
+        ],
+        "tokenCount": 9,
+        "exactSource": true,
+        "caretColor": "rgb(71, 112, 91)"
+      }
+    },
+    {
+      "name": "a real source edit remains one undo step with syntax paint enabled",
+      "status": "pass",
+      "elapsedMs": 577,
+      "details": {
+        "nativeUndoRestored": true
+      }
+    },
+    {
+      "name": "source coloring can be disabled and restored without changing text, selection or dirty state",
+      "status": "pass",
+      "elapsedMs": 216,
+      "details": {
+        "nativeFallbackReadable": true,
+        "reEnabled": true
+      }
+    },
+    {
+      "name": "vertical and horizontal native scrolling keep the paint at the same offsets",
+      "status": "pass",
+      "elapsedMs": 168,
+      "details": {
+        "top": 380,
+        "left": 140,
+        "paintPosition": {
+          "top": -380,
+          "left": -140
+        }
+      }
+    },
+    {
+      "name": "overlay glyph positions match the real native textarea across Chinese wrap, tabs and width changes",
+      "status": "pass",
+      "elapsedMs": 1361,
+      "details": [
+        {
+          "width": 1045,
+          "height": 724,
+          "referenceInk": 45560,
+          "differentInk": 214,
+          "mismatchRatio": 0.004697102721685689
+        },
+        {
+          "width": 529,
+          "height": 699,
+          "referenceInk": 39664,
+          "differentInk": 246,
+          "mismatchRatio": 0.006202097620008068
+        },
+        {
+          "width": 649,
+          "height": 714,
+          "referenceInk": 19930,
+          "differentInk": 59,
+          "mismatchRatio": 0.002960361264425489
+        }
+      ]
+    },
+    {
+      "name": "focus line masks and typewriter padding remain aligned above source coloring",
+      "status": "pass",
+      "elapsedMs": 355,
+      "details": {
+        "padding": "349.05px",
+        "maskAboveColoring": true
+      }
+    },
+    {
+      "name": "active composition shows native text and does not replace the paint tree",
+      "status": "pass",
+      "elapsedMs": 150,
+      "details": {
+        "syntheticCompositionGuard": true,
+        "realOperatingSystemIMEUntested": true
+      }
+    },
+    {
+      "name": "mode changes hide source paint and discard stale document jobs",
+      "status": "pass",
+      "elapsedMs": 400,
+      "details": {
+        "latestDocumentOnly": true,
+        "stats": {
+          "paints": 19,
+          "staleDropped": 11,
+          "fallback": null,
+          "tokenCount": 2,
+          "lastDurationMs": 0.09999999962747097,
+          "lastValueLength": 14,
+          "active": true,
+          "generation": 185,
+          "scrollTop": 0,
+          "scrollLeft": 0
+        }
+      }
+    },
+    {
+      "name": "large source files and extreme lines fall back to readable native text",
+      "status": "pass",
+      "elapsedMs": 738,
+      "details": {
+        "largeAndLongLineReadable": true,
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "source markup stays literal and overlay spans do not create executable DOM",
+      "status": "pass",
+      "elapsedMs": 94,
+      "details": {
+        "literalOnly": true
+      }
+    },
+    {
+      "name": "forced-colors accessibility keeps native text visible",
+      "status": "pass",
+      "elapsedMs": 181,
+      "details": {
+        "nativeForcedColors": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": true,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/Moye"
+  },
+  "pass": true
+}

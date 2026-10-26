@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-10-25T10:55:46.600Z",
+  "platform": "linux/x64",
+  "purpose": "Moye live configuration file behaviour; not original-app differential verification",
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": true,
+    "path": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/Moye"
+  },
+  "results": [
+    {
+      "name": "configuration file opens through the real settings UI at its single whitelisted path",
+      "status": "pass",
+      "elapsedMs": 966,
+      "details": {
+        "pathMatchesAppSettingsFile": true,
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "saving a valid external configuration live-updates rendered typography and panel controls",
+      "status": "pass",
+      "elapsedMs": 223,
+      "details": {
+        "realFontSize": "21px",
+        "panelUpdated": true,
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "an incomplete external edit keeps the last valid rendering and rejects UI overwrites without quarantine",
+      "status": "pass",
+      "elapsedMs": 115,
+      "details": {
+        "lastValidFontSize": 21,
+        "partialFilePreserved": true,
+        "writeRejected": true
+      }
+    },
+    {
+      "name": "repair and explicit reload recover settings while leaving the external file bytes intact",
+      "status": "pass",
+      "elapsedMs": 157,
+      "details": {
+        "realFontSize": "23px",
+        "diagnosticsCleared": true,
+        "externalFileNotRewritten": true
+      }
+    },
+    {
+      "name": "external display updates wait for committed composition before touching the editor layout",
+      "status": "pass",
+      "elapsedMs": 190,
+      "details": {
+        "deferredDuringSyntheticComposition": true,
+        "appliedAfterCommit": true,
+        "realSystemIMEUntested": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "pass": true
+}

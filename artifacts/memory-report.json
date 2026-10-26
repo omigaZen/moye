@@ -1,0 +1,47 @@
+{
+  "generatedAt": "2026-10-25T10:59:42.923Z",
+  "unit": "KiB",
+  "method": "Separate settled long-document snapshot from /proc status and smaps_rollup, resolving PID namespace IDs; not a peak or input-latency measurement.",
+  "processes": [
+    {
+      "type": "Browser",
+      "rssKiB": 170540,
+      "peakRssKiB": 171408,
+      "pssKiB": 96544
+    },
+    {
+      "type": "Utility",
+      "rssKiB": 84308,
+      "peakRssKiB": 84308,
+      "pssKiB": 29910
+    },
+    {
+      "type": "Tab",
+      "rssKiB": 372472,
+      "peakRssKiB": 389632,
+      "pssKiB": 312447
+    },
+    {
+      "type": "GPU",
+      "rssKiB": 61176,
+      "peakRssKiB": 61176,
+      "pssKiB": 19997
+    }
+  ],
+  "pass": true,
+  "document": {
+    "mode": "ir",
+    "sourceLength": 108630,
+    "dirty": false
+  },
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": true,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/Moye",
+    "asarSha256": "ad05c6bf951a99d93c090201dddb93c1d4cb1bc5d52def6d1aa1457bce5f5211"
+  },
+  "totalRssKiB": 688496,
+  "totalPssKiB": 458898,
+  "note": "RSS can double-count shared pages; PSS apportions them. This is one settled Linux snapshot, not a cross-platform bound or a peak-total measurement. Electron getAppMetrics returned zero working-set values on this host."
+}

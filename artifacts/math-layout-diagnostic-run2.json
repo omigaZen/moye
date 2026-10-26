@@ -1,0 +1,47 @@
+{
+  "platform": "linux",
+  "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron",
+  "results": [
+    {
+      "name": "collapsed math and code source markers have zero area and no padding box",
+      "status": "pass",
+      "details": [
+        {
+          "type": "math-block",
+          "width": 0,
+          "height": 0,
+          "padding": "0px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "type": "code-block",
+          "width": 0,
+          "height": 0,
+          "padding": "0px",
+          "background": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    {
+      "name": "expanding a formula keeps its original editable source visible",
+      "status": "pass",
+      "details": {
+        "width": 770,
+        "height": 67.875,
+        "padding": "18px 22px",
+        "editable": true
+      }
+    },
+    {
+      "name": "leaving formula source collapses it again and preserves the original Markdown",
+      "status": "pass",
+      "details": {
+        "width": 0,
+        "height": 0,
+        "dirty": false,
+        "originalBytesPreserved": true
+      }
+    }
+  ],
+  "pageErrors": []
+}

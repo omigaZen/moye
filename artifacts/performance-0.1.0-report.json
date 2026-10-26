@@ -1,0 +1,1493 @@
+{
+  "generatedAt": "2026-10-23T14:32:05.014Z",
+  "environment": {
+    "os": "linux 6.18.55 x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "logicalCpuCount": 9,
+    "reportedMemoryBytes": 10451439616,
+    "cgroupCpuMax": "800000 100000",
+    "cgroupMemoryMax": "8589934592",
+    "fontconfigFile": "/workspace/scratch/8a7610d50e71/system-deps/fonts.conf",
+    "runtime": {
+      "node": "24.22.0",
+      "acorn": "8.18.0",
+      "ada": "4.0.0",
+      "amaro": "1.1.11",
+      "ares": "1.34.8",
+      "brotli": "1.2.0",
+      "cldr": "48.0",
+      "icu": "78.2",
+      "llhttp": "9.4.3",
+      "merve": "1.2.2",
+      "modules": "150",
+      "napi": "10",
+      "nbytes": "0.1.4",
+      "ncrypto": "0.0.1",
+      "nghttp2": "1.70.0",
+      "nghttp3": "",
+      "ngtcp2": "",
+      "openssl": "0.0.0",
+      "simdjson": "4.6.11",
+      "simdutf": "7.7.0",
+      "sqlite": "3.53.4",
+      "tz": "2026e",
+      "undici": "7.29.1",
+      "unicode": "17.0",
+      "uv": "1.52.1",
+      "uvwasi": "0.0.23",
+      "v8": "15.6.75.19-electron.0",
+      "zlib": "1.3.2.1-motley",
+      "zstd": "1.6.0",
+      "electron": "45.0.0",
+      "chrome": "156.0.8078.48"
+    },
+    "executable": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/Moye",
+    "mode": "Electron headless with explicit 1280×860 renderer viewport, isolated userData; native open/save dialogs stubbed only for deterministic file selection",
+    "viewport": {
+      "width": 1280,
+      "height": 860,
+      "devicePixelRatio": 1
+    },
+    "rendererTimeOriginMs": 1792765925157.1
+  },
+  "fixture": {
+    "path": "samples/长文性能验收.md",
+    "bytes": 308790,
+    "codePoints": 108630,
+    "hanCharacters": 100080,
+    "codeBlocks": 100,
+    "localImageReferences": 20
+  },
+  "sourceHashes": {
+    "rendererSha256": "264452ffcfa91bdfe5385ff795eca23c1fe4fcbd73a68d2f2fd88218dae955b0",
+    "mainSha256": "d3d7835a41482ecb50d8224dbded9fd7f397c500d27e05a75eee239271c3321b"
+  },
+  "thresholds": {
+    "openToEditableMs": 2000,
+    "inputP95Ms": 50
+  },
+  "limitations": [
+    "Measured on one Linux host only. Windows and macOS are unmeasured.",
+    "Headless requestAnimationFrame is a rendering scheduling proxy, not physical monitor presentation latency.",
+    "Playwright keyboard.insertText dispatches committed Unicode text; it does not exercise a real Chinese IME.",
+    "The native file picker is replaced with an immediate selection. Human picker time is excluded.",
+    "Initial editor launch is warmed before opening the long document. Open timing is document-open-to-editable, not application cold launch."
+  ],
+  "errors": [],
+  "isPackaged": true,
+  "loadedApplication": {
+    "isPackaged": true,
+    "sourcePath": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar",
+    "rendererSha256": "264452ffcfa91bdfe5385ff795eca23c1fe4fcbd73a68d2f2fd88218dae955b0",
+    "mainSha256": "d3d7835a41482ecb50d8224dbded9fd7f397c500d27e05a75eee239271c3321b"
+  },
+  "coldStartup": {
+    "startupToReadyMs": 621.208544,
+    "method": "Node monotonic time immediately before Playwright Electron launch → first renderer reports moye.ready; includes automation process/debugger/viewport setup and font preload, excludes human interaction.",
+    "fonts": {
+      "declared": 121,
+      "loaded": 101,
+      "notoSansScDeclared": 101,
+      "notoSansScLoaded": 101
+    },
+    "meets2000Ms": true
+  },
+  "open": {
+    "openToEditableMs": 589.6000000014901,
+    "editable": true,
+    "mode": "ir",
+    "sourceLength": 108630,
+    "meets2000Ms": true
+  },
+  "resources": {
+    "imageCount": 20,
+    "loadedImageCount": 20,
+    "imageNaturalWidths": [
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640
+    ],
+    "highlightedCodeBlocks": 100,
+    "fontsStatus": "loaded",
+    "settleAfterEditableMs": 1879.8898649999999,
+    "resourcesReadyAfterEditableMs": 975.6709789999998,
+    "additionalStabilizationWaitMs": 900,
+    "unmodifiedContentExact": true
+  },
+  "viewport": {
+    "longParagraphCount": 100,
+    "selectedParagraphIndex": 50,
+    "initialScrollTop": 54580,
+    "scrollHeight": 109120,
+    "viewportHeight": 724,
+    "caretInitialTop": 465.359375,
+    "scrollerClass": "vditor-reset",
+    "maximumObservedScrollDeltaPx": 0,
+    "neverJumpedToTop": true,
+    "allKeyboardCaretPositionsVisible": true,
+    "note": "Per-input scroll/caret samples detect large resets. This is not proof that no intermediate display frame ever flickered."
+  },
+  "keyboardEndToEnd": {
+    "method": "Node performance.now → await Playwright keyboard.insertText(one committed Unicode character) → renderer next requestAnimationFrame callback and IPC response",
+    "interpretation": "Conservative automation command roundtrip diagnostic, including IPC and potentially an additional frame; this is not physical input-to-display latency.",
+    "text": "【端到端测量】甲乙丙丁戊己庚辛壬癸子丑寅卯辰巳午未申酉戌亥",
+    "count": 29,
+    "p50Ms": 33.406300999999985,
+    "p95Ms": 51.87201899999991,
+    "minMs": 29.742433000000347,
+    "maxMs": 52.217707999999675,
+    "samples": [
+      {
+        "character": "【",
+        "latencyMs": 52.217707999999675,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "端",
+        "latencyMs": 34.771026999999776,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "到",
+        "latencyMs": 51.87201899999991,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "端",
+        "latencyMs": 50.40188599999965,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "测",
+        "latencyMs": 40.876328999999714,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "量",
+        "latencyMs": 31.231778999999733,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "】",
+        "latencyMs": 29.742433000000347,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "甲",
+        "latencyMs": 36.055335000000014,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "乙",
+        "latencyMs": 30.792421999999533,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "丙",
+        "latencyMs": 33.32677700000022,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "丁",
+        "latencyMs": 33.406300999999985,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "戊",
+        "latencyMs": 33.050790000000234,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "己",
+        "latencyMs": 33.29233199999999,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "庚",
+        "latencyMs": 33.23282400000062,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "辛",
+        "latencyMs": 34.45227200000045,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "壬",
+        "latencyMs": 32.26160600000003,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "癸",
+        "latencyMs": 33.497174000000086,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "子",
+        "latencyMs": 33.0386639999997,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "丑",
+        "latencyMs": 33.678642000000764,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "寅",
+        "latencyMs": 33.19911999999931,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "卯",
+        "latencyMs": 33.422955,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "辰",
+        "latencyMs": 33.193475999999464,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "巳",
+        "latencyMs": 34.04029399999945,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "午",
+        "latencyMs": 34.14577599999939,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "未",
+        "latencyMs": 37.5185620000002,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "申",
+        "latencyMs": 33.978197000000364,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "酉",
+        "latencyMs": 30.15426699999989,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "戌",
+        "latencyMs": 30.39674399999967,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      },
+      {
+        "character": "亥",
+        "latencyMs": 33.20071699999971,
+        "scrollTop": 54580,
+        "caretTop": 465.359375,
+        "caretBottom": 490.359375
+      }
+    ],
+    "meets50Ms": false
+  },
+  "keyboardEventToFrame": {
+    "method": "Renderer capture of real Playwright-dispatched beforeinput (fallback input) → next requestAnimationFrame; excludes command/response IPC outside the renderer",
+    "count": 29,
+    "p50Ms": 24,
+    "p95Ms": 32.100000001490116,
+    "minMs": 20.599999994039536,
+    "maxMs": 39.399999998509884,
+    "samples": [
+      {
+        "phase": "keyboard",
+        "character": "【",
+        "trusted": true,
+        "startedAtMs": 3411.3000000044703,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3415.7000000029802,
+        "beforeInputToInputCaptureMs": 4.399999998509884,
+        "inputTargetHandlersMs": 18,
+        "frameAtMs": 3438.10000000149,
+        "latencyMs": 26.799999997019768,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "端",
+        "trusted": true,
+        "startedAtMs": 3445.5,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3448.3000000044703,
+        "beforeInputToInputCaptureMs": 2.8000000044703484,
+        "inputTargetHandlersMs": 17,
+        "frameAtMs": 3473.60000000149,
+        "latencyMs": 28.100000001490116,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "到",
+        "trusted": true,
+        "startedAtMs": 3479.10000000149,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3482.7000000029802,
+        "beforeInputToInputCaptureMs": 3.600000001490116,
+        "inputTargetHandlersMs": 23.299999997019768,
+        "frameAtMs": 3518.5,
+        "latencyMs": 39.399999998509884,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "端",
+        "trusted": true,
+        "startedAtMs": 3537.39999999851,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3541.10000000149,
+        "beforeInputToInputCaptureMs": 3.7000000029802322,
+        "inputTargetHandlersMs": 18.200000002980232,
+        "frameAtMs": 3569.5,
+        "latencyMs": 32.100000001490116,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "测",
+        "trusted": true,
+        "startedAtMs": 3586.10000000149,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3588.8000000044703,
+        "beforeInputToInputCaptureMs": 2.7000000029802322,
+        "inputTargetHandlersMs": 24.19999999552965,
+        "frameAtMs": 3617.10000000149,
+        "latencyMs": 31,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "量",
+        "trusted": true,
+        "startedAtMs": 3622.89999999851,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3627.2000000029802,
+        "beforeInputToInputCaptureMs": 4.300000004470348,
+        "inputTargetHandlersMs": 19,
+        "frameAtMs": 3648.89999999851,
+        "latencyMs": 26,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "】",
+        "trusted": true,
+        "startedAtMs": 3653.7000000029802,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3656.39999999851,
+        "beforeInputToInputCaptureMs": 2.6999999955296516,
+        "inputTargetHandlersMs": 15.100000001490116,
+        "frameAtMs": 3674.39999999851,
+        "latencyMs": 20.69999999552965,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "甲",
+        "trusted": true,
+        "startedAtMs": 3683,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3686.10000000149,
+        "beforeInputToInputCaptureMs": 3.100000001490116,
+        "inputTargetHandlersMs": 21.100000001490116,
+        "frameAtMs": 3711.2000000029802,
+        "latencyMs": 28.200000002980232,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "乙",
+        "trusted": true,
+        "startedAtMs": 3719.10000000149,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3722.3000000044703,
+        "beforeInputToInputCaptureMs": 3.2000000029802322,
+        "inputTargetHandlersMs": 17.099999994039536,
+        "frameAtMs": 3742.2000000029802,
+        "latencyMs": 23.100000001490116,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "丙",
+        "trusted": true,
+        "startedAtMs": 3750,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3753.7000000029802,
+        "beforeInputToInputCaptureMs": 3.7000000029802322,
+        "inputTargetHandlersMs": 20.600000001490116,
+        "frameAtMs": 3777.5,
+        "latencyMs": 27.5,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "丁",
+        "trusted": true,
+        "startedAtMs": 3783.2000000029802,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3786,
+        "beforeInputToInputCaptureMs": 2.7999999970197678,
+        "inputTargetHandlersMs": 16,
+        "frameAtMs": 3805.10000000149,
+        "latencyMs": 21.899999998509884,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "戊",
+        "trusted": true,
+        "startedAtMs": 3816.5,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3819.60000000149,
+        "beforeInputToInputCaptureMs": 3.100000001490116,
+        "inputTargetHandlersMs": 16.399999998509884,
+        "frameAtMs": 3838.89999999851,
+        "latencyMs": 22.399999998509884,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "己",
+        "trusted": true,
+        "startedAtMs": 3849.60000000149,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3852.7000000029802,
+        "beforeInputToInputCaptureMs": 3.100000001490116,
+        "inputTargetHandlersMs": 15.5,
+        "frameAtMs": 3870.60000000149,
+        "latencyMs": 21,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "庚",
+        "trusted": true,
+        "startedAtMs": 3882.89999999851,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3885.3000000044703,
+        "beforeInputToInputCaptureMs": 2.4000000059604645,
+        "inputTargetHandlersMs": 18.799999997019768,
+        "frameAtMs": 3906.89999999851,
+        "latencyMs": 24,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "辛",
+        "trusted": true,
+        "startedAtMs": 3916.10000000149,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3918.7000000029802,
+        "beforeInputToInputCaptureMs": 2.600000001490116,
+        "inputTargetHandlersMs": 16.399999998509884,
+        "frameAtMs": 3938.2000000029802,
+        "latencyMs": 22.100000001490116,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "壬",
+        "trusted": true,
+        "startedAtMs": 3950.7000000029802,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3953.7000000029802,
+        "beforeInputToInputCaptureMs": 3,
+        "inputTargetHandlersMs": 15.799999997019768,
+        "frameAtMs": 3971.8000000044703,
+        "latencyMs": 21.100000001490116,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "癸",
+        "trusted": true,
+        "startedAtMs": 3982.8000000044703,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3985.60000000149,
+        "beforeInputToInputCaptureMs": 2.7999999970197678,
+        "inputTargetHandlersMs": 15.700000002980232,
+        "frameAtMs": 4004.5,
+        "latencyMs": 21.69999999552965,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "子",
+        "trusted": true,
+        "startedAtMs": 4016.5,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4019.7000000029802,
+        "beforeInputToInputCaptureMs": 3.2000000029802322,
+        "inputTargetHandlersMs": 18.100000001490116,
+        "frameAtMs": 4040.60000000149,
+        "latencyMs": 24.100000001490116,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "丑",
+        "trusted": true,
+        "startedAtMs": 4049.39999999851,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4052.3000000044703,
+        "beforeInputToInputCaptureMs": 2.9000000059604645,
+        "inputTargetHandlersMs": 15.699999995529652,
+        "frameAtMs": 4070.5,
+        "latencyMs": 21.100000001490116,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "寅",
+        "trusted": true,
+        "startedAtMs": 4083.3000000044703,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4085.89999999851,
+        "beforeInputToInputCaptureMs": 2.5999999940395355,
+        "inputTargetHandlersMs": 15.5,
+        "frameAtMs": 4103.89999999851,
+        "latencyMs": 20.599999994039536,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "卯",
+        "trusted": true,
+        "startedAtMs": 4116.39999999851,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4119.30000000447,
+        "beforeInputToInputCaptureMs": 2.9000000059604645,
+        "inputTargetHandlersMs": 15.899999998509884,
+        "frameAtMs": 4139.39999999851,
+        "latencyMs": 23,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "辰",
+        "trusted": true,
+        "startedAtMs": 4149.70000000298,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4152.80000000447,
+        "beforeInputToInputCaptureMs": 3.100000001490116,
+        "inputTargetHandlersMs": 16.69999999552965,
+        "frameAtMs": 4172.30000000447,
+        "latencyMs": 22.600000001490116,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "巳",
+        "trusted": true,
+        "startedAtMs": 4182.80000000447,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4185.70000000298,
+        "beforeInputToInputCaptureMs": 2.899999998509884,
+        "inputTargetHandlersMs": 15.699999995529652,
+        "frameAtMs": 4204.30000000447,
+        "latencyMs": 21.5,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "午",
+        "trusted": true,
+        "startedAtMs": 4217,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4220.89999999851,
+        "beforeInputToInputCaptureMs": 3.899999998509884,
+        "inputTargetHandlersMs": 17.600000001490116,
+        "frameAtMs": 4241.80000000447,
+        "latencyMs": 24.80000000447035,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "未",
+        "trusted": true,
+        "startedAtMs": 4251.20000000298,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4256.60000000149,
+        "beforeInputToInputCaptureMs": 5.399999998509884,
+        "inputTargetHandlersMs": 20.200000002980232,
+        "frameAtMs": 4280.89999999851,
+        "latencyMs": 29.69999999552965,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "申",
+        "trusted": true,
+        "startedAtMs": 4288.60000000149,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4291.70000000298,
+        "beforeInputToInputCaptureMs": 3.100000001490116,
+        "inputTargetHandlersMs": 21.299999997019768,
+        "frameAtMs": 4316.39999999851,
+        "latencyMs": 27.799999997019768,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "酉",
+        "trusted": true,
+        "startedAtMs": 4322.70000000298,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4326.39999999851,
+        "beforeInputToInputCaptureMs": 3.6999999955296516,
+        "inputTargetHandlersMs": 18.30000000447035,
+        "frameAtMs": 4347.70000000298,
+        "latencyMs": 25,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "戌",
+        "trusted": true,
+        "startedAtMs": 4353,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4357.39999999851,
+        "beforeInputToInputCaptureMs": 4.399999998509884,
+        "inputTargetHandlersMs": 17,
+        "frameAtMs": 4377.5,
+        "latencyMs": 24.5,
+        "caretTop": 465.359375
+      },
+      {
+        "phase": "keyboard",
+        "character": "亥",
+        "trusted": true,
+        "startedAtMs": 4383.30000000447,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4386.60000000149,
+        "beforeInputToInputCaptureMs": 3.2999999970197678,
+        "inputTargetHandlersMs": 15.799999997019768,
+        "frameAtMs": 4405.20000000298,
+        "latencyMs": 21.899999998509884,
+        "caretTop": 465.359375
+      }
+    ],
+    "meets50Ms": true
+  },
+  "pageInsertToFrame": {
+    "method": "Renderer performance.now → document.execCommand(insertText, one character) → next requestAnimationFrame; excludes Playwright input IPC",
+    "text": "【页面帧测量】天地玄黄宇宙洪荒日月盈昃辰宿列张寒来暑往秋收冬藏",
+    "count": 31,
+    "p50Ms": 22.200000002980232,
+    "p95Ms": 30.299999997019768,
+    "minMs": 19.799999997019768,
+    "maxMs": 31,
+    "synchronousWork": {
+      "count": 31,
+      "p50Ms": 16.600000001490116,
+      "p95Ms": 23.399999998509884,
+      "minMs": 14.600000001490116,
+      "maxMs": 26.100000001490116
+    },
+    "samples": [
+      {
+        "character": "【",
+        "accepted": true,
+        "latencyMs": 19.799999997019768,
+        "synchronousMs": 16.799999997019768,
+        "scrollTop": 54580,
+        "caretTop": 465.359375
+      },
+      {
+        "character": "页",
+        "accepted": true,
+        "latencyMs": 27.5,
+        "synchronousMs": 20.5,
+        "scrollTop": 54580,
+        "caretTop": 465.359375
+      },
+      {
+        "character": "面",
+        "accepted": true,
+        "latencyMs": 22.100000001490116,
+        "synchronousMs": 15.799999997019768,
+        "scrollTop": 54580,
+        "caretTop": 465.359375
+      },
+      {
+        "character": "帧",
+        "accepted": true,
+        "latencyMs": 21.899999998509884,
+        "synchronousMs": 16.599999994039536,
+        "scrollTop": 54580,
+        "caretTop": 465.359375
+      },
+      {
+        "character": "测",
+        "accepted": true,
+        "latencyMs": 20.399999998509884,
+        "synchronousMs": 15.299999997019768,
+        "scrollTop": 54580,
+        "caretTop": 465.359375
+      },
+      {
+        "character": "量",
+        "accepted": true,
+        "latencyMs": 21,
+        "synchronousMs": 15.899999998509884,
+        "scrollTop": 54580,
+        "caretTop": 465.359375
+      },
+      {
+        "character": "】",
+        "accepted": true,
+        "latencyMs": 22.399999998509884,
+        "synchronousMs": 15.600000001490116,
+        "scrollTop": 54580,
+        "caretTop": 465.359375
+      },
+      {
+        "character": "天",
+        "accepted": true,
+        "latencyMs": 20.899999998509884,
+        "synchronousMs": 15.899999998509884,
+        "scrollTop": 54580,
+        "caretTop": 465.359375
+      },
+      {
+        "character": "地",
+        "accepted": true,
+        "latencyMs": 23.200000002980232,
+        "synchronousMs": 17.900000005960464,
+        "scrollTop": 54580,
+        "caretTop": 465.359375
+      },
+      {
+        "character": "玄",
+        "accepted": true,
+        "latencyMs": 22.299999997019768,
+        "synchronousMs": 16.399999998509884,
+        "scrollTop": 54580,
+        "caretTop": 465.359375
+      },
+      {
+        "character": "黄",
+        "accepted": true,
+        "latencyMs": 21.600000001490116,
+        "synchronousMs": 16.600000001490116,
+        "scrollTop": 54580,
+        "caretTop": 465.359375
+      },
+      {
+        "character": "宇",
+        "accepted": true,
+        "latencyMs": 22,
+        "synchronousMs": 16.700000002980232,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "宙",
+        "accepted": true,
+        "latencyMs": 22.399999998509884,
+        "synchronousMs": 16.299999997019768,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "洪",
+        "accepted": true,
+        "latencyMs": 31,
+        "synchronousMs": 26.100000001490116,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "荒",
+        "accepted": true,
+        "latencyMs": 21.80000000447035,
+        "synchronousMs": 16.5,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "日",
+        "accepted": true,
+        "latencyMs": 22,
+        "synchronousMs": 16.19999999552965,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "月",
+        "accepted": true,
+        "latencyMs": 30.299999997019768,
+        "synchronousMs": 23.399999998509884,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "盈",
+        "accepted": true,
+        "latencyMs": 24.600000001490116,
+        "synchronousMs": 18.399999998509884,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "昃",
+        "accepted": true,
+        "latencyMs": 24.399999998509884,
+        "synchronousMs": 18.69999999552965,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "辰",
+        "accepted": true,
+        "latencyMs": 22.299999997019768,
+        "synchronousMs": 16.799999997019768,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "宿",
+        "accepted": true,
+        "latencyMs": 21,
+        "synchronousMs": 15.900000005960464,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "列",
+        "accepted": true,
+        "latencyMs": 25.400000005960464,
+        "synchronousMs": 19.80000000447035,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "张",
+        "accepted": true,
+        "latencyMs": 26.299999997019768,
+        "synchronousMs": 17.099999994039536,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "寒",
+        "accepted": true,
+        "latencyMs": 27.799999997019768,
+        "synchronousMs": 21.5,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "来",
+        "accepted": true,
+        "latencyMs": 27.200000002980232,
+        "synchronousMs": 18.600000001490116,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "暑",
+        "accepted": true,
+        "latencyMs": 23.5,
+        "synchronousMs": 18.200000002980232,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "往",
+        "accepted": true,
+        "latencyMs": 20.5,
+        "synchronousMs": 14.600000001490116,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "秋",
+        "accepted": true,
+        "latencyMs": 20.799999997019768,
+        "synchronousMs": 15.799999997019768,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "收",
+        "accepted": true,
+        "latencyMs": 22.200000002980232,
+        "synchronousMs": 16.900000005960464,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "冬",
+        "accepted": true,
+        "latencyMs": 20.799999997019768,
+        "synchronousMs": 15.799999997019768,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      },
+      {
+        "character": "藏",
+        "accepted": true,
+        "latencyMs": 21.30000000447035,
+        "synchronousMs": 16.100000001490116,
+        "scrollTop": 54580,
+        "caretTop": 498.5
+      }
+    ],
+    "meets50Ms": true
+  },
+  "editorInteractionPass": true,
+  "integrity": {
+    "keyboardTextPresentExactlyOnce": true,
+    "pageTextPresentExactlyOnce": true,
+    "originalRenderedMarkdownIntact": true,
+    "inputEventCount": 60,
+    "expectedInputEventCount": 60,
+    "stateMatchesCurrentEditor": true,
+    "originalDocumentCodePoints": 108630,
+    "finalDocumentCodePoints": 108690,
+    "finalScrollTop": 54580
+  },
+  "profile": {
+    "fullDocumentGetValue": {
+      "count": 8,
+      "p50Ms": 53.100000001490116,
+      "p95Ms": 77.10000000149012,
+      "minMs": 50.100000001490116,
+      "maxMs": 77.10000000149012,
+      "samplesMs": [
+        53.400000005960464,
+        50.100000001490116,
+        58,
+        77.10000000149012,
+        50.899999998509884,
+        51.79999999701977,
+        53.100000001490116,
+        54.899999998509884
+      ],
+      "note": "Eight isolated calls after the input test; useful attribution, not an independent input latency measurement."
+    }
+  },
+  "warmKeyboardDiagnostic": {
+    "note": "Same characters entered a second time, after initial glyph/font use. This diagnostic does not replace or relax the first-use input acceptance gates.",
+    "eventToFrame": {
+      "count": 29,
+      "p50Ms": 21.5,
+      "p95Ms": 26.5,
+      "minMs": 18.700000002980232,
+      "maxMs": 30.19999999552965,
+      "samples": [
+        {
+          "phase": "warm-keyboard",
+          "character": "【",
+          "trusted": true,
+          "startedAtMs": 6503.20000000298,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 6506.30000000447,
+          "beforeInputToInputCaptureMs": 3.100000001490116,
+          "inputTargetHandlersMs": 15.199999995529652,
+          "frameAtMs": 6524.10000000149,
+          "latencyMs": 20.899999998509884,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "端",
+          "trusted": true,
+          "startedAtMs": 6533.60000000149,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 6536.60000000149,
+          "beforeInputToInputCaptureMs": 3,
+          "inputTargetHandlersMs": 17.5,
+          "frameAtMs": 6556.80000000447,
+          "latencyMs": 23.200000002980232,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "到",
+          "trusted": true,
+          "startedAtMs": 6567.70000000298,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 6570.60000000149,
+          "beforeInputToInputCaptureMs": 2.899999998509884,
+          "inputTargetHandlersMs": 14.600000001490116,
+          "frameAtMs": 6587.60000000149,
+          "latencyMs": 19.899999998509884,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "端",
+          "trusted": true,
+          "startedAtMs": 6599.60000000149,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 6602.10000000149,
+          "beforeInputToInputCaptureMs": 2.5,
+          "inputTargetHandlersMs": 16.899999998509884,
+          "frameAtMs": 6621.70000000298,
+          "latencyMs": 22.100000001490116,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "测",
+          "trusted": true,
+          "startedAtMs": 6632.60000000149,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 6635.10000000149,
+          "beforeInputToInputCaptureMs": 2.5,
+          "inputTargetHandlersMs": 15.5,
+          "frameAtMs": 6653.39999999851,
+          "latencyMs": 20.799999997019768,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "量",
+          "trusted": true,
+          "startedAtMs": 6666,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 6668.5,
+          "beforeInputToInputCaptureMs": 2.5,
+          "inputTargetHandlersMs": 15,
+          "frameAtMs": 6685.80000000447,
+          "latencyMs": 19.80000000447035,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "】",
+          "trusted": true,
+          "startedAtMs": 6699.80000000447,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 6702.5,
+          "beforeInputToInputCaptureMs": 2.6999999955296516,
+          "inputTargetHandlersMs": 15.200000002980232,
+          "frameAtMs": 6720.39999999851,
+          "latencyMs": 20.599999994039536,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "甲",
+          "trusted": true,
+          "startedAtMs": 6732.60000000149,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 6735.70000000298,
+          "beforeInputToInputCaptureMs": 3.100000001490116,
+          "inputTargetHandlersMs": 14.799999997019768,
+          "frameAtMs": 6754,
+          "latencyMs": 21.399999998509884,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "乙",
+          "trusted": true,
+          "startedAtMs": 6771.10000000149,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 6773.80000000447,
+          "beforeInputToInputCaptureMs": 2.7000000029802322,
+          "inputTargetHandlersMs": 15.199999995529652,
+          "frameAtMs": 6792.10000000149,
+          "latencyMs": 21,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "丙",
+          "trusted": true,
+          "startedAtMs": 6800.70000000298,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 6803.70000000298,
+          "beforeInputToInputCaptureMs": 3,
+          "inputTargetHandlersMs": 17.299999997019768,
+          "frameAtMs": 6824.10000000149,
+          "latencyMs": 23.399999998509884,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "丁",
+          "trusted": true,
+          "startedAtMs": 6832.60000000149,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 6835.20000000298,
+          "beforeInputToInputCaptureMs": 2.600000001490116,
+          "inputTargetHandlersMs": 16,
+          "frameAtMs": 6853.5,
+          "latencyMs": 20.899999998509884,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "戊",
+          "trusted": true,
+          "startedAtMs": 6866.60000000149,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 6869.70000000298,
+          "beforeInputToInputCaptureMs": 3.100000001490116,
+          "inputTargetHandlersMs": 16.100000001490116,
+          "frameAtMs": 6888.30000000447,
+          "latencyMs": 21.700000002980232,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "己",
+          "trusted": true,
+          "startedAtMs": 6899.70000000298,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 6902.70000000298,
+          "beforeInputToInputCaptureMs": 3,
+          "inputTargetHandlersMs": 15,
+          "frameAtMs": 6921,
+          "latencyMs": 21.299999997019768,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "庚",
+          "trusted": true,
+          "startedAtMs": 6933.30000000447,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 6936.39999999851,
+          "beforeInputToInputCaptureMs": 3.0999999940395355,
+          "inputTargetHandlersMs": 16,
+          "frameAtMs": 6954.80000000447,
+          "latencyMs": 21.5,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "辛",
+          "trusted": true,
+          "startedAtMs": 6966.10000000149,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 6968.39999999851,
+          "beforeInputToInputCaptureMs": 2.2999999970197678,
+          "inputTargetHandlersMs": 14,
+          "frameAtMs": 6984.80000000447,
+          "latencyMs": 18.700000002980232,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "壬",
+          "trusted": true,
+          "startedAtMs": 6999.70000000298,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7002.60000000149,
+          "beforeInputToInputCaptureMs": 2.899999998509884,
+          "inputTargetHandlersMs": 15.899999998509884,
+          "frameAtMs": 7021.20000000298,
+          "latencyMs": 21.5,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "癸",
+          "trusted": true,
+          "startedAtMs": 7033,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7035.80000000447,
+          "beforeInputToInputCaptureMs": 2.8000000044703484,
+          "inputTargetHandlersMs": 14.299999997019768,
+          "frameAtMs": 7052.39999999851,
+          "latencyMs": 19.399999998509884,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "子",
+          "trusted": true,
+          "startedAtMs": 7066.39999999851,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7069.39999999851,
+          "beforeInputToInputCaptureMs": 3,
+          "inputTargetHandlersMs": 16.80000000447035,
+          "frameAtMs": 7089.10000000149,
+          "latencyMs": 22.700000002980232,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "丑",
+          "trusted": true,
+          "startedAtMs": 7099.70000000298,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7103.60000000149,
+          "beforeInputToInputCaptureMs": 3.899999998509884,
+          "inputTargetHandlersMs": 22.100000001490116,
+          "frameAtMs": 7129.89999999851,
+          "latencyMs": 30.19999999552965,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "寅",
+          "trusted": true,
+          "startedAtMs": 7138.60000000149,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7141.80000000447,
+          "beforeInputToInputCaptureMs": 3.2000000029802322,
+          "inputTargetHandlersMs": 18.5,
+          "frameAtMs": 7162.60000000149,
+          "latencyMs": 24,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "卯",
+          "trusted": true,
+          "startedAtMs": 7169.60000000149,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7172.80000000447,
+          "beforeInputToInputCaptureMs": 3.2000000029802322,
+          "inputTargetHandlersMs": 16.399999998509884,
+          "frameAtMs": 7193.60000000149,
+          "latencyMs": 24,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "辰",
+          "trusted": true,
+          "startedAtMs": 7202.10000000149,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7208.60000000149,
+          "beforeInputToInputCaptureMs": 6.5,
+          "inputTargetHandlersMs": 16.600000001490116,
+          "frameAtMs": 7228.60000000149,
+          "latencyMs": 26.5,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "巳",
+          "trusted": true,
+          "startedAtMs": 7233.60000000149,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7236.39999999851,
+          "beforeInputToInputCaptureMs": 2.7999999970197678,
+          "inputTargetHandlersMs": 15.300000004470348,
+          "frameAtMs": 7254.60000000149,
+          "latencyMs": 21,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "午",
+          "trusted": true,
+          "startedAtMs": 7268.39999999851,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7272.10000000149,
+          "beforeInputToInputCaptureMs": 3.7000000029802322,
+          "inputTargetHandlersMs": 16.200000002980232,
+          "frameAtMs": 7290.80000000447,
+          "latencyMs": 22.400000005960464,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "未",
+          "trusted": true,
+          "startedAtMs": 7299.30000000447,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7301.60000000149,
+          "beforeInputToInputCaptureMs": 2.2999999970197678,
+          "inputTargetHandlersMs": 14.799999997019768,
+          "frameAtMs": 7319.20000000298,
+          "latencyMs": 19.899999998509884,
+          "caretTop": 498.5
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "申",
+          "trusted": true,
+          "startedAtMs": 7332.70000000298,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7335.5,
+          "beforeInputToInputCaptureMs": 2.7999999970197678,
+          "inputTargetHandlersMs": 16.100000001490116,
+          "frameAtMs": 7354.60000000149,
+          "latencyMs": 21.899999998509884,
+          "caretTop": 531.640625
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "酉",
+          "trusted": true,
+          "startedAtMs": 7366.39999999851,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7369.39999999851,
+          "beforeInputToInputCaptureMs": 3,
+          "inputTargetHandlersMs": 18.100000001490116,
+          "frameAtMs": 7390.5,
+          "latencyMs": 24.100000001490116,
+          "caretTop": 531.640625
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "戌",
+          "trusted": true,
+          "startedAtMs": 7399.70000000298,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7402.60000000149,
+          "beforeInputToInputCaptureMs": 2.899999998509884,
+          "inputTargetHandlersMs": 16,
+          "frameAtMs": 7421.20000000298,
+          "latencyMs": 21.5,
+          "caretTop": 531.640625
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "亥",
+          "trusted": true,
+          "startedAtMs": 7432.70000000298,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7436.10000000149,
+          "beforeInputToInputCaptureMs": 3.399999998509884,
+          "inputTargetHandlersMs": 15.600000001490116,
+          "frameAtMs": 7454.10000000149,
+          "latencyMs": 21.399999998509884,
+          "caretTop": 531.640625
+        }
+      ]
+    },
+    "externalRoundtrip": {
+      "count": 29,
+      "p50Ms": 33.116211999999905,
+      "p95Ms": 34.160031000000345,
+      "minMs": 30.234204000000318,
+      "maxMs": 38.245654999999715
+    },
+    "fullDocumentIntactAfterWarmDiagnostic": true
+  },
+  "fontLoadingDiagnostics": {
+    "coldSpikes": [],
+    "resources": [],
+    "fontEvents": [],
+    "initialDeclaredFontFaces": 121,
+    "initialLoadedFontFaces": 104,
+    "initialNotoSansScDeclaredFaces": 101,
+    "initialNotoSansScLoadedFaces": 101,
+    "finalLoadedFontFaces": 104,
+    "fullDocumentIntactAfterWarmDiagnostic": true,
+    "protocolFontRequests": [
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/vditor/dist/js/katex/fonts/KaTeX_Math-Italic.woff2",
+        "startWallMs": 1792765925706.532,
+        "startProtocolSeconds": 46657.551796,
+        "endWallMs": 1792765925707.324,
+        "encodedDataLength": 16440,
+        "startTimeMs": 549.431884765625,
+        "responseEndMs": 550.223876953125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/vditor/dist/js/katex/fonts/KaTeX_Main-Regular.woff2",
+        "startWallMs": 1792765925706.917,
+        "startProtocolSeconds": 46657.552221,
+        "endWallMs": 1792765925707.75,
+        "encodedDataLength": 26272,
+        "startTimeMs": 549.81689453125,
+        "responseEndMs": 550.64990234375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/vditor/dist/js/katex/fonts/KaTeX_Size1-Regular.woff2",
+        "startWallMs": 1792765925707.53,
+        "startProtocolSeconds": 46657.552837,
+        "endWallMs": 1792765925708.024,
+        "encodedDataLength": 5468,
+        "startTimeMs": 550.429931640625,
+        "responseEndMs": 550.923828125
+      }
+    ]
+  },
+  "pass": false,
+  "recommendations": [
+    "Profile the input handler on the same fixture. Avoid serializing and reparsing the complete document synchronously for every input event.",
+    "Keep immediate DOM editing responsive while batching noncritical word count, outline and recovery serialization work.",
+    "Remeasure on Windows/macOS and target user hardware before claiming cross-platform performance acceptance."
+  ]
+}

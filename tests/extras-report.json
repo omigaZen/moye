@@ -1,0 +1,194 @@
+{
+  "platform": "linux/x64",
+  "engine": "Electron 45",
+  "network": "all HTTP(S) requests blocked",
+  "requests": [],
+  "results": [
+    {
+      "name": "complete sample renders 8 Mermaid diagrams and 5 formulae offline",
+      "status": "pass",
+      "elapsedMs": 2407,
+      "details": {
+        "diagrams": 8,
+        "math": 5,
+        "errors": []
+      }
+    },
+    {
+      "name": "live replace-all changes visible text and preserves hidden link URL",
+      "status": "pass",
+      "elapsedMs": 1124,
+      "details": {
+        "count": "0/3",
+        "content": "[CHANGED](https://same.example) and CHANGED\n\n**CHANGED**\n"
+      }
+    },
+    {
+      "name": "code block source remains searchable while syntax markers stay excluded",
+      "status": "pass",
+      "elapsedMs": 1008,
+      "details": {
+        "count": "0/2",
+        "content": "```csharp\nConsole.WriteLine(\"changed\");\n```\n\nchanged\n"
+      }
+    },
+    {
+      "name": "literal replacement preserves angle brackets as text",
+      "status": "pass",
+      "elapsedMs": 997,
+      "details": {
+        "count": "0/1",
+        "content": "one <item> two\n"
+      }
+    },
+    {
+      "name": "table Tab/Shift+Tab navigate cells and text does not bleed",
+      "status": "pass",
+      "elapsedMs": 508,
+      "details": {
+        "cells": [
+          "one中文",
+          "第二格"
+        ],
+        "currentCell": 0
+      }
+    },
+    {
+      "name": "table Enter inserts a cell line break and undo preserves table",
+      "status": "pass",
+      "elapsedMs": 952,
+      "details": {
+        "tables": 1,
+        "cells": [
+          "one<br>line",
+          "two"
+        ],
+        "content": "| A             | B   |\n| ------------- | --- |\n| one<br />line | two |\n"
+      }
+    },
+    {
+      "name": "local image chooser creates relative asset and reloads from disk",
+      "status": "pass",
+      "elapsedMs": 998,
+      "details": {
+        "saved": "image here![书写 测试](./extra-6.assets/%E4%B9%A6%E5%86%99%20%E6%B5%8B%E8%AF%95.svg)\n",
+        "asset": "书写 测试.svg"
+      }
+    },
+    {
+      "name": "empty list Enter exits to an ordinary paragraph",
+      "status": "pass",
+      "elapsedMs": 968,
+      "details": {
+        "content": "- one\n\nafter\n",
+        "inList": false,
+        "itemCount": 1
+      }
+    },
+    {
+      "name": "list Tab and Shift+Tab indent and outdent without text loss",
+      "status": "pass",
+      "elapsedMs": 497,
+      "details": {
+        "nested": 0,
+        "items": [
+          "first",
+          "second"
+        ]
+      }
+    },
+    {
+      "name": "list indentation preserves a backward text selection and supports undo",
+      "status": "pass",
+      "elapsedMs": 486,
+      "details": {
+        "selected": "eco",
+        "backward": true,
+        "nested": 1
+      }
+    },
+    {
+      "name": "code block Tab still inserts spaces when nested in a list",
+      "status": "pass",
+      "elapsedMs": 935,
+      "details": {
+        "content": "- first\n- second\n\n  ```csharp\n  abc\n      \n  ```\n",
+        "nestedLists": 0,
+        "code": "abc\n    "
+      }
+    },
+    {
+      "name": "table Shift+Enter inside text preserves both sides and the line break",
+      "status": "pass",
+      "elapsedMs": 951,
+      "details": {
+        "html": "o<br>Xne",
+        "content": "| A          | B   |\n| ---------- | --- |\n| o<br />Xne | two |\n"
+      }
+    },
+    {
+      "name": "table Ctrl+Enter inserts a row and undo restores the previous rows",
+      "status": "pass",
+      "elapsedMs": 970,
+      "details": {
+        "rows": [
+          [
+            "one",
+            "two"
+          ],
+          [
+            "new row",
+            ""
+          ]
+        ],
+        "content": "| A       | B   |\n| ------- | --- |\n| one     | two |\n| new row |     |\n"
+      }
+    },
+    {
+      "name": "Tab from the last table cell appends a new row",
+      "status": "pass",
+      "elapsedMs": 934,
+      "details": {
+        "rows": [
+          [
+            "one",
+            "two"
+          ],
+          [
+            "added",
+            ""
+          ]
+        ],
+        "content": "| A     | B   |\n| ----- | --- |\n| one   | two |\n| added |     |\n"
+      }
+    },
+    {
+      "name": "invalid Mermaid source remains editable and recovers after correction",
+      "status": "pass",
+      "elapsedMs": 588,
+      "details": {
+        "content": "```mermaid\nflowchart TD\nA[Start] --> B[Finish]\n```\n\nafter\n",
+        "graph": "StartFinish"
+      }
+    },
+    {
+      "name": "invalid formula source survives error and recovers after correction",
+      "status": "pass",
+      "elapsedMs": 538,
+      "details": {
+        "content": "$$\n\\frac{1}{2}\n$$\n\nafter\n",
+        "errors": 0
+      }
+    },
+    {
+      "name": "quote start Backspace removes quote structure without losing text",
+      "status": "pass",
+      "elapsedMs": 925,
+      "details": {
+        "content": "quoted\n\nplain\n",
+        "quotes": 0
+      }
+    }
+  ],
+  "pageErrors": []
+}

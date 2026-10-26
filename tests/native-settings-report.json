@@ -1,0 +1,42 @@
+{
+  "platform": "linux",
+  "generatedAt": "2026-10-25T10:46:34.072Z",
+  "results": [
+    {
+      "name": "settings IPC returns app defaults and toggles native spellchecking",
+      "status": "pass"
+    },
+    {
+      "name": "native Preferences menu exposes the platform accelerator",
+      "status": "pass"
+    },
+    {
+      "name": "IPC rejects unknown keys without applying valid siblings",
+      "status": "pass"
+    },
+    {
+      "name": "canceled native import and export leave current settings intact",
+      "status": "pass"
+    },
+    {
+      "name": "reference-image policy inserts an encoded original URL without copying",
+      "status": "pass"
+    },
+    {
+      "name": "export and native import round-trip validated settings",
+      "status": "pass"
+    },
+    {
+      "name": "invalid import is rejected without altering the current preferences",
+      "status": "pass"
+    },
+    {
+      "name": "reset persists defaults and disables the native spellchecker",
+      "status": "pass"
+    }
+  ],
+  "limitations": [
+    "Native capability tests; not a Typora parity, OS dictionary availability or real IME certification."
+  ],
+  "pass": true
+}

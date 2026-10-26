@@ -1,0 +1,274 @@
+[
+  {
+    "type": "flowchart-v2",
+    "font": "\"Noto Sans SC\", sans-serif",
+    "labels": [
+      {
+        "text": "开始书写",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "需要结构吗",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "添加标题",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "继续正文",
+        "font": "\"Noto Sans SC\", sans-serif"
+      }
+    ],
+    "width": 239.03125,
+    "height": 486.015625
+  },
+  {
+    "type": "sequence",
+    "font": "\"Noto Sans SC\", sans-serif",
+    "labels": [
+      {
+        "text": "本地文件",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "编辑器",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "用户",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "本地文件",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "编辑器",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "用户",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "输入内容",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "1",
+        "font": "sans-serif"
+      }
+    ],
+    "width": 435.984375,
+    "height": 364.359375
+  },
+  {
+    "type": "stateDiagram",
+    "font": "\"Noto Sans SC\", sans-serif",
+    "labels": [
+      {
+        "text": "Writing",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "Modified",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "Saved",
+        "font": "\"Noto Sans SC\", sans-serif"
+      }
+    ],
+    "width": 132.03125,
+    "height": 436
+  },
+  {
+    "type": "classDiagram",
+    "font": "\"Noto Sans SC\", sans-serif",
+    "labels": [
+      {
+        "text": "Document",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "+string title",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "+string markdown",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "+save()",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "Editor",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "+render()",
+        "font": "\"Noto Sans SC\", sans-serif"
+      }
+    ],
+    "width": 214.609375,
+    "height": 384
+  },
+  {
+    "type": "er",
+    "font": "\"Noto Sans SC\", sans-serif",
+    "labels": [
+      {
+        "text": "DOCUMENT",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "string",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "path",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "string",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "content",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "",
+        "font": "\"Noto Sans SC\", sans-serif"
+      }
+    ],
+    "width": 197.9375,
+    "height": 330.75
+  },
+  {
+    "type": "gantt",
+    "font": "\"Noto Sans SC\", sans-serif",
+    "labels": [
+      {
+        "text": "2026-10-23",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "2026-10-23",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "2026-10-23",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "2026-10-23",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "2026-10-24",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "2026-10-24",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "2026-10-24",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "2026-10-24",
+        "font": "\"Noto Sans SC\", sans-serif"
+      }
+    ],
+    "width": 435.9375,
+    "height": 87.1875
+  },
+  {
+    "type": "pie",
+    "font": "\"Noto Sans SC\", sans-serif",
+    "labels": [
+      {
+        "text": "60%",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "30%",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "10%",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "示例时间分配",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "写作",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "修改",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "整理",
+        "font": "\"Noto Sans SC\", sans-serif"
+      }
+    ],
+    "width": 435.984375,
+    "height": 359.328125
+  },
+  {
+    "type": "mindmap",
+    "font": "\"Noto Sans SC\", sans-serif",
+    "labels": [
+      {
+        "text": "一篇笔记",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "想法",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "问题",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "例子",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "结构",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "标题",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "列表",
+        "font": "\"Noto Sans SC\", sans-serif"
+      },
+      {
+        "text": "回顾",
+        "font": "\"Noto Sans SC\", sans-serif"
+      }
+    ],
+    "width": 310.609375,
+    "height": 422.875
+  }
+]

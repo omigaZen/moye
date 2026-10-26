@@ -1,0 +1,54 @@
+.moye-reading{position:absolute!important;inset:0;z-index:26;display:flex!important;min-width:0;min-height:0;background:var(--paper);color:var(--ink)}
+.moye-reading[hidden]{display:none!important}
+#editor .moye-reading-content{flex:1;min-width:0;min-height:0;overflow:auto;outline:0;padding:56px max(24px,calc((100% - var(--content-width))/2)) 80px!important;max-width:none!important;height:100%;scrollbar-width:thin;overflow-anchor:none;user-select:text}
+.moye-reading-content:focus-visible{box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--accent) 30%,transparent)}
+.moye-reading-content .moye-reading-rendered{display:block;overflow-x:auto;max-width:100%;white-space:normal}
+.moye-reading-content span.moye-reading-rendered{display:inline-block;vertical-align:middle}
+.moye-reading-content .moye-reading-math-source{font-family:var(--mono-font);white-space:pre-wrap;overflow-wrap:anywhere}
+.moye-reading-content a{cursor:pointer}.moye-reading-content img{cursor:zoom-in}.moye-reading-content a img{cursor:pointer}
+.moye-reading-content input[type=checkbox]{opacity:1;pointer-events:none}
+.moye-reading__controls{position:absolute;right:18px;top:10px;display:flex;align-items:center;gap:5px;z-index:2;padding:4px;background:var(--paper);border:1px solid var(--line);border-radius:7px;box-shadow:var(--shadow);transition:opacity .15s ease}
+.moye-reading__controls button{font-size:11px;padding:5px 9px;border-radius:4px;white-space:nowrap}
+.moye-reading__controls,.moye-image-viewer__toolbar,.moye-image-viewer__caption{font-family:"Noto Sans SC",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.moye-reading--plaintext .moye-reading-plain-paragraph{content-visibility:auto;contain-intrinsic-size:auto 2em;white-space:pre-wrap}
+#editor .moye-reading-content[data-reading-virtual=true] .moye-reading-plain-paragraph{content-visibility:visible;contain:none;contain-intrinsic-size:none}
+.moye-reading--plaintext .moye-reading-plain-paragraph:empty{min-height:.5em;margin:0!important}
+.moye-reading__long-navigation{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;max-width:calc(100% - 28px);padding:6px 9px;background:var(--paper);border:1px solid var(--line);border-radius:7px;box-shadow:var(--shadow);z-index:3;font-size:11px}
+.moye-reading__long-navigation[hidden],.moye-reading__next-document[hidden]{display:none!important}
+.moye-reading__long-navigation button,.moye-reading__next-document button{padding:5px 9px;border-radius:4px;font-size:11px;white-space:nowrap}
+.moye-reading__long-navigation output{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted)}
+.moye-reading__next-document{position:absolute;bottom:12px;right:18px;max-width:min(480px,calc(100% - 36px));display:flex;align-items:center;gap:5px;padding:6px;background:var(--paper);border:1px solid var(--line);border-radius:7px;box-shadow:var(--shadow);z-index:3}
+.moye-reading__next-document [data-reading-action=next-document]{overflow:hidden;text-overflow:ellipsis;color:var(--accent)}
+.moye-reading:has(.moye-reading__long-navigation:not([hidden])) .moye-reading__next-document{bottom:58px}
+.moye-reading__long-status{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
+#editor .moye-reading[data-txt-preset=book]{--content-width:720px}
+#editor .moye-reading[data-txt-preset=book] .moye-reading-content{font-size:18px!important;line-height:2!important}
+#editor .moye-reading[data-txt-preset=book] .moye-reading-plain-paragraph{text-indent:2em;margin:.8em 0}
+#editor .moye-reading[data-txt-preset=compact]{--content-width:920px}
+#editor .moye-reading[data-txt-preset=compact] .moye-reading-content{font-size:15px!important;line-height:1.65!important}
+#editor .moye-reading[data-txt-preset=compact] .moye-reading-plain-paragraph{margin:.35em 0}
+#editor .moye-reading-content.moye-txt-book .moye-reading-plain-paragraph{text-indent:2em;margin:.8em 0}
+#editor .moye-reading-content.moye-txt-compact .moye-reading-plain-paragraph{margin:.35em 0}
+#editor .moye-reading--window-continuation .moye-reading-plain-paragraph:first-child{text-indent:0}
+#editor .moye-reading:has(.moye-reading__long-navigation:not([hidden])) .moye-reading-content{padding-bottom:128px!important}
+.moye-reading__hotzone{position:absolute;top:0;left:0;right:0;height:12px;pointer-events:none}
+.moye-reading--immersive .moye-reading__controls{opacity:0;pointer-events:none}
+.moye-reading--immersive .moye-reading__hotzone{pointer-events:auto}
+.moye-reading--immersive.moye-reading--controls-visible .moye-reading__controls,.moye-reading--immersive .moye-reading__controls:focus-within,.moye-reading--immersive .moye-reading__controls:hover{opacity:1;pointer-events:auto}
+.moye-reading-active>.vditor-toolbar{visibility:hidden;pointer-events:none}
+.moye-reading-active>.vditor-content{display:none!important}
+.reading-mode .moye-table-tools{display:none!important}
+.reading-mode .moye-focus-source-mask{display:none!important}
+.moye-image-viewer{width:min(1100px,94vw);height:min(850px,94vh);max-width:94vw;max-height:94vh;padding:0;overflow:hidden;grid-template-rows:auto minmax(0,1fr) auto;text-align:left}
+.moye-image-viewer[open]{display:grid}
+.moye-image-viewer__toolbar{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--chrome)}
+.moye-image-viewer__toolbar button{border:1px solid var(--line);border-radius:5px;padding:5px 11px;font-size:12px;min-width:32px}
+.moye-image-viewer__toolbar button[aria-pressed=true]{color:var(--accent);background:var(--accent-bg)}
+.moye-image-viewer__toolbar output{min-width:54px;text-align:center;font-size:11px;font-variant-numeric:tabular-nums;color:var(--muted)}
+.moye-image-viewer__toolbar [data-image-action=close]{margin-left:auto;font-size:19px;line-height:18px}
+.moye-image-viewer__stage{overflow:auto;min-width:0;min-height:0;position:relative;background:var(--code);cursor:grab;display:block;touch-action:none;overscroll-behavior:contain}
+.moye-image-viewer__stage.is-dragging{cursor:grabbing}
+.moye-image-viewer__stage img{display:block;max-width:none;max-height:none;object-fit:contain;margin:16px;user-select:none;pointer-events:none}
+.moye-image-viewer__caption{margin:0;padding:8px 14px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(prefers-reduced-motion:reduce){.moye-reading__controls{transition:none}}
+@media(max-width:640px){.moye-image-viewer__toolbar{gap:3px;padding:8px}.moye-image-viewer__toolbar button{padding:5px 7px}.moye-image-viewer__toolbar output{min-width:40px}}

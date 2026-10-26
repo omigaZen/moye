@@ -1,0 +1,88 @@
+{
+  "generatedAt": "2026-10-25T10:56:22.223Z",
+  "platform": "linux/x64",
+  "purpose": "Moye bilingual UI, native controls and document protection; not Telari language parity or real operating-system IME certification",
+  "results": [
+    {
+      "name": "language switches the actual header, preferences and native menu without restarting",
+      "status": "pass",
+      "details": {
+        "locale": "en-US",
+        "nativeMenuTranslated": true,
+        "preferencesTranslated": true
+      }
+    },
+    {
+      "name": "English search, descriptions and composed theme warnings preserve canonical control values",
+      "status": "pass",
+      "details": {
+        "englishSearch": true,
+        "composedWarningsTranslatedBothWays": true,
+        "themeSourceAndNamePreserved": true,
+        "configurationValuesUntranslated": true
+      }
+    },
+    {
+      "name": "repeated locale changes preserve exact source, reverse selection and undo history",
+      "status": "pass",
+      "details": {
+        "exactSource": true,
+        "reverseSelection": [
+          3,
+          15,
+          "backward"
+        ],
+        "undoExact": true,
+        "diskUntouched": true
+      }
+    },
+    {
+      "name": "custom preset names, recent file names, paths and search input are not translated",
+      "status": "pass",
+      "details": {
+        "customNamePreserved": true,
+        "fileNamePreserved": true,
+        "pathPreserved": true,
+        "folderNamePreserved": true,
+        "treeAriaTranslated": true,
+        "emptyAndFilteredMessagesTranslated": true,
+        "inputPreserved": true
+      }
+    },
+    {
+      "name": "reading controls, editor accessibility and owned code-copy UI are translated without translating document text",
+      "status": "pass",
+      "details": {
+        "contentUntranslated": true,
+        "readingControlsTranslated": true,
+        "copyControlTranslated": true
+      }
+    },
+    {
+      "name": "external language changes wait until composition ends and preserve committed text",
+      "status": "pass",
+      "details": {
+        "deferredDuringComposition": true,
+        "appliedAfterComposition": true,
+        "committedSourceExact": true
+      }
+    },
+    {
+      "name": "English preference survives a full restart and native open dialog uses English application labels",
+      "status": "pass",
+      "details": {
+        "persisted": true,
+        "nativeDialogTranslated": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": true,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/Moye"
+  },
+  "pass": true
+}

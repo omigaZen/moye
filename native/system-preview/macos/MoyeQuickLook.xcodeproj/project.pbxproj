@@ -1,0 +1,29 @@
+// !$*UTF8*$!
+{
+  archiveVersion = 1;
+  classes = {};
+  objectVersion = 56;
+  objects = {
+    A00000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+    A00000000000000000000002 = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MoyeQuickLook.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+    A00000000000000000000003 = {isa = PBXBuildFile; fileRef = A00000000000000000000001; };
+    A00000000000000000000004 = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+    A00000000000000000000005 = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+    A00000000000000000000006 = {isa = PBXBuildFile; fileRef = A00000000000000000000004; };
+    A00000000000000000000007 = {isa = PBXBuildFile; fileRef = A00000000000000000000005; };
+    A00000000000000000000008 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000003); runOnlyForDeploymentPostprocessing = 0; };
+    A00000000000000000000009 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000006,A00000000000000000000007); runOnlyForDeploymentPostprocessing = 0; };
+    A0000000000000000000000A = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+    A0000000000000000000000B = {isa = PBXGroup; children = (A00000000000000000000001,A00000000000000000000004,A00000000000000000000005,A0000000000000000000000C); sourceTree = "<group>"; };
+    A0000000000000000000000C = {isa = PBXGroup; children = (A00000000000000000000002); name = Products; sourceTree = "<group>"; };
+    A0000000000000000000000D = {isa = PBXNativeTarget; buildConfigurationList = A00000000000000000000010; buildPhases = (A00000000000000000000008,A00000000000000000000009,A0000000000000000000000A); buildRules = (); dependencies = (); name = MoyeQuickLook; productName = MoyeQuickLook; productReference = A00000000000000000000002; productType = "com.apple.product-type.app-extension"; };
+    A0000000000000000000000E = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = YES; LastSwiftUpdateCheck = 1600; LastUpgradeCheck = 1600; }; buildConfigurationList = A0000000000000000000000F; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en,Base); mainGroup = A0000000000000000000000B; productRefGroup = A0000000000000000000000C; projectDirPath = ""; projectRoot = ""; targets = (A0000000000000000000000D); };
+    A0000000000000000000000F = {isa = XCConfigurationList; buildConfigurations = (A00000000000000000000011,A00000000000000000000012); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+    A00000000000000000000010 = {isa = XCConfigurationList; buildConfigurations = (A00000000000000000000013,A00000000000000000000014); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+    A00000000000000000000011 = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; MACOSX_DEPLOYMENT_TARGET = 12.0; SDKROOT = macosx; SWIFT_VERSION = 5.0; }; name = Debug; };
+    A00000000000000000000012 = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; MACOSX_DEPLOYMENT_TARGET = 12.0; SDKROOT = macosx; SWIFT_VERSION = 5.0; }; name = Release; };
+    A00000000000000000000013 = {isa = XCBuildConfiguration; buildSettings = {APPLICATION_EXTENSION_API_ONLY = YES; CODE_SIGN_ENTITLEMENTS = MoyeQuickLook.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 500; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Info.plist; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)","@executable_path/../Frameworks","@executable_path/../../../../Frameworks"); MARKETING_VERSION = 0.5.0; PRODUCT_BUNDLE_IDENTIFIER = com.moye.editor.quicklook; PRODUCT_NAME = "$(TARGET_NAME)"; SKIP_INSTALL = YES; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; SWIFT_VERSION = 5.0; }; name = Debug; };
+    A00000000000000000000014 = {isa = XCBuildConfiguration; buildSettings = {APPLICATION_EXTENSION_API_ONLY = YES; CODE_SIGN_ENTITLEMENTS = MoyeQuickLook.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 500; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Info.plist; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)","@executable_path/../Frameworks","@executable_path/../../../../Frameworks"); MARKETING_VERSION = 0.5.0; PRODUCT_BUNDLE_IDENTIFIER = com.moye.editor.quicklook; PRODUCT_NAME = "$(TARGET_NAME)"; SKIP_INSTALL = YES; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_VERSION = 5.0; }; name = Release; };
+  };
+  rootObject = A0000000000000000000000E;
+}

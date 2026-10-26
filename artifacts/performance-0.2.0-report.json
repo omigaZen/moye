@@ -1,0 +1,2276 @@
+{
+  "generatedAt": "2026-10-23T16:14:34.773Z",
+  "environment": {
+    "os": "linux 6.18.55 x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "logicalCpuCount": 9,
+    "reportedMemoryBytes": 10451439616,
+    "cgroupCpuMax": "800000 100000",
+    "cgroupMemoryMax": "8589934592",
+    "fontconfigFile": "/workspace/scratch/8a7610d50e71/system-deps/fonts.conf",
+    "runtime": {
+      "node": "24.22.0",
+      "acorn": "8.18.0",
+      "ada": "4.0.0",
+      "amaro": "1.1.11",
+      "ares": "1.34.8",
+      "brotli": "1.2.0",
+      "cldr": "48.0",
+      "icu": "78.2",
+      "llhttp": "9.4.3",
+      "merve": "1.2.2",
+      "modules": "150",
+      "napi": "10",
+      "nbytes": "0.1.4",
+      "ncrypto": "0.0.1",
+      "nghttp2": "1.70.0",
+      "nghttp3": "",
+      "ngtcp2": "",
+      "openssl": "0.0.0",
+      "simdjson": "4.6.11",
+      "simdutf": "7.7.0",
+      "sqlite": "3.53.4",
+      "tz": "2026e",
+      "undici": "7.29.1",
+      "unicode": "17.0",
+      "uv": "1.52.1",
+      "uvwasi": "0.0.23",
+      "v8": "15.6.75.19-electron.0",
+      "zlib": "1.3.2.1-motley",
+      "zstd": "1.6.0",
+      "electron": "45.0.0",
+      "chrome": "156.0.8078.48"
+    },
+    "executable": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/Moye",
+    "mode": "Electron headless with explicit 1280×860 renderer viewport, isolated userData; native open/save dialogs stubbed only for deterministic file selection",
+    "viewport": {
+      "width": 1280,
+      "height": 860,
+      "devicePixelRatio": 1
+    },
+    "rendererTimeOriginMs": 1792772074933.9
+  },
+  "fixture": {
+    "path": "samples/长文性能验收.md",
+    "bytes": 308790,
+    "codePoints": 108630,
+    "hanCharacters": 100080,
+    "codeBlocks": 100,
+    "localImageReferences": 20
+  },
+  "sourceHashes": {
+    "rendererSha256": "c89300125dd6776e55aa48e42976a7cfec6eb28dce556f7b8c478c14111a2663",
+    "mainSha256": "72db63b764d8287a3ce20f1c94518c19f21aba48547b191de6b018ef7009f1f2"
+  },
+  "thresholds": {
+    "openToEditableMs": 2000,
+    "inputP95Ms": 50
+  },
+  "limitations": [
+    "Measured on one Linux host only. Windows and macOS are unmeasured.",
+    "Headless requestAnimationFrame is a rendering scheduling proxy, not physical monitor presentation latency.",
+    "Playwright keyboard.insertText dispatches committed Unicode text; it does not exercise a real Chinese IME.",
+    "The native file picker is replaced with an immediate selection. Human picker time is excluded.",
+    "Initial editor launch is warmed before opening the long document. Open timing is document-open-to-editable, not application cold launch."
+  ],
+  "errors": [],
+  "isPackaged": true,
+  "loadedApplication": {
+    "isPackaged": true,
+    "sourcePath": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar",
+    "rendererSha256": "c89300125dd6776e55aa48e42976a7cfec6eb28dce556f7b8c478c14111a2663",
+    "mainSha256": "72db63b764d8287a3ce20f1c94518c19f21aba48547b191de6b018ef7009f1f2"
+  },
+  "coldStartup": {
+    "startupToReadyMs": 816.843798,
+    "method": "Node monotonic time immediately before Playwright Electron launch → first renderer reports moye.ready; includes automation process/debugger/viewport setup and font preload, excludes human interaction.",
+    "fonts": {
+      "declared": 101,
+      "loaded": 101,
+      "notoSansScDeclared": 101,
+      "notoSansScLoaded": 101
+    },
+    "meets2000Ms": true
+  },
+  "open": {
+    "openToEditableMs": 679.3000000044703,
+    "editable": true,
+    "mode": "ir",
+    "sourceLength": 108630,
+    "meets2000Ms": true
+  },
+  "resources": {
+    "imageCount": 20,
+    "loadedImageCount": 20,
+    "imageNaturalWidths": [
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640,
+      640
+    ],
+    "highlightedCodeBlocks": 100,
+    "fontsStatus": "loaded",
+    "settleAfterEditableMs": 1791.9204369999998,
+    "resourcesReadyAfterEditableMs": 886.8151539999999,
+    "additionalStabilizationWaitMs": 900,
+    "unmodifiedContentExact": true
+  },
+  "viewport": {
+    "longParagraphCount": 100,
+    "selectedParagraphIndex": 50,
+    "initialScrollTop": 51823,
+    "scrollHeight": 103646,
+    "viewportHeight": 724,
+    "caretInitialTop": 464.984375,
+    "scrollerClass": "vditor-reset",
+    "maximumObservedScrollDeltaPx": 0,
+    "neverJumpedToTop": true,
+    "allKeyboardCaretPositionsVisible": true,
+    "note": "Per-input scroll/caret samples detect large resets. This is not proof that no intermediate display frame ever flickered."
+  },
+  "keyboardEndToEnd": {
+    "method": "Node performance.now → await Playwright keyboard.insertText(one committed Unicode character) → renderer next requestAnimationFrame callback and IPC response",
+    "interpretation": "Conservative automation command roundtrip diagnostic, including IPC and potentially an additional frame; this is not physical input-to-display latency.",
+    "text": "【端到端测量】甲乙丙丁戊己庚辛壬癸子丑寅卯辰巳午未申酉戌亥",
+    "count": 29,
+    "p50Ms": 38.63288099999954,
+    "p95Ms": 58.27282399999967,
+    "minMs": 32.7712219999994,
+    "maxMs": 65.26231000000053,
+    "samples": [
+      {
+        "character": "【",
+        "latencyMs": 65.26231000000053,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "端",
+        "latencyMs": 47.04591700000037,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "到",
+        "latencyMs": 58.27282399999967,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "端",
+        "latencyMs": 56.52200100000027,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "测",
+        "latencyMs": 51.77660300000025,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "量",
+        "latencyMs": 40.54235900000003,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "】",
+        "latencyMs": 38.63288099999954,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "甲",
+        "latencyMs": 40.2768329999999,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "乙",
+        "latencyMs": 38.88558000000012,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "丙",
+        "latencyMs": 32.84839499999998,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "丁",
+        "latencyMs": 47.28945199999998,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "戊",
+        "latencyMs": 49.42550899999969,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "己",
+        "latencyMs": 52.92133600000034,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "庚",
+        "latencyMs": 46.47253500000079,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "辛",
+        "latencyMs": 33.59727599999951,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "壬",
+        "latencyMs": 33.57157299999926,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "癸",
+        "latencyMs": 32.79304400000001,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "子",
+        "latencyMs": 33.28278599999976,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "丑",
+        "latencyMs": 33.47394299999996,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "寅",
+        "latencyMs": 39.86020699999972,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "卯",
+        "latencyMs": 43.40806199999952,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "辰",
+        "latencyMs": 33.57896500000061,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "巳",
+        "latencyMs": 32.88053800000034,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "午",
+        "latencyMs": 33.60764599999948,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "未",
+        "latencyMs": 33.72889099999975,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "申",
+        "latencyMs": 33.2709789999999,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "酉",
+        "latencyMs": 32.7712219999994,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "戌",
+        "latencyMs": 33.397447000000284,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      },
+      {
+        "character": "亥",
+        "latencyMs": 33.311955000000125,
+        "scrollTop": 51823,
+        "caretTop": 464.984375,
+        "caretBottom": 489.984375
+      }
+    ],
+    "meets50Ms": false
+  },
+  "keyboardEventToFrame": {
+    "method": "Renderer capture of real Playwright-dispatched beforeinput (fallback input) → next requestAnimationFrame; excludes command/response IPC outside the renderer",
+    "count": 29,
+    "p50Ms": 27.5,
+    "p95Ms": 36.5,
+    "minMs": 21,
+    "maxMs": 43.80000000447035,
+    "samples": [
+      {
+        "phase": "keyboard",
+        "character": "【",
+        "trusted": true,
+        "startedAtMs": 3612.7999999970198,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3616.2999999970198,
+        "beforeInputToInputCaptureMs": 3.5,
+        "inputTargetHandlersMs": 23.700000002980232,
+        "frameAtMs": 3645.5,
+        "latencyMs": 32.70000000298023,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "端",
+        "trusted": true,
+        "startedAtMs": 3666,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3668.5999999940395,
+        "beforeInputToInputCaptureMs": 2.5999999940395355,
+        "inputTargetHandlersMs": 17.400000005960464,
+        "frameAtMs": 3696,
+        "latencyMs": 30,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "到",
+        "trusted": true,
+        "startedAtMs": 3706.89999999851,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3709.2999999970198,
+        "beforeInputToInputCaptureMs": 2.399999998509884,
+        "inputTargetHandlersMs": 19.899999998509884,
+        "frameAtMs": 3742.5,
+        "latencyMs": 35.600000001490116,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "端",
+        "trusted": true,
+        "startedAtMs": 3773.2999999970198,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3777.2999999970198,
+        "beforeInputToInputCaptureMs": 4,
+        "inputTargetHandlersMs": 26.200000002980232,
+        "frameAtMs": 3809.7999999970198,
+        "latencyMs": 36.5,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "测",
+        "trusted": true,
+        "startedAtMs": 3821.5999999940395,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3826.5,
+        "beforeInputToInputCaptureMs": 4.9000000059604645,
+        "inputTargetHandlersMs": 29.299999997019768,
+        "frameAtMs": 3865.39999999851,
+        "latencyMs": 43.80000000447035,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "量",
+        "trusted": true,
+        "startedAtMs": 3873.5,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3877.89999999851,
+        "beforeInputToInputCaptureMs": 4.399999998509884,
+        "inputTargetHandlersMs": 27.100000001490116,
+        "frameAtMs": 3908.39999999851,
+        "latencyMs": 34.899999998509884,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "】",
+        "trusted": true,
+        "startedAtMs": 3913.7999999970198,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3917.6999999955297,
+        "beforeInputToInputCaptureMs": 3.899999998509884,
+        "inputTargetHandlersMs": 23.100000001490116,
+        "frameAtMs": 3945,
+        "latencyMs": 31.200000002980232,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "甲",
+        "trusted": true,
+        "startedAtMs": 3953.89999999851,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 3958,
+        "beforeInputToInputCaptureMs": 4.100000001490116,
+        "inputTargetHandlersMs": 22.599999994039536,
+        "frameAtMs": 3984.5,
+        "latencyMs": 30.600000001490116,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "乙",
+        "trusted": true,
+        "startedAtMs": 3993.0999999940395,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4000.5999999940395,
+        "beforeInputToInputCaptureMs": 7.5,
+        "inputTargetHandlersMs": 19.5,
+        "frameAtMs": 4023.7999999970198,
+        "latencyMs": 30.700000002980232,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "丙",
+        "trusted": true,
+        "startedAtMs": 4031.5999999940395,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4036.39999999851,
+        "beforeInputToInputCaptureMs": 4.800000004470348,
+        "inputTargetHandlersMs": 17.399999998509884,
+        "frameAtMs": 4057.39999999851,
+        "latencyMs": 25.80000000447035,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "丁",
+        "trusted": true,
+        "startedAtMs": 4064.2999999970198,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4068.1999999955297,
+        "beforeInputToInputCaptureMs": 3.899999998509884,
+        "inputTargetHandlersMs": 19.399999998509884,
+        "frameAtMs": 4092.5999999940395,
+        "latencyMs": 28.299999997019768,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "戊",
+        "trusted": true,
+        "startedAtMs": 4111.79999999702,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4118.19999999553,
+        "beforeInputToInputCaptureMs": 6.399999998509884,
+        "inputTargetHandlersMs": 20.100000001490116,
+        "frameAtMs": 4142.5999999940395,
+        "latencyMs": 30.799999997019768,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "己",
+        "trusted": true,
+        "startedAtMs": 4161.29999999702,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4165.69999999553,
+        "beforeInputToInputCaptureMs": 4.399999998509884,
+        "inputTargetHandlersMs": 20.600000001490116,
+        "frameAtMs": 4190.0999999940395,
+        "latencyMs": 28.799999997019768,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "庚",
+        "trusted": true,
+        "startedAtMs": 4214.29999999702,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4219.79999999702,
+        "beforeInputToInputCaptureMs": 5.5,
+        "inputTargetHandlersMs": 21.100000001490116,
+        "frameAtMs": 4244.79999999702,
+        "latencyMs": 30.5,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "辛",
+        "trusted": true,
+        "startedAtMs": 4260.29999999702,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4263.19999999553,
+        "beforeInputToInputCaptureMs": 2.899999998509884,
+        "inputTargetHandlersMs": 18.700000002980232,
+        "frameAtMs": 4285.89999999851,
+        "latencyMs": 25.600000001490116,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "壬",
+        "trusted": true,
+        "startedAtMs": 4293.89999999851,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4296.69999999553,
+        "beforeInputToInputCaptureMs": 2.7999999970197678,
+        "inputTargetHandlersMs": 16,
+        "frameAtMs": 4316.19999999553,
+        "latencyMs": 22.299999997019768,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "癸",
+        "trusted": true,
+        "startedAtMs": 4327.5999999940395,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4330.69999999553,
+        "beforeInputToInputCaptureMs": 3.100000001490116,
+        "inputTargetHandlersMs": 15,
+        "frameAtMs": 4348.5999999940395,
+        "latencyMs": 21,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "子",
+        "trusted": true,
+        "startedAtMs": 4360.39999999851,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4363.39999999851,
+        "beforeInputToInputCaptureMs": 3,
+        "inputTargetHandlersMs": 15.399999998509884,
+        "frameAtMs": 4382,
+        "latencyMs": 21.600000001490116,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "丑",
+        "trusted": true,
+        "startedAtMs": 4393.5999999940395,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4396.19999999553,
+        "beforeInputToInputCaptureMs": 2.600000001490116,
+        "inputTargetHandlersMs": 16.600000001490116,
+        "frameAtMs": 4416,
+        "latencyMs": 22.400000005960464,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "寅",
+        "trusted": true,
+        "startedAtMs": 4427.0999999940395,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4429.79999999702,
+        "beforeInputToInputCaptureMs": 2.7000000029802322,
+        "inputTargetHandlersMs": 20.799999997019768,
+        "frameAtMs": 4457.0999999940395,
+        "latencyMs": 30,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "卯",
+        "trusted": true,
+        "startedAtMs": 4466.89999999851,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4469.5999999940395,
+        "beforeInputToInputCaptureMs": 2.6999999955296516,
+        "inputTargetHandlersMs": 16.80000000447035,
+        "frameAtMs": 4490.0999999940395,
+        "latencyMs": 23.19999999552965,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "辰",
+        "trusted": true,
+        "startedAtMs": 4510.39999999851,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4514.29999999702,
+        "beforeInputToInputCaptureMs": 3.899999998509884,
+        "inputTargetHandlersMs": 20,
+        "frameAtMs": 4537.89999999851,
+        "latencyMs": 27.5,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "巳",
+        "trusted": true,
+        "startedAtMs": 4543.89999999851,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4546.39999999851,
+        "beforeInputToInputCaptureMs": 2.5,
+        "inputTargetHandlersMs": 18,
+        "frameAtMs": 4568.39999999851,
+        "latencyMs": 24.5,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "午",
+        "trusted": true,
+        "startedAtMs": 4576.69999999553,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4579.69999999553,
+        "beforeInputToInputCaptureMs": 3,
+        "inputTargetHandlersMs": 15.700000002980232,
+        "frameAtMs": 4599.19999999553,
+        "latencyMs": 22.5,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "未",
+        "trusted": true,
+        "startedAtMs": 4610.39999999851,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4613.39999999851,
+        "beforeInputToInputCaptureMs": 3,
+        "inputTargetHandlersMs": 15.799999997019768,
+        "frameAtMs": 4632.39999999851,
+        "latencyMs": 22,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "申",
+        "trusted": true,
+        "startedAtMs": 4644.19999999553,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4647.29999999702,
+        "beforeInputToInputCaptureMs": 3.100000001490116,
+        "inputTargetHandlersMs": 15.100000001490116,
+        "frameAtMs": 4665.39999999851,
+        "latencyMs": 21.200000002980232,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "酉",
+        "trusted": true,
+        "startedAtMs": 4677.79999999702,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4682,
+        "beforeInputToInputCaptureMs": 4.200000002980232,
+        "inputTargetHandlersMs": 16.299999997019768,
+        "frameAtMs": 4701.29999999702,
+        "latencyMs": 23.5,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "戌",
+        "trusted": true,
+        "startedAtMs": 4710.5,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4715.29999999702,
+        "beforeInputToInputCaptureMs": 4.799999997019768,
+        "inputTargetHandlersMs": 18.5,
+        "frameAtMs": 4736.69999999553,
+        "latencyMs": 26.19999999552965,
+        "caretTop": 464.984375
+      },
+      {
+        "phase": "keyboard",
+        "character": "亥",
+        "trusted": true,
+        "startedAtMs": 4743.5999999940395,
+        "startEvent": "beforeinput",
+        "inputCaptureAtMs": 4746.89999999851,
+        "beforeInputToInputCaptureMs": 3.3000000044703484,
+        "inputTargetHandlersMs": 18.100000001490116,
+        "frameAtMs": 4768.69999999553,
+        "latencyMs": 25.100000001490116,
+        "caretTop": 464.984375
+      }
+    ],
+    "meets50Ms": true
+  },
+  "pageInsertToFrame": {
+    "method": "Renderer performance.now → document.execCommand(insertText, one character) → next requestAnimationFrame; excludes Playwright input IPC",
+    "text": "【页面帧测量】天地玄黄宇宙洪荒日月盈昃辰宿列张寒来暑往秋收冬藏",
+    "count": 31,
+    "p50Ms": 26.899999998509884,
+    "p95Ms": 38.30000000447035,
+    "minMs": 22.700000002980232,
+    "maxMs": 44.19999999552965,
+    "synchronousWork": {
+      "count": 31,
+      "p50Ms": 20,
+      "p95Ms": 29,
+      "minMs": 15.899999998509884,
+      "maxMs": 30.799999997019768
+    },
+    "samples": [
+      {
+        "character": "【",
+        "accepted": true,
+        "latencyMs": 24.100000001490116,
+        "synchronousMs": 20.5,
+        "scrollTop": 51823,
+        "caretTop": 464.984375
+      },
+      {
+        "character": "页",
+        "accepted": true,
+        "latencyMs": 23.5,
+        "synchronousMs": 16.899999998509884,
+        "scrollTop": 51823,
+        "caretTop": 464.984375
+      },
+      {
+        "character": "面",
+        "accepted": true,
+        "latencyMs": 22.700000002980232,
+        "synchronousMs": 16.399999998509884,
+        "scrollTop": 51823,
+        "caretTop": 464.984375
+      },
+      {
+        "character": "帧",
+        "accepted": true,
+        "latencyMs": 28,
+        "synchronousMs": 20.099999994039536,
+        "scrollTop": 51823,
+        "caretTop": 464.984375
+      },
+      {
+        "character": "测",
+        "accepted": true,
+        "latencyMs": 25,
+        "synchronousMs": 18,
+        "scrollTop": 51823,
+        "caretTop": 464.984375
+      },
+      {
+        "character": "量",
+        "accepted": true,
+        "latencyMs": 38.30000000447035,
+        "synchronousMs": 29,
+        "scrollTop": 51823,
+        "caretTop": 464.984375
+      },
+      {
+        "character": "】",
+        "accepted": true,
+        "latencyMs": 32.19999999552965,
+        "synchronousMs": 22.099999994039536,
+        "scrollTop": 51823,
+        "caretTop": 464.984375
+      },
+      {
+        "character": "天",
+        "accepted": true,
+        "latencyMs": 26.899999998509884,
+        "synchronousMs": 20.700000002980232,
+        "scrollTop": 51823,
+        "caretTop": 464.984375
+      },
+      {
+        "character": "地",
+        "accepted": true,
+        "latencyMs": 27,
+        "synchronousMs": 19.100000001490116,
+        "scrollTop": 51823,
+        "caretTop": 464.984375
+      },
+      {
+        "character": "玄",
+        "accepted": true,
+        "latencyMs": 27,
+        "synchronousMs": 20.399999998509884,
+        "scrollTop": 51823,
+        "caretTop": 464.984375
+      },
+      {
+        "character": "黄",
+        "accepted": true,
+        "latencyMs": 25.700000002980232,
+        "synchronousMs": 19.5,
+        "scrollTop": 51823,
+        "caretTop": 464.984375
+      },
+      {
+        "character": "宇",
+        "accepted": true,
+        "latencyMs": 24.5,
+        "synchronousMs": 15.899999998509884,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "宙",
+        "accepted": true,
+        "latencyMs": 44.19999999552965,
+        "synchronousMs": 30.799999997019768,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "洪",
+        "accepted": true,
+        "latencyMs": 24,
+        "synchronousMs": 17.700000002980232,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "荒",
+        "accepted": true,
+        "latencyMs": 25.399999998509884,
+        "synchronousMs": 19.200000002980232,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "日",
+        "accepted": true,
+        "latencyMs": 28.200000002980232,
+        "synchronousMs": 19.900000005960464,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "月",
+        "accepted": true,
+        "latencyMs": 26.799999997019768,
+        "synchronousMs": 20.399999998509884,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "盈",
+        "accepted": true,
+        "latencyMs": 34.5,
+        "synchronousMs": 24.30000000447035,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "昃",
+        "accepted": true,
+        "latencyMs": 25.30000000447035,
+        "synchronousMs": 18.80000000447035,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "辰",
+        "accepted": true,
+        "latencyMs": 23.19999999552965,
+        "synchronousMs": 17.100000001490116,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "宿",
+        "accepted": true,
+        "latencyMs": 26.700000002980232,
+        "synchronousMs": 20,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "列",
+        "accepted": true,
+        "latencyMs": 25.899999998509884,
+        "synchronousMs": 18.700000002980232,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "张",
+        "accepted": true,
+        "latencyMs": 29.399999998509884,
+        "synchronousMs": 19.80000000447035,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "寒",
+        "accepted": true,
+        "latencyMs": 25.5,
+        "synchronousMs": 18,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "来",
+        "accepted": true,
+        "latencyMs": 33.399999998509884,
+        "synchronousMs": 23,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "暑",
+        "accepted": true,
+        "latencyMs": 34.400000005960464,
+        "synchronousMs": 27,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "往",
+        "accepted": true,
+        "latencyMs": 28.099999994039536,
+        "synchronousMs": 20.399999998509884,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "秋",
+        "accepted": true,
+        "latencyMs": 31.100000001490116,
+        "synchronousMs": 23.900000005960464,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "收",
+        "accepted": true,
+        "latencyMs": 24.299999997019768,
+        "synchronousMs": 17.799999997019768,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "冬",
+        "accepted": true,
+        "latencyMs": 28,
+        "synchronousMs": 21.400000005960464,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      },
+      {
+        "character": "藏",
+        "accepted": true,
+        "latencyMs": 31.700000002980232,
+        "synchronousMs": 23,
+        "scrollTop": 51823,
+        "caretTop": 496.421875
+      }
+    ],
+    "meets50Ms": true
+  },
+  "editorInteractionPass": true,
+  "integrity": {
+    "keyboardTextPresentExactlyOnce": true,
+    "pageTextPresentExactlyOnce": true,
+    "originalRenderedMarkdownIntact": true,
+    "inputEventCount": 60,
+    "expectedInputEventCount": 60,
+    "stateMatchesCurrentEditor": true,
+    "originalDocumentCodePoints": 108630,
+    "finalDocumentCodePoints": 108690,
+    "finalScrollTop": 51823
+  },
+  "profile": {
+    "fullDocumentGetValue": {
+      "count": 8,
+      "p50Ms": 56.20000000298023,
+      "p95Ms": 63.5,
+      "minMs": 49.100000001490116,
+      "maxMs": 63.5,
+      "samplesMs": [
+        61.100000001490116,
+        56.20000000298023,
+        60.20000000298023,
+        63.5,
+        55.5,
+        49.100000001490116,
+        54.899999998509884,
+        61.79999999701977
+      ],
+      "note": "Eight isolated calls after the input test; useful attribution, not an independent input latency measurement."
+    }
+  },
+  "warmKeyboardDiagnostic": {
+    "note": "Same characters entered a second time, after initial glyph/font use. This diagnostic does not replace or relax the first-use input acceptance gates.",
+    "eventToFrame": {
+      "count": 29,
+      "p50Ms": 27.30000000447035,
+      "p95Ms": 35.400000005960464,
+      "minMs": 22.399999998509884,
+      "maxMs": 46.100000001490116,
+      "samples": [
+        {
+          "phase": "warm-keyboard",
+          "character": "【",
+          "trusted": true,
+          "startedAtMs": 7036.79999999702,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7041.39999999851,
+          "beforeInputToInputCaptureMs": 4.600000001490116,
+          "inputTargetHandlersMs": 19.19999999552965,
+          "frameAtMs": 7064.5,
+          "latencyMs": 27.700000002980232,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "端",
+          "trusted": true,
+          "startedAtMs": 7069.79999999702,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7072.79999999702,
+          "beforeInputToInputCaptureMs": 3,
+          "inputTargetHandlersMs": 21,
+          "frameAtMs": 7098,
+          "latencyMs": 28.200000002980232,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "到",
+          "trusted": true,
+          "startedAtMs": 7103.89999999851,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7109.29999999702,
+          "beforeInputToInputCaptureMs": 5.399999998509884,
+          "inputTargetHandlersMs": 19.299999997019768,
+          "frameAtMs": 7131.69999999553,
+          "latencyMs": 27.799999997019768,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "端",
+          "trusted": true,
+          "startedAtMs": 7138.39999999851,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7147.89999999851,
+          "beforeInputToInputCaptureMs": 9.5,
+          "inputTargetHandlersMs": 33.19999999552965,
+          "frameAtMs": 7184.5,
+          "latencyMs": 46.100000001490116,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "测",
+          "trusted": true,
+          "startedAtMs": 7190.79999999702,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7194,
+          "beforeInputToInputCaptureMs": 3.2000000029802322,
+          "inputTargetHandlersMs": 20.399999998509884,
+          "frameAtMs": 7218.19999999553,
+          "latencyMs": 27.399999998509884,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "量",
+          "trusted": true,
+          "startedAtMs": 7224,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7227.69999999553,
+          "beforeInputToInputCaptureMs": 3.6999999955296516,
+          "inputTargetHandlersMs": 19.399999998509884,
+          "frameAtMs": 7251.5,
+          "latencyMs": 27.5,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "】",
+          "trusted": true,
+          "startedAtMs": 7256.5,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7259.5,
+          "beforeInputToInputCaptureMs": 3,
+          "inputTargetHandlersMs": 19.599999994039536,
+          "frameAtMs": 7282.5999999940395,
+          "latencyMs": 26.099999994039536,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "甲",
+          "trusted": true,
+          "startedAtMs": 7289.5999999940395,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7294.5999999940395,
+          "beforeInputToInputCaptureMs": 5,
+          "inputTargetHandlersMs": 24.100000001490116,
+          "frameAtMs": 7325,
+          "latencyMs": 35.400000005960464,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "乙",
+          "trusted": true,
+          "startedAtMs": 7331.79999999702,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7335.5999999940395,
+          "beforeInputToInputCaptureMs": 3.7999999970197678,
+          "inputTargetHandlersMs": 18.100000001490116,
+          "frameAtMs": 7357.5999999940395,
+          "latencyMs": 25.799999997019768,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "丙",
+          "trusted": true,
+          "startedAtMs": 7362.89999999851,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7366.0999999940395,
+          "beforeInputToInputCaptureMs": 3.1999999955296516,
+          "inputTargetHandlersMs": 16.600000001490116,
+          "frameAtMs": 7386,
+          "latencyMs": 23.100000001490116,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "丁",
+          "trusted": true,
+          "startedAtMs": 7393.29999999702,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7395.79999999702,
+          "beforeInputToInputCaptureMs": 2.5,
+          "inputTargetHandlersMs": 16.5,
+          "frameAtMs": 7415.69999999553,
+          "latencyMs": 22.399999998509884,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "戊",
+          "trusted": true,
+          "startedAtMs": 7427.29999999702,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7431.69999999553,
+          "beforeInputToInputCaptureMs": 4.399999998509884,
+          "inputTargetHandlersMs": 19.600000001490116,
+          "frameAtMs": 7455.29999999702,
+          "latencyMs": 28,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "己",
+          "trusted": true,
+          "startedAtMs": 7477.39999999851,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7480.5,
+          "beforeInputToInputCaptureMs": 3.100000001490116,
+          "inputTargetHandlersMs": 21.799999997019768,
+          "frameAtMs": 7505.79999999702,
+          "latencyMs": 28.399999998509884,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "庚",
+          "trusted": true,
+          "startedAtMs": 7527.19999999553,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7531.5999999940395,
+          "beforeInputToInputCaptureMs": 4.399999998509884,
+          "inputTargetHandlersMs": 19.100000001490116,
+          "frameAtMs": 7554.29999999702,
+          "latencyMs": 27.100000001490116,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "辛",
+          "trusted": true,
+          "startedAtMs": 7561,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7563.5,
+          "beforeInputToInputCaptureMs": 2.5,
+          "inputTargetHandlersMs": 18.799999997019768,
+          "frameAtMs": 7585.69999999553,
+          "latencyMs": 24.69999999552965,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "壬",
+          "trusted": true,
+          "startedAtMs": 7595.19999999553,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7599,
+          "beforeInputToInputCaptureMs": 3.8000000044703484,
+          "inputTargetHandlersMs": 27.899999998509884,
+          "frameAtMs": 7630.5999999940395,
+          "latencyMs": 35.399999998509884,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "癸",
+          "trusted": true,
+          "startedAtMs": 7644.5,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7647.5999999940395,
+          "beforeInputToInputCaptureMs": 3.0999999940395355,
+          "inputTargetHandlersMs": 19.700000002980232,
+          "frameAtMs": 7671.5,
+          "latencyMs": 27,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "子",
+          "trusted": true,
+          "startedAtMs": 7678.69999999553,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7682.89999999851,
+          "beforeInputToInputCaptureMs": 4.200000002980232,
+          "inputTargetHandlersMs": 18.100000001490116,
+          "frameAtMs": 7704,
+          "latencyMs": 25.30000000447035,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "丑",
+          "trusted": true,
+          "startedAtMs": 7711.5,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7714.0999999940395,
+          "beforeInputToInputCaptureMs": 2.5999999940395355,
+          "inputTargetHandlersMs": 18.80000000447035,
+          "frameAtMs": 7736.39999999851,
+          "latencyMs": 24.899999998509884,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "寅",
+          "trusted": true,
+          "startedAtMs": 7746.5,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7749.79999999702,
+          "beforeInputToInputCaptureMs": 3.2999999970197678,
+          "inputTargetHandlersMs": 19.100000001490116,
+          "frameAtMs": 7772.19999999553,
+          "latencyMs": 25.69999999552965,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "卯",
+          "trusted": true,
+          "startedAtMs": 7778.89999999851,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7782.5,
+          "beforeInputToInputCaptureMs": 3.600000001490116,
+          "inputTargetHandlersMs": 19.399999998509884,
+          "frameAtMs": 7807.29999999702,
+          "latencyMs": 28.399999998509884,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "辰",
+          "trusted": true,
+          "startedAtMs": 7828,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7831.39999999851,
+          "beforeInputToInputCaptureMs": 3.399999998509884,
+          "inputTargetHandlersMs": 17.69999999552965,
+          "frameAtMs": 7852.19999999553,
+          "latencyMs": 24.19999999552965,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "巳",
+          "trusted": true,
+          "startedAtMs": 7860.39999999851,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7864.39999999851,
+          "beforeInputToInputCaptureMs": 4,
+          "inputTargetHandlersMs": 21.899999998509884,
+          "frameAtMs": 7890.39999999851,
+          "latencyMs": 30,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "午",
+          "trusted": true,
+          "startedAtMs": 7897.29999999702,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7900.5,
+          "beforeInputToInputCaptureMs": 3.2000000029802322,
+          "inputTargetHandlersMs": 19.19999999552965,
+          "frameAtMs": 7923.5999999940395,
+          "latencyMs": 26.299999997019768,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "未",
+          "trusted": true,
+          "startedAtMs": 7930.89999999851,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7934.89999999851,
+          "beforeInputToInputCaptureMs": 4,
+          "inputTargetHandlersMs": 20.100000001490116,
+          "frameAtMs": 7958.5999999940395,
+          "latencyMs": 27.69999999552965,
+          "caretTop": 496.421875
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "申",
+          "trusted": true,
+          "startedAtMs": 7978.0999999940395,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 7982,
+          "beforeInputToInputCaptureMs": 3.9000000059604645,
+          "inputTargetHandlersMs": 19.799999997019768,
+          "frameAtMs": 8005.39999999851,
+          "latencyMs": 27.30000000447035,
+          "caretTop": 527.859375
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "酉",
+          "trusted": true,
+          "startedAtMs": 8010.5,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 8013.5,
+          "beforeInputToInputCaptureMs": 3,
+          "inputTargetHandlersMs": 17.599999994039536,
+          "frameAtMs": 8035,
+          "latencyMs": 24.5,
+          "caretTop": 527.859375
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "戌",
+          "trusted": true,
+          "startedAtMs": 8043.5999999940395,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 8046.89999999851,
+          "beforeInputToInputCaptureMs": 3.3000000044703484,
+          "inputTargetHandlersMs": 18.899999998509884,
+          "frameAtMs": 8069.5,
+          "latencyMs": 25.900000005960464,
+          "caretTop": 527.859375
+        },
+        {
+          "phase": "warm-keyboard",
+          "character": "亥",
+          "trusted": true,
+          "startedAtMs": 8077.69999999553,
+          "startEvent": "beforeinput",
+          "inputCaptureAtMs": 8081.5999999940395,
+          "beforeInputToInputCaptureMs": 3.899999998509884,
+          "inputTargetHandlersMs": 22.80000000447035,
+          "frameAtMs": 8108.29999999702,
+          "latencyMs": 30.600000001490116,
+          "caretTop": 527.859375
+        }
+      ]
+    },
+    "externalRoundtrip": {
+      "count": 29,
+      "p50Ms": 33.63681899999938,
+      "p95Ms": 50.42536999999993,
+      "minMs": 30.396371000000727,
+      "maxMs": 52.56749099999979
+    },
+    "fullDocumentIntactAfterWarmDiagnostic": true
+  },
+  "fontLoadingDiagnostics": {
+    "coldSpikes": [],
+    "resources": [],
+    "fontEvents": [],
+    "initialDeclaredFontFaces": 102,
+    "initialLoadedFontFaces": 101,
+    "initialNotoSansScDeclaredFaces": 101,
+    "initialNotoSansScLoadedFaces": 101,
+    "finalLoadedFontFaces": 101,
+    "fullDocumentIntactAfterWarmDiagnostic": true,
+    "protocolFontRequests": [
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-4-400-normal.woff2",
+        "startWallMs": 1792772075170.943,
+        "startProtocolSeconds": 52807.016223,
+        "endWallMs": 1792772075171.8792,
+        "encodedDataLength": 2300,
+        "startTimeMs": 237.043212890625,
+        "responseEndMs": 237.979248046875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-5-400-normal.woff2",
+        "startWallMs": 1792772075171.126,
+        "startProtocolSeconds": 52807.016437,
+        "endWallMs": 1792772075171.528,
+        "encodedDataLength": 10904,
+        "startTimeMs": 237.22607421875,
+        "responseEndMs": 237.628173828125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-6-400-normal.woff2",
+        "startWallMs": 1792772075171.169,
+        "startProtocolSeconds": 52807.01649,
+        "endWallMs": 1792772075171.5588,
+        "encodedDataLength": 6468,
+        "startTimeMs": 237.26904296875,
+        "responseEndMs": 237.658935546875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-21-400-normal.woff2",
+        "startWallMs": 1792772075171.219,
+        "startProtocolSeconds": 52807.016536,
+        "endWallMs": 1792772075172.062,
+        "encodedDataLength": 6192,
+        "startTimeMs": 237.319091796875,
+        "responseEndMs": 238.162109375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-22-400-normal.woff2",
+        "startWallMs": 1792772075171.34,
+        "startProtocolSeconds": 52807.016578,
+        "endWallMs": 1792772075173.5332,
+        "encodedDataLength": 34548,
+        "startTimeMs": 237.440185546875,
+        "responseEndMs": 239.63330078125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-23-400-normal.woff2",
+        "startWallMs": 1792772075171.4639,
+        "startProtocolSeconds": 52807.016768,
+        "endWallMs": 1792772075172.023,
+        "encodedDataLength": 30520,
+        "startTimeMs": 237.56396484375,
+        "responseEndMs": 238.123046875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-24-400-normal.woff2",
+        "startWallMs": 1792772075171.5679,
+        "startProtocolSeconds": 52807.016871,
+        "endWallMs": 1792772075172.5278,
+        "encodedDataLength": 33328,
+        "startTimeMs": 237.66796875,
+        "responseEndMs": 238.6279296875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-25-400-normal.woff2",
+        "startWallMs": 1792772075171.6868,
+        "startProtocolSeconds": 52807.016995,
+        "endWallMs": 1792772075172.8767,
+        "encodedDataLength": 31216,
+        "startTimeMs": 237.786865234375,
+        "responseEndMs": 238.976806640625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-26-400-normal.woff2",
+        "startWallMs": 1792772075171.766,
+        "startProtocolSeconds": 52807.017075,
+        "endWallMs": 1792772075173.5962,
+        "encodedDataLength": 27220,
+        "startTimeMs": 237.8662109375,
+        "responseEndMs": 239.6962890625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-27-400-normal.woff2",
+        "startWallMs": 1792772075171.898,
+        "startProtocolSeconds": 52807.017205,
+        "endWallMs": 1792772075173.562,
+        "encodedDataLength": 25452,
+        "startTimeMs": 237.998046875,
+        "responseEndMs": 239.662109375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-28-400-normal.woff2",
+        "startWallMs": 1792772075171.997,
+        "startProtocolSeconds": 52807.017288,
+        "endWallMs": 1792772075173.012,
+        "encodedDataLength": 26456,
+        "startTimeMs": 238.09716796875,
+        "responseEndMs": 239.112060546875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-29-400-normal.woff2",
+        "startWallMs": 1792772075172.085,
+        "startProtocolSeconds": 52807.017398,
+        "endWallMs": 1792772075173.378,
+        "encodedDataLength": 28684,
+        "startTimeMs": 238.18505859375,
+        "responseEndMs": 239.47802734375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-30-400-normal.woff2",
+        "startWallMs": 1792772075172.179,
+        "startProtocolSeconds": 52807.017498,
+        "endWallMs": 1792772075172.897,
+        "encodedDataLength": 29164,
+        "startTimeMs": 238.279052734375,
+        "responseEndMs": 238.9970703125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-31-400-normal.woff2",
+        "startWallMs": 1792772075172.246,
+        "startProtocolSeconds": 52807.017563,
+        "endWallMs": 1792772075173.917,
+        "encodedDataLength": 25400,
+        "startTimeMs": 238.34619140625,
+        "responseEndMs": 240.01708984375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-32-400-normal.woff2",
+        "startWallMs": 1792772075172.3188,
+        "startProtocolSeconds": 52807.017633,
+        "endWallMs": 1792772075173.88,
+        "encodedDataLength": 27604,
+        "startTimeMs": 238.4189453125,
+        "responseEndMs": 239.97998046875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-33-400-normal.woff2",
+        "startWallMs": 1792772075172.375,
+        "startProtocolSeconds": 52807.017696,
+        "endWallMs": 1792772075181.861,
+        "encodedDataLength": 25440,
+        "startTimeMs": 238.47509765625,
+        "responseEndMs": 247.961181640625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-34-400-normal.woff2",
+        "startWallMs": 1792772075172.417,
+        "startProtocolSeconds": 52807.017736,
+        "endWallMs": 1792772075175.781,
+        "encodedDataLength": 25288,
+        "startTimeMs": 238.51708984375,
+        "responseEndMs": 241.881103515625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-35-400-normal.woff2",
+        "startWallMs": 1792772075172.45,
+        "startProtocolSeconds": 52807.017771,
+        "endWallMs": 1792772075179.093,
+        "encodedDataLength": 26692,
+        "startTimeMs": 238.550048828125,
+        "responseEndMs": 245.193115234375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-36-400-normal.woff2",
+        "startWallMs": 1792772075172.486,
+        "startProtocolSeconds": 52807.017803,
+        "endWallMs": 1792772075182.052,
+        "encodedDataLength": 22652,
+        "startTimeMs": 238.586181640625,
+        "responseEndMs": 248.152099609375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-37-400-normal.woff2",
+        "startWallMs": 1792772075172.522,
+        "startProtocolSeconds": 52807.017841,
+        "endWallMs": 1792772075175.834,
+        "encodedDataLength": 28156,
+        "startTimeMs": 238.6220703125,
+        "responseEndMs": 241.93408203125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-38-400-normal.woff2",
+        "startWallMs": 1792772075172.551,
+        "startProtocolSeconds": 52807.017871,
+        "endWallMs": 1792772075185.634,
+        "encodedDataLength": 28944,
+        "startTimeMs": 238.651123046875,
+        "responseEndMs": 251.734130859375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-39-400-normal.woff2",
+        "startWallMs": 1792772075172.587,
+        "startProtocolSeconds": 52807.017905,
+        "endWallMs": 1792772075179.5159,
+        "encodedDataLength": 27700,
+        "startTimeMs": 238.68701171875,
+        "responseEndMs": 245.615966796875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-40-400-normal.woff2",
+        "startWallMs": 1792772075172.645,
+        "startProtocolSeconds": 52807.017958,
+        "endWallMs": 1792772075177.017,
+        "encodedDataLength": 24704,
+        "startTimeMs": 238.7451171875,
+        "responseEndMs": 243.1171875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-41-400-normal.woff2",
+        "startWallMs": 1792772075172.6948,
+        "startProtocolSeconds": 52807.01801,
+        "endWallMs": 1792772075175.9758,
+        "encodedDataLength": 19412,
+        "startTimeMs": 238.794921875,
+        "responseEndMs": 242.075927734375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-42-400-normal.woff2",
+        "startWallMs": 1792772075172.7322,
+        "startProtocolSeconds": 52807.01805,
+        "endWallMs": 1792772075177.559,
+        "encodedDataLength": 24460,
+        "startTimeMs": 238.832275390625,
+        "responseEndMs": 243.6591796875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-43-400-normal.woff2",
+        "startWallMs": 1792772075172.7668,
+        "startProtocolSeconds": 52807.018087,
+        "endWallMs": 1792772075179.4028,
+        "encodedDataLength": 24952,
+        "startTimeMs": 238.866943359375,
+        "responseEndMs": 245.5029296875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-44-400-normal.woff2",
+        "startWallMs": 1792772075172.802,
+        "startProtocolSeconds": 52807.018122,
+        "endWallMs": 1792772075180.768,
+        "encodedDataLength": 28748,
+        "startTimeMs": 238.902099609375,
+        "responseEndMs": 246.8681640625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-45-400-normal.woff2",
+        "startWallMs": 1792772075172.838,
+        "startProtocolSeconds": 52807.018158,
+        "endWallMs": 1792772075181.772,
+        "encodedDataLength": 36840,
+        "startTimeMs": 238.93798828125,
+        "responseEndMs": 247.8720703125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-46-400-normal.woff2",
+        "startWallMs": 1792772075172.872,
+        "startProtocolSeconds": 52807.01819,
+        "endWallMs": 1792772075179.439,
+        "encodedDataLength": 32192,
+        "startTimeMs": 238.97216796875,
+        "responseEndMs": 245.5390625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-47-400-normal.woff2",
+        "startWallMs": 1792772075172.905,
+        "startProtocolSeconds": 52807.018224,
+        "endWallMs": 1792772075181.646,
+        "encodedDataLength": 29776,
+        "startTimeMs": 239.005126953125,
+        "responseEndMs": 247.74609375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-48-400-normal.woff2",
+        "startWallMs": 1792772075172.937,
+        "startProtocolSeconds": 52807.018255,
+        "endWallMs": 1792772075176.842,
+        "encodedDataLength": 26892,
+        "startTimeMs": 239.037109375,
+        "responseEndMs": 242.942138671875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-49-400-normal.woff2",
+        "startWallMs": 1792772075173.007,
+        "startProtocolSeconds": 52807.018298,
+        "endWallMs": 1792772075180.6821,
+        "encodedDataLength": 28084,
+        "startTimeMs": 239.107177734375,
+        "responseEndMs": 246.7822265625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-50-400-normal.woff2",
+        "startWallMs": 1792772075173.068,
+        "startProtocolSeconds": 52807.018386,
+        "endWallMs": 1792772075182.485,
+        "encodedDataLength": 24788,
+        "startTimeMs": 239.168212890625,
+        "responseEndMs": 248.585205078125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-51-400-normal.woff2",
+        "startWallMs": 1792772075173.1091,
+        "startProtocolSeconds": 52807.018423,
+        "endWallMs": 1792772075178.9583,
+        "encodedDataLength": 22496,
+        "startTimeMs": 239.209228515625,
+        "responseEndMs": 245.058349609375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-52-400-normal.woff2",
+        "startWallMs": 1792772075173.177,
+        "startProtocolSeconds": 52807.018488,
+        "endWallMs": 1792772075179.249,
+        "encodedDataLength": 27404,
+        "startTimeMs": 239.277099609375,
+        "responseEndMs": 245.34912109375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-53-400-normal.woff2",
+        "startWallMs": 1792772075173.2349,
+        "startProtocolSeconds": 52807.018549,
+        "endWallMs": 1792772075181.5498,
+        "encodedDataLength": 23076,
+        "startTimeMs": 239.3349609375,
+        "responseEndMs": 247.64990234375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-54-400-normal.woff2",
+        "startWallMs": 1792772075173.276,
+        "startProtocolSeconds": 52807.018593,
+        "endWallMs": 1792772075180.5298,
+        "encodedDataLength": 27744,
+        "startTimeMs": 239.3759765625,
+        "responseEndMs": 246.6298828125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-55-400-normal.woff2",
+        "startWallMs": 1792772075173.414,
+        "startProtocolSeconds": 52807.018629,
+        "endWallMs": 1792772075179.424,
+        "encodedDataLength": 25820,
+        "startTimeMs": 239.51416015625,
+        "responseEndMs": 245.524169921875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-56-400-normal.woff2",
+        "startWallMs": 1792772075173.514,
+        "startProtocolSeconds": 52807.018823,
+        "endWallMs": 1792772075180.176,
+        "encodedDataLength": 28548,
+        "startTimeMs": 239.614013671875,
+        "responseEndMs": 246.276123046875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-57-400-normal.woff2",
+        "startWallMs": 1792772075173.572,
+        "startProtocolSeconds": 52807.018886,
+        "endWallMs": 1792772075183.205,
+        "encodedDataLength": 29636,
+        "startTimeMs": 239.672119140625,
+        "responseEndMs": 249.30517578125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-58-400-normal.woff2",
+        "startWallMs": 1792772075173.63,
+        "startProtocolSeconds": 52807.018944,
+        "endWallMs": 1792772075183.784,
+        "encodedDataLength": 30384,
+        "startTimeMs": 239.72998046875,
+        "responseEndMs": 249.884033203125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-59-400-normal.woff2",
+        "startWallMs": 1792772075173.6802,
+        "startProtocolSeconds": 52807.018995,
+        "endWallMs": 1792772075180.4363,
+        "encodedDataLength": 25128,
+        "startTimeMs": 239.7802734375,
+        "responseEndMs": 246.536376953125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-60-400-normal.woff2",
+        "startWallMs": 1792772075173.723,
+        "startProtocolSeconds": 52807.01904,
+        "endWallMs": 1792772075182.542,
+        "encodedDataLength": 22240,
+        "startTimeMs": 239.822998046875,
+        "responseEndMs": 248.64208984375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-61-400-normal.woff2",
+        "startWallMs": 1792772075173.771,
+        "startProtocolSeconds": 52807.019087,
+        "endWallMs": 1792772075181.596,
+        "encodedDataLength": 24176,
+        "startTimeMs": 239.87109375,
+        "responseEndMs": 247.696044921875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-62-400-normal.woff2",
+        "startWallMs": 1792772075173.823,
+        "startProtocolSeconds": 52807.019137,
+        "endWallMs": 1792772075180.205,
+        "encodedDataLength": 31148,
+        "startTimeMs": 239.923095703125,
+        "responseEndMs": 246.30517578125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-63-400-normal.woff2",
+        "startWallMs": 1792772075173.885,
+        "startProtocolSeconds": 52807.019198,
+        "endWallMs": 1792772075180.1091,
+        "encodedDataLength": 25952,
+        "startTimeMs": 239.985107421875,
+        "responseEndMs": 246.209228515625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-64-400-normal.woff2",
+        "startWallMs": 1792772075173.998,
+        "startProtocolSeconds": 52807.019287,
+        "endWallMs": 1792772075181.924,
+        "encodedDataLength": 21888,
+        "startTimeMs": 240.09814453125,
+        "responseEndMs": 248.024169921875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-65-400-normal.woff2",
+        "startWallMs": 1792772075174.0671,
+        "startProtocolSeconds": 52807.019379,
+        "endWallMs": 1792772075182.393,
+        "encodedDataLength": 22376,
+        "startTimeMs": 240.167236328125,
+        "responseEndMs": 248.4931640625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-66-400-normal.woff2",
+        "startWallMs": 1792772075174.1309,
+        "startProtocolSeconds": 52807.019444,
+        "endWallMs": 1792772075182.3499,
+        "encodedDataLength": 27956,
+        "startTimeMs": 240.23095703125,
+        "responseEndMs": 248.449951171875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-67-400-normal.woff2",
+        "startWallMs": 1792772075174.191,
+        "startProtocolSeconds": 52807.019504,
+        "endWallMs": 1792772075181.984,
+        "encodedDataLength": 28048,
+        "startTimeMs": 240.291015625,
+        "responseEndMs": 248.083984375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-68-400-normal.woff2",
+        "startWallMs": 1792772075174.249,
+        "startProtocolSeconds": 52807.019563,
+        "endWallMs": 1792772075184.56,
+        "encodedDataLength": 22240,
+        "startTimeMs": 240.34912109375,
+        "responseEndMs": 250.66015625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-69-400-normal.woff2",
+        "startWallMs": 1792772075174.3,
+        "startProtocolSeconds": 52807.019614,
+        "endWallMs": 1792772075182.861,
+        "encodedDataLength": 29556,
+        "startTimeMs": 240.400146484375,
+        "responseEndMs": 248.961181640625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-70-400-normal.woff2",
+        "startWallMs": 1792772075174.357,
+        "startProtocolSeconds": 52807.019671,
+        "endWallMs": 1792772075183.2559,
+        "encodedDataLength": 22440,
+        "startTimeMs": 240.45703125,
+        "responseEndMs": 249.35595703125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-71-400-normal.woff2",
+        "startWallMs": 1792772075174.408,
+        "startProtocolSeconds": 52807.019722,
+        "endWallMs": 1792772075182.813,
+        "encodedDataLength": 25544,
+        "startTimeMs": 240.508056640625,
+        "responseEndMs": 248.9130859375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-72-400-normal.woff2",
+        "startWallMs": 1792772075174.46,
+        "startProtocolSeconds": 52807.019773,
+        "endWallMs": 1792772075184.507,
+        "encodedDataLength": 25012,
+        "startTimeMs": 240.56005859375,
+        "responseEndMs": 250.607177734375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-73-400-normal.woff2",
+        "startWallMs": 1792772075174.505,
+        "startProtocolSeconds": 52807.019818,
+        "endWallMs": 1792772075183.1028,
+        "encodedDataLength": 20844,
+        "startTimeMs": 240.60498046875,
+        "responseEndMs": 249.202880859375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-74-400-normal.woff2",
+        "startWallMs": 1792772075174.631,
+        "startProtocolSeconds": 52807.019947,
+        "endWallMs": 1792772075183.3242,
+        "encodedDataLength": 30036,
+        "startTimeMs": 240.731201171875,
+        "responseEndMs": 249.42431640625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-75-400-normal.woff2",
+        "startWallMs": 1792772075174.709,
+        "startProtocolSeconds": 52807.01999,
+        "endWallMs": 1792772075183.6619,
+        "encodedDataLength": 23668,
+        "startTimeMs": 240.80908203125,
+        "responseEndMs": 249.761962890625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-76-400-normal.woff2",
+        "startWallMs": 1792772075174.792,
+        "startProtocolSeconds": 52807.020105,
+        "endWallMs": 1792772075183.292,
+        "encodedDataLength": 25788,
+        "startTimeMs": 240.89208984375,
+        "responseEndMs": 249.39208984375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-77-400-normal.woff2",
+        "startWallMs": 1792772075174.849,
+        "startProtocolSeconds": 52807.020163,
+        "endWallMs": 1792772075185.1362,
+        "encodedDataLength": 19708,
+        "startTimeMs": 240.94921875,
+        "responseEndMs": 251.236328125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-78-400-normal.woff2",
+        "startWallMs": 1792772075174.9028,
+        "startProtocolSeconds": 52807.020218,
+        "endWallMs": 1792772075183.5059,
+        "encodedDataLength": 26120,
+        "startTimeMs": 241.0029296875,
+        "responseEndMs": 249.60595703125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-79-400-normal.woff2",
+        "startWallMs": 1792772075174.9539,
+        "startProtocolSeconds": 52807.020269,
+        "endWallMs": 1792772075184.097,
+        "encodedDataLength": 21936,
+        "startTimeMs": 241.053955078125,
+        "responseEndMs": 250.197021484375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-80-400-normal.woff2",
+        "startWallMs": 1792772075175.044,
+        "startProtocolSeconds": 52807.020359,
+        "endWallMs": 1792772075183.012,
+        "encodedDataLength": 17304,
+        "startTimeMs": 241.14404296875,
+        "responseEndMs": 249.112060546875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-81-400-normal.woff2",
+        "startWallMs": 1792772075175.085,
+        "startProtocolSeconds": 52807.020403,
+        "endWallMs": 1792772075183.582,
+        "encodedDataLength": 25120,
+        "startTimeMs": 241.18505859375,
+        "responseEndMs": 249.68212890625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-82-400-normal.woff2",
+        "startWallMs": 1792772075175.136,
+        "startProtocolSeconds": 52807.02045,
+        "endWallMs": 1792772075184.3,
+        "encodedDataLength": 24404,
+        "startTimeMs": 241.236083984375,
+        "responseEndMs": 250.400146484375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-83-400-normal.woff2",
+        "startWallMs": 1792772075175.19,
+        "startProtocolSeconds": 52807.020506,
+        "endWallMs": 1792772075184.217,
+        "encodedDataLength": 23076,
+        "startTimeMs": 241.2900390625,
+        "responseEndMs": 250.317138671875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-84-400-normal.woff2",
+        "startWallMs": 1792772075175.25,
+        "startProtocolSeconds": 52807.020562,
+        "endWallMs": 1792772075184.041,
+        "encodedDataLength": 17540,
+        "startTimeMs": 241.35009765625,
+        "responseEndMs": 250.14111328125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-85-400-normal.woff2",
+        "startWallMs": 1792772075175.315,
+        "startProtocolSeconds": 52807.020622,
+        "endWallMs": 1792772075184.291,
+        "encodedDataLength": 14600,
+        "startTimeMs": 241.4150390625,
+        "responseEndMs": 250.39111328125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-86-400-normal.woff2",
+        "startWallMs": 1792772075175.436,
+        "startProtocolSeconds": 52807.020719,
+        "endWallMs": 1792772075184.405,
+        "encodedDataLength": 17912,
+        "startTimeMs": 241.5361328125,
+        "responseEndMs": 250.505126953125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-87-400-normal.woff2",
+        "startWallMs": 1792772075175.506,
+        "startProtocolSeconds": 52807.020818,
+        "endWallMs": 1792772075183.9602,
+        "encodedDataLength": 5212,
+        "startTimeMs": 241.606201171875,
+        "responseEndMs": 250.060302734375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-89-400-normal.woff2",
+        "startWallMs": 1792772075175.575,
+        "startProtocolSeconds": 52807.020887,
+        "endWallMs": 1792772075183.929,
+        "encodedDataLength": 6112,
+        "startTimeMs": 241.675048828125,
+        "responseEndMs": 250.029052734375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-90-400-normal.woff2",
+        "startWallMs": 1792772075175.638,
+        "startProtocolSeconds": 52807.020948,
+        "endWallMs": 1792772075184.786,
+        "encodedDataLength": 5324,
+        "startTimeMs": 241.738037109375,
+        "responseEndMs": 250.885986328125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-91-400-normal.woff2",
+        "startWallMs": 1792772075175.832,
+        "startProtocolSeconds": 52807.021136,
+        "endWallMs": 1792772075184.606,
+        "encodedDataLength": 4704,
+        "startTimeMs": 241.93212890625,
+        "responseEndMs": 250.7060546875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-97-400-normal.woff2",
+        "startWallMs": 1792772075175.895,
+        "startProtocolSeconds": 52807.021209,
+        "endWallMs": 1792772075183.0571,
+        "encodedDataLength": 1412,
+        "startTimeMs": 241.9951171875,
+        "responseEndMs": 249.1572265625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-98-400-normal.woff2",
+        "startWallMs": 1792772075175.961,
+        "startProtocolSeconds": 52807.021269,
+        "endWallMs": 1792772075184.261,
+        "encodedDataLength": 2076,
+        "startTimeMs": 242.06103515625,
+        "responseEndMs": 250.361083984375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-99-400-normal.woff2",
+        "startWallMs": 1792772075176.068,
+        "startProtocolSeconds": 52807.021377,
+        "endWallMs": 1792772075183.36,
+        "encodedDataLength": 5204,
+        "startTimeMs": 242.168212890625,
+        "responseEndMs": 249.460205078125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-100-400-normal.woff2",
+        "startWallMs": 1792772075176.127,
+        "startProtocolSeconds": 52807.021439,
+        "endWallMs": 1792772075183.124,
+        "encodedDataLength": 34272,
+        "startTimeMs": 242.22705078125,
+        "responseEndMs": 249.22412109375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-101-400-normal.woff2",
+        "startWallMs": 1792772075176.1729,
+        "startProtocolSeconds": 52807.021486,
+        "endWallMs": 1792772075183.6528,
+        "encodedDataLength": 31028,
+        "startTimeMs": 242.27294921875,
+        "responseEndMs": 249.7529296875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-102-400-normal.woff2",
+        "startWallMs": 1792772075176.228,
+        "startProtocolSeconds": 52807.021544,
+        "endWallMs": 1792772075183.818,
+        "encodedDataLength": 32100,
+        "startTimeMs": 242.328125,
+        "responseEndMs": 249.918212890625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-103-400-normal.woff2",
+        "startWallMs": 1792772075176.2979,
+        "startProtocolSeconds": 52807.021603,
+        "endWallMs": 1792772075183.5989,
+        "encodedDataLength": 33840,
+        "startTimeMs": 242.39794921875,
+        "responseEndMs": 249.698974609375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-104-400-normal.woff2",
+        "startWallMs": 1792772075176.348,
+        "startProtocolSeconds": 52807.021668,
+        "endWallMs": 1792772075184.8628,
+        "encodedDataLength": 32552,
+        "startTimeMs": 242.447998046875,
+        "responseEndMs": 250.962890625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-105-400-normal.woff2",
+        "startWallMs": 1792772075176.399,
+        "startProtocolSeconds": 52807.021714,
+        "endWallMs": 1792772075183.374,
+        "encodedDataLength": 32760,
+        "startTimeMs": 242.4990234375,
+        "responseEndMs": 249.47412109375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-107-400-normal.woff2",
+        "startWallMs": 1792772075176.454,
+        "startProtocolSeconds": 52807.021771,
+        "endWallMs": 1792772075184.948,
+        "encodedDataLength": 32380,
+        "startTimeMs": 242.55419921875,
+        "responseEndMs": 251.048095703125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-108-400-normal.woff2",
+        "startWallMs": 1792772075176.502,
+        "startProtocolSeconds": 52807.021817,
+        "endWallMs": 1792772075183.448,
+        "encodedDataLength": 34144,
+        "startTimeMs": 242.60205078125,
+        "responseEndMs": 249.548095703125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-109-400-normal.woff2",
+        "startWallMs": 1792772075176.5461,
+        "startProtocolSeconds": 52807.021861,
+        "endWallMs": 1792772075184.914,
+        "encodedDataLength": 32056,
+        "startTimeMs": 242.646240234375,
+        "responseEndMs": 251.01416015625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-112-400-normal.woff2",
+        "startWallMs": 1792772075176.5908,
+        "startProtocolSeconds": 52807.021911,
+        "endWallMs": 1792772075184.0608,
+        "encodedDataLength": 30472,
+        "startTimeMs": 242.69091796875,
+        "responseEndMs": 250.160888671875
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-114-400-normal.woff2",
+        "startWallMs": 1792772075176.626,
+        "startProtocolSeconds": 52807.021947,
+        "endWallMs": 1792772075184.673,
+        "encodedDataLength": 30712,
+        "startTimeMs": 242.72607421875,
+        "responseEndMs": 250.773193359375
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-cyrillic-400-normal.woff2",
+        "startWallMs": 1792772075176.6938,
+        "startProtocolSeconds": 52807.022002,
+        "endWallMs": 1792772075184.6328,
+        "encodedDataLength": 5304,
+        "startTimeMs": 242.7939453125,
+        "responseEndMs": 250.73291015625
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-vietnamese-400-normal.woff2",
+        "startWallMs": 1792772075176.76,
+        "startProtocolSeconds": 52807.022074,
+        "endWallMs": 1792772075183.983,
+        "encodedDataLength": 4708,
+        "startTimeMs": 242.860107421875,
+        "responseEndMs": 250.0830078125
+      },
+      {
+        "name": "file:///workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar/src/vendor/fonts/noto-sans-sc/files/noto-sans-sc-latin-ext-400-normal.woff2",
+        "startWallMs": 1792772075176.857,
+        "startProtocolSeconds": 52807.022169,
+        "endWallMs": 1792772075185.603,
+        "encodedDataLength": 4484,
+        "startTimeMs": 242.95703125,
+        "responseEndMs": 251.703125
+      }
+    ]
+  },
+  "pass": false,
+  "recommendations": [
+    "Profile the input handler on the same fixture. Avoid serializing and reparsing the complete document synchronously for every input event.",
+    "Keep immediate DOM editing responsive while batching noncritical word count, outline and recovery serialization work.",
+    "Remeasure on Windows/macOS and target user hardware before claiming cross-platform performance acceptance."
+  ]
+}

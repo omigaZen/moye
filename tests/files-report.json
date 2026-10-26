@@ -1,0 +1,42 @@
+{
+  "platform": "linux",
+  "results": [
+    {
+      "name": "native no-op save preserves BOM and mixed newlines at Chinese-space filename",
+      "status": "pass",
+      "details": {
+        "bytes": 31
+      }
+    },
+    {
+      "name": "Save As copies local relative images and reopens with working image",
+      "status": "pass",
+      "details": {
+        "images": 1
+      }
+    },
+    {
+      "name": "Save As rebases parent-directory image references and syncs editor saved state",
+      "status": "pass",
+      "details": {
+        "rebased": true
+      }
+    },
+    {
+      "name": "bundled syntax example saves as a standalone document with its local images",
+      "status": "pass",
+      "details": {
+        "diagrams": 8
+      }
+    },
+    {
+      "name": "external edit cancellation preserves disk file and keeps editor editable and dirty",
+      "status": "pass",
+      "details": {
+        "dirty": true,
+        "disabled": false
+      }
+    }
+  ],
+  "pageErrors": []
+}

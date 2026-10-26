@@ -1,0 +1,108 @@
+{
+  "checkedAt": "2026-10-23T15:05:39.141460+00:00",
+  "purpose": "Acquire an unmodified official reference and record actual version before claiming Typora settings parity.",
+  "overallStablePage": {
+    "url": "https://typora.io/releases/stable",
+    "topVersion": "1.14.10",
+    "runtimeEvidence": false
+  },
+  "linuxReferencePackage": {
+    "url": "https://download.typora.io/linux/Typora-linux-x64.tar.gz",
+    "final": "https://download.typora.io/linux/Typora-linux-x64.tar.gz",
+    "status": 200,
+    "headers": {
+      "Content-Length": "150865201",
+      "Content-Range": null,
+      "Last-Modified": "Wed, 05 Aug 2026 08:57:00 GMT",
+      "Content-Type": "application/gzip"
+    },
+    "bytes": 150865201,
+    "sha256": "06f03e6dee1f48126e62680ecd8e0551053681951d802d8ee433f96dae9fa045",
+    "elapsedSeconds": 8.45,
+    "metadata": {
+      "name": "Typora",
+      "productName": null,
+      "version": "1.14.9",
+      "metadataPath": "resources/app.asar/package.json",
+      "method": "Read-only package version metadata only; application implementation not inspected."
+    },
+    "archiveSha256IsLocallyMeasured": true,
+    "officialDetachedSignatureVerified": false
+  },
+  "officialAptIndex": {
+    "url": "https://download.typora.io/linux/Packages",
+    "method": "HTTPS GET with Range bytes=0-65535; full 15360-byte index returned",
+    "signatureVerified": false,
+    "latestAmd64": {
+      "Version": "1.14.9-1",
+      "Architecture": "amd64",
+      "Filename": "linux/typora_1.14.9_amd64.deb",
+      "Size": "113032806",
+      "SHA256": "8885207cf9e2daeda2592fda9dcb05c12d6b5c4665a2a055a50e654800e633ea"
+    },
+    "specific11410DebRequests": [
+      {
+        "url": "https://downloads.typora.io/linux/typora_1.14.10_amd64.deb",
+        "status": 404
+      },
+      {
+        "url": "https://download.typora.io/linux/typora_1.14.10_amd64.deb",
+        "status": 404
+      }
+    ]
+  },
+  "versionFinding": "The obtained singular download.typora.io fallback archive contains package metadata version 1.14.9. A full GET Range read of the primary plural downloads.typora.io APT index also currently lists 1.14.9-1 as its latest amd64 entry. The overall stable release page lists 1.14.10. These observations do not establish the latest Linux version across every distribution channel; do not label the obtained archive as 1.14.10.",
+  "launchAttempts": [
+    {
+      "method": "Playwright Electron launch with unmodified executable, headless, isolated user data",
+      "result": "Timed out at 20000ms; no reference UI or settings captured."
+    },
+    {
+      "method": "Direct headless launch with remote-debugging-port=0",
+      "result": "Application main process refuses debugging arguments",
+      "error": "Error: Arguments not allowed debug in production main thread",
+      "guardBypassed": false
+    },
+    {
+      "method": "Normal direct headless launch without debugging arguments",
+      "result": "Fatal process singleton initialization error before UI",
+      "exitCode": -5,
+      "error": "FATAL:chrome/browser/process_singleton_posix.cc:299 Check failed: . socket() failed: Operation not permitted (1)",
+      "guardBypassed": false
+    }
+  ],
+  "settingsInventory": {
+    "complete": false,
+    "actualUiCaptured": false,
+    "actualDefaultsCaptured": false,
+    "reason": "Reference runtime is blocked by its own debugging guard and the host prohibition on Unix sockets; generated profile contains no preferences baseline."
+  },
+  "referenceRuntimeFrozen": false,
+  "parityVerified": false,
+  "boundaries": [
+    "No licensing bypass, trial reset, clock manipulation, binary modification or debugger-guard workaround was used.",
+    "Only package.json name/version metadata was read from the application archive; application implementation was not inspected or copied.",
+    "Original reference binaries remain outside the Moye source tree and must not enter its source or release archives.",
+    "Windows and macOS reference runtime evidence has not been obtained."
+  ],
+  "requiredNextEvidence": "Run the unmodified latest official package on an ordinary supported desktop without these host restrictions, record its platform-specific actual version and settings/UI/defaults, and perform side-by-side operations.",
+  "primaryAptIndexCheck": {
+    "url": "https://downloads.typora.io/linux/Packages",
+    "method": "GET",
+    "rangeRequested": "bytes=0-65535",
+    "status": 206,
+    "finalUrl": "https://downloads.typora.io/linux/Packages",
+    "contentRange": "bytes 0-15359/15360",
+    "bytes": 15360,
+    "sha256": "0b81ccf0d1ae62d21889c06ced4fa2122e2e5d308337b23536b5b8f7df4fd3a5",
+    "sameBytesAsFallbackIndex": true,
+    "latestAmd64Entry": {
+      "Version": "1.14.9-1",
+      "Architecture": "amd64",
+      "Filename": "linux/typora_1.14.9_amd64.deb",
+      "Size": "113032806",
+      "SHA256": "8885207cf9e2daeda2592fda9dcb05c12d6b5c4665a2a055a50e654800e633ea"
+    }
+  },
+  "latestLinuxVersionConfirmed": false
+}

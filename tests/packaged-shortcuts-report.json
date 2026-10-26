@@ -1,0 +1,137 @@
+{
+  "generatedAt": "2026-10-25T10:53:47.241Z",
+  "platform": "linux",
+  "results": [
+    {
+      "name": "native menu changes immediately, removes old accelerators, and reflects disabling",
+      "status": "pass",
+      "elapsedMs": 73,
+      "details": {
+        "label": "加粗 <Ctrl+Alt+B>",
+        "hotkeys": []
+      }
+    },
+    {
+      "name": "changed source hotkey performs one mode switch and its old key is inert",
+      "status": "pass",
+      "elapsedMs": 981
+    },
+    {
+      "name": "custom bold applies once in live mode and one Undo restores the exact source",
+      "status": "pass",
+      "elapsedMs": 449
+    },
+    {
+      "name": "custom bold applies once in source mode and one Undo restores the exact source",
+      "status": "pass",
+      "elapsedMs": 357
+    },
+    {
+      "name": "native formatting menu uses the current editor selection and one Undo",
+      "status": "pass",
+      "elapsedMs": 363
+    },
+    {
+      "name": "custom strike, inline code, link, code block, quote and list commands use one source transaction",
+      "status": "pass",
+      "elapsedMs": 2456,
+      "details": [
+        {
+          "command": "strike",
+          "content": "~~alpha~~ beta\n"
+        },
+        {
+          "command": "inline-code",
+          "content": "`alpha` beta\n"
+        },
+        {
+          "command": "link",
+          "content": "[alpha](https://) beta\n"
+        },
+        {
+          "command": "code",
+          "content": "```\nalpha\n``` beta\n"
+        },
+        {
+          "command": "quote",
+          "content": "> alpha beta\n"
+        },
+        {
+          "command": "list",
+          "content": "* alpha beta\n"
+        },
+        {
+          "command": "ordered-list",
+          "content": "1. alpha beta\n"
+        }
+      ]
+    },
+    {
+      "name": "remapped Undo and Redo retire old editor keys and still perform a single history action",
+      "status": "pass",
+      "elapsedMs": 1023
+    },
+    {
+      "name": "unmanaged native zoom retains its Electron role while custom shortcuts are enabled",
+      "status": "pass",
+      "elapsedMs": 338,
+      "details": {
+        "before": 0,
+        "after": -0.5
+      }
+    },
+    {
+      "name": "disabled default and retired Vditor keys do not format or change modes",
+      "status": "pass",
+      "elapsedMs": 782
+    },
+    {
+      "name": "default and custom shortcut conflicts fail atomically without changing menus or revision",
+      "status": "pass",
+      "elapsedMs": 61
+    },
+    {
+      "name": "find and replace fields keep text editing and never trigger configured editor or app actions",
+      "status": "pass",
+      "elapsedMs": 563
+    },
+    {
+      "name": "preferences JSON control saves valid shortcuts and rejects a fixed edit collision accessibly",
+      "status": "pass",
+      "elapsedMs": 133
+    },
+    {
+      "name": "composition and AltGraph keyboard events preserve content, selection and modes",
+      "status": "pass",
+      "elapsedMs": 149,
+      "details": {
+        "syntheticEventsOnly": true
+      }
+    },
+    {
+      "name": "save, open and find remappings execute their real operations and retire defaults",
+      "status": "pass",
+      "elapsedMs": 890
+    },
+    {
+      "name": "custom shortcuts persist through a real restart and reset restores defaults",
+      "status": "pass",
+      "elapsedMs": 1437
+    },
+    {
+      "name": "renderer reports no uncaught errors",
+      "status": "pass",
+      "details": []
+    }
+  ],
+  "pageErrors": [],
+  "limitations": [
+    "Moye keyboard/menu behavior only; latest Typora runtime comparison, Windows/macOS native execution, non-US hardware keyboard layouts and real system IMEs remain unverified."
+  ],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": true,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/Moye"
+  }
+}

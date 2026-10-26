@@ -1,0 +1,4 @@
+# Template only. The installer safely quotes and substitutes an absolute executable.
+[Thumbnailer Entry]
+Exec=@MOYE_EXECUTABLE@ --system-preview --input %u --output %o --size %s
+MimeType=text/markdown;text/x-markdown;text/plain;

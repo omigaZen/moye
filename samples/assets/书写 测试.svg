@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="240" viewBox="0 0 640 240">
+  <rect width="640" height="240" rx="20" fill="#f3f1eb"/>
+  <rect x="54" y="40" width="145" height="160" rx="12" fill="#fff" stroke="#d6d2c8" stroke-width="2"/>
+  <path d="M80 80H172M80 106H172M80 132H148M80 158H160" stroke="#aab7a1" stroke-width="6" stroke-linecap="round"/>
+  <text x="242" y="116" font-family="sans-serif" font-size="34" fill="#3d483a">墨页 · 图片测试</text>
+  <text x="244" y="153" font-family="sans-serif" font-size="18" fill="#777d72">640 × 240 · 本地相对路径</text>
+</svg>

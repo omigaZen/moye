@@ -1,0 +1,5 @@
+/* English labels may be longer; keep controls legible at narrow widths. */
+html[lang="en-US"] .mode-tabs button { min-width: 54px; }
+html[lang="en-US"] .moye-settings__nav button { overflow-wrap: anywhere; hyphens: auto; }
+html[lang="en-US"] .moye-settings__profile-actions button,
+html[lang="en-US"] .moye-settings__operations button { white-space: normal; }

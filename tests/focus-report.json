@@ -1,0 +1,170 @@
+{
+  "generatedAt": "2026-10-25T10:47:24.601Z",
+  "platform": "linux",
+  "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron",
+  "application": {
+    "version": "0.0",
+    "isPackaged": false,
+    "path": "/workspace/scratch/8a7610d50e71/moye/electron",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "purpose": "Moye focus and typewriter behavior regressions; original Typora runtime comparison and system IME pending",
+  "results": [
+    {
+      "name": "focus fades other paragraphs and heading without hiding application controls",
+      "status": "pass",
+      "elapsedMs": 563,
+      "details": {
+        "dimmedHeading": "# Heading alpha",
+        "controlsVisible": true
+      }
+    },
+    {
+      "name": "nested list highlights its own item while fading outer and sibling items",
+      "status": "pass",
+      "elapsedMs": 122,
+      "details": {
+        "outerDimmed": "outer text",
+        "activeNested": true
+      }
+    },
+    {
+      "name": "table cell stays active while adjacent cells fade",
+      "status": "pass",
+      "elapsedMs": 132,
+      "details": [
+        {
+          "text": "cell one",
+          "dimmed": false
+        },
+        {
+          "text": "cell two",
+          "dimmed": true
+        }
+      ]
+    },
+    {
+      "name": "active IR code fence fades noncurrent lines with editable source unchanged",
+      "status": "pass",
+      "elapsedMs": 226,
+      "details": {
+        "text": "first();\nsecond();\nthird();\n",
+        "dimmedText": "first();\n\nthird();\n",
+        "rangeCount": 23
+      }
+    },
+    {
+      "name": "focus toggling preserves raw Markdown selection scroll and undo history in light and dark",
+      "status": "pass",
+      "elapsedMs": 762,
+      "details": {
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "exactEditableDOM": true,
+        "undoRedo": true
+      }
+    },
+    {
+      "name": "source mask tracks actual mouse and keyboard selection with caret line unobscured",
+      "status": "pass",
+      "elapsedMs": 236,
+      "details": {
+        "selection": 13,
+        "gap": 25.890625,
+        "lineHeight": 25.9,
+        "pointerEvents": "none",
+        "opacity": "0.65",
+        "editable": true,
+        "text": "source first\nsource second\nsource third\n"
+      }
+    },
+    {
+      "name": "source focus toggling in both themes preserves scroll selection raw text and undo",
+      "status": "pass",
+      "elapsedMs": 887,
+      "details": {
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "raw": true,
+        "selection": true,
+        "scroll": 300,
+        "undoRedo": true
+      }
+    },
+    {
+      "name": "typewriter ir: mouse click centers only with always-center; typing centers in both cases",
+      "status": "pass",
+      "elapsedMs": 1161,
+      "details": [
+        {
+          "always": false,
+          "clickDistance": 306.921875,
+          "typingDistance": 0.078125
+        },
+        {
+          "always": true,
+          "clickDistance": 0.078125,
+          "typingDistance": 0.078125
+        }
+      ]
+    },
+    {
+      "name": "typewriter sv: mouse click centers only with always-center; typing centers in both cases",
+      "status": "pass",
+      "elapsedMs": 1168,
+      "details": [
+        {
+          "always": false,
+          "clickDistance": 311.3984375,
+          "typingDistance": 0.3984375
+        },
+        {
+          "always": true,
+          "clickDistance": 0.3984375,
+          "typingDistance": 0.3984375
+        }
+      ]
+    },
+    {
+      "name": "typewriter reserves space to center first and last lines in both editor modes",
+      "status": "pass",
+      "elapsedMs": 980,
+      "details": [
+        {
+          "mode": "ir",
+          "firstDistance": 0.234375,
+          "lastDistance": 0.203125
+        },
+        {
+          "mode": "sv",
+          "firstDistance": 0.9609375,
+          "lastDistance": 0.1484375
+        }
+      ]
+    },
+    {
+      "name": "composition defers focus and typewriter paint until committed",
+      "status": "pass",
+      "elapsedMs": 440,
+      "details": {
+        "deferred": true,
+        "committedRefresh": true,
+        "systemIME": "not exercised"
+      }
+    },
+    {
+      "name": "Escape exits focus and removes source masks and dim ranges",
+      "status": "pass",
+      "elapsedMs": 109,
+      "details": {
+        "cleaned": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": []
+}

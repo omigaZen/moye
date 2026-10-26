@@ -1,0 +1,26 @@
+{
+  "platform": "linux/x64",
+  "application": {
+    "version": "0.2.0",
+    "isPackaged": true,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/Moye"
+  },
+  "kind": "Moye settings feature regression, not Typora differential acceptance",
+  "network": "HTTP(S) blocked",
+  "remoteRequests": [],
+  "results": [
+    {
+      "name": "automatic save writes committed edits on its configured timer without opening a save dialog",
+      "status": "pass",
+      "elapsedMs": 643,
+      "details": {
+        "configuredMinutes": 1,
+        "committedSourceWritten": true,
+        "dirtyWhenDiskWriteObserved": false,
+        "rendererAcknowledgementWaitMs": 12
+      }
+    }
+  ],
+  "pageErrors": []
+}

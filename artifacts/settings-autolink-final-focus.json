@@ -1,0 +1,58 @@
+{
+  "platform": "linux/x64",
+  "application": {
+    "version": "0.0",
+    "isPackaged": false,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye/electron",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "kind": "Moye settings feature regression, not Typora differential acceptance",
+  "network": "HTTP(S) blocked",
+  "remoteRequests": [],
+  "results": [
+    {
+      "name": "remaining: automatic-link setting changes parsed links without rewriting the source",
+      "status": "pass",
+      "elapsedMs": 1370,
+      "details": {
+        "expectedFromIndependentLute": [
+          {
+            "text": "https://example.com/path",
+            "url": "https://example.com/path"
+          },
+          {
+            "text": "www.example.com",
+            "url": "http://www.example.com"
+          }
+        ],
+        "highlighted": {
+          "links": [
+            {
+              "text": "https://example.com/path",
+              "url": "https://example.com/path",
+              "selectedText": "https://example.com/path",
+              "connected": true
+            },
+            {
+              "text": "www.example.com",
+              "url": "http://www.example.com",
+              "selectedText": "www.example.com",
+              "connected": true
+            }
+          ],
+          "highlightCount": 2,
+          "allRangesHighlighted": true
+        },
+        "normalClickOpensNothing": true,
+        "ctrlClickOpened": [
+          "https://example.com/path"
+        ],
+        "disabledHighlights": 0,
+        "editingAndUndoTracked": true,
+        "sourceUnchangedByHighlighting": true,
+        "typoraTldComparison": "not executed; independent Lute output is a parser reference, not proof of Typora parity"
+      }
+    }
+  ],
+  "pageErrors": []
+}

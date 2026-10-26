@@ -1,0 +1,19 @@
+node_modules/
+release/
+src/vendor/
+src/samples/
+artifacts/*user-data*/
+artifacts/*profile*/
+artifacts/*.log
+artifacts/*.png
+*.tmp
+*.log
+.DS_Store
+__pycache__/
+*.pyc
+
+artifacts/**/*.png
+
+# Generated release metadata is emitted after the source commit.
+RELEASE-MANIFEST.json
+SOURCE_VERSION.txt

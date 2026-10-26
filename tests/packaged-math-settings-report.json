@@ -1,0 +1,91 @@
+{
+  "generatedAt": "2026-10-25T10:53:33.183Z",
+  "platform": "linux/x64",
+  "purpose": "Moye real-editor settings integration; not Typora differential acceptance",
+  "results": [
+    {
+      "name": "body font preference changes the real editor and paragraph computed font family",
+      "status": "pass",
+      "elapsedMs": 366,
+      "details": {
+        "before": "\"Noto Sans SC\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "editor": "serif",
+        "paragraph": "serif",
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "real editor switches MathJax to KaTeX and back after explicit settings reload",
+      "status": "pass",
+      "elapsedMs": 325,
+      "details": {
+        "stages": [
+          {
+            "engine": "MathJax",
+            "mathjax": 2,
+            "katex": 0
+          },
+          {
+            "engine": "KaTeX",
+            "mathjax": 0,
+            "katex": 2
+          },
+          {
+            "engine": "MathJax",
+            "mathjax": 2,
+            "katex": 0
+          }
+        ],
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "macro preference expands then removes a macro in the actual editor without stale expansion",
+      "status": "pass",
+      "elapsedMs": 498,
+      "details": {
+        "addedGlyphs": [
+          "34",
+          "32"
+        ],
+        "removedGlyphs": [
+          "5C",
+          "6D",
+          "6F",
+          "79",
+          "65",
+          "70",
+          "72",
+          "62"
+        ],
+        "oldExpansionRemoved": true,
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "numbering preference affects real equation labels and resets between documents",
+      "status": "pass",
+      "elapsedMs": 616,
+      "details": {
+        "offLabels": [],
+        "onLabels": [
+          "(1)",
+          "(2)"
+        ],
+        "newDocumentLabels": [
+          "(1)"
+        ],
+        "disabledLabels": [],
+        "sourceUnchanged": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": true,
+    "path": "/workspace/scratch/8a7610d50e71/moye/release/Moye-linux-x64/resources/app.asar"
+  },
+  "pass": true
+}

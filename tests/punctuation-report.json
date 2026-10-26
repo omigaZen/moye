@@ -1,0 +1,365 @@
+{
+  "generatedAt": "2026-10-25T10:47:46.736Z",
+  "platform": "linux",
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": false,
+    "appPath": "/workspace/scratch/8a7610d50e71/moye",
+    "executable": "/workspace/scratch/8a7610d50e71/moye/node_modules/electron/dist/electron"
+  },
+  "reference": "https://support.typora.io/SmartyPants/",
+  "purpose": "Moye input regressions; original defaults, render-only/remap, OS quote patterns, and real IME remain unverified/unimplemented",
+  "network": "HTTP(S) blocked at session and page",
+  "remoteRequests": [],
+  "results": [
+    {
+      "name": "structural horizontal rule remains ASCII while later prose converts",
+      "status": "pass",
+      "elapsedMs": 461,
+      "details": {
+        "actual": "lead\n\n\n---\n\nbody–…\n",
+        "rule": "ASCII ---",
+        "undoRedo": true,
+        "scope": "syntax protection; not Unicode remapping"
+      }
+    },
+    {
+      "name": "structural first-line YAML delimiters remain ASCII",
+      "status": "pass",
+      "elapsedMs": 302,
+      "details": {
+        "actual": "---\ntitle: \"alpha--...\"\n---\nbody–…\n",
+        "opening": "actual --- keys",
+        "closing": "existing editor template",
+        "undoRedo": true,
+        "rawParity": "Moye preserves ASCII; Typora input plus remap may save Unicode. Original runtime not compared."
+      }
+    },
+    {
+      "name": "structural HTML comment delimiters remain ASCII",
+      "status": "pass",
+      "elapsedMs": 293,
+      "details": {
+        "actual": "<!--comment-->\n\nbody–…\n",
+        "comment": "ASCII delimiters",
+        "undoRedo": true,
+        "baseline": "already protected before the hyphen-line fix"
+      }
+    },
+    {
+      "name": "IR actual keys convert nested quotes and apostrophes",
+      "status": "pass",
+      "elapsedMs": 293,
+      "details": {
+        "actual": "prefix “It’s a ‘word’ in a quoted sentence.”\n"
+      }
+    },
+    {
+      "name": "IR actual -- --- and ... produce en/em dash and ellipsis",
+      "status": "pass",
+      "elapsedMs": 193,
+      "details": {
+        "actual": "prefix a–b—c…d\n"
+      }
+    },
+    {
+      "name": "a newly loaded literal en dash is not a prior typed double hyphen",
+      "status": "pass",
+      "elapsedMs": 240,
+      "details": {
+        "actual": "prefix –-\n"
+      }
+    },
+    {
+      "name": "smart dashes and quotes change behavior independently and immediately",
+      "status": "pass",
+      "elapsedMs": 631,
+      "details": {
+        "combinations": 3
+      }
+    },
+    {
+      "name": "all sixteen smart punctuation and pairing boolean combinations",
+      "status": "pass",
+      "elapsedMs": 3280,
+      "details": {
+        "combinations": 16,
+        "details": [
+          {
+            "smartQuotes": false,
+            "smartDashes": false,
+            "brackets": false,
+            "markdown": false,
+            "actual": "prefix \"a\" -- ...\n"
+          },
+          {
+            "smartQuotes": true,
+            "smartDashes": false,
+            "brackets": false,
+            "markdown": false,
+            "actual": "prefix “a” -- ...\n"
+          },
+          {
+            "smartQuotes": false,
+            "smartDashes": true,
+            "brackets": false,
+            "markdown": false,
+            "actual": "prefix \"a\" – …\n"
+          },
+          {
+            "smartQuotes": true,
+            "smartDashes": true,
+            "brackets": false,
+            "markdown": false,
+            "actual": "prefix “a” – …\n"
+          },
+          {
+            "smartQuotes": false,
+            "smartDashes": false,
+            "brackets": true,
+            "markdown": false,
+            "actual": "prefix \"a\" -- ...\n"
+          },
+          {
+            "smartQuotes": true,
+            "smartDashes": false,
+            "brackets": true,
+            "markdown": false,
+            "actual": "prefix “a” -- ...\n"
+          },
+          {
+            "smartQuotes": false,
+            "smartDashes": true,
+            "brackets": true,
+            "markdown": false,
+            "actual": "prefix \"a\" – …\n"
+          },
+          {
+            "smartQuotes": true,
+            "smartDashes": true,
+            "brackets": true,
+            "markdown": false,
+            "actual": "prefix “a” – …\n"
+          },
+          {
+            "smartQuotes": false,
+            "smartDashes": false,
+            "brackets": false,
+            "markdown": true,
+            "actual": "prefix \"a\" -- ...\n"
+          },
+          {
+            "smartQuotes": true,
+            "smartDashes": false,
+            "brackets": false,
+            "markdown": true,
+            "actual": "prefix “a” -- ...\n"
+          },
+          {
+            "smartQuotes": false,
+            "smartDashes": true,
+            "brackets": false,
+            "markdown": true,
+            "actual": "prefix \"a\" – …\n"
+          },
+          {
+            "smartQuotes": true,
+            "smartDashes": true,
+            "brackets": false,
+            "markdown": true,
+            "actual": "prefix “a” – …\n"
+          },
+          {
+            "smartQuotes": false,
+            "smartDashes": false,
+            "brackets": true,
+            "markdown": true,
+            "actual": "prefix \"a\" -- ...\n"
+          },
+          {
+            "smartQuotes": true,
+            "smartDashes": false,
+            "brackets": true,
+            "markdown": true,
+            "actual": "prefix “a” -- ...\n"
+          },
+          {
+            "smartQuotes": false,
+            "smartDashes": true,
+            "brackets": true,
+            "markdown": true,
+            "actual": "prefix \"a\" – …\n"
+          },
+          {
+            "smartQuotes": true,
+            "smartDashes": true,
+            "brackets": true,
+            "markdown": true,
+            "actual": "prefix “a” – …\n"
+          }
+        ]
+      }
+    },
+    {
+      "name": "source mode keeps ASCII literal with smart options enabled",
+      "status": "pass",
+      "elapsedMs": 194,
+      "details": {
+        "actual": "prefix \"It's\" -- --- ...\n"
+      }
+    },
+    {
+      "name": "IR escapes prevent quote and dash conversion",
+      "status": "pass",
+      "elapsedMs": 241,
+      "details": {
+        "actual": "prefix \\\"word\\\" \\-- \\---\n"
+      }
+    },
+    {
+      "name": "IR code math YAML HTML and URL destinations stay literal",
+      "status": "pass",
+      "elapsedMs": 861,
+      "details": [
+        {
+          "selector": "[data-type=\"code\"]",
+          "actual": "`alpha\"--...`\n"
+        },
+        {
+          "selector": "[data-type=\"code-block\"] code",
+          "actual": "```text\nalpha\"--...\n```\n"
+        },
+        {
+          "selector": "[data-type=\"math-inline\"]",
+          "actual": "$alpha\"--...$\n"
+        },
+        {
+          "selector": "[data-type=\"math-block\"] code",
+          "actual": "$$\nalpha\"--...\n$$\n"
+        },
+        {
+          "selector": "[data-type=\"yaml-front-matter\"]",
+          "actual": "---\nname: alpha\"--...\n---\ntext\n"
+        },
+        {
+          "selector": "[data-type=\"html-inline\"]",
+          "actual": "<span title=\"alpha\"--...\">html</span>\n"
+        }
+      ]
+    },
+    {
+      "name": "unparsed URL and unfinished HTML attributes stay literal",
+      "status": "pass",
+      "elapsedMs": 376,
+      "details": {
+        "scenarios": 2
+      }
+    },
+    {
+      "name": "input conversion Undo restores literal punctuation and Redo restores conversion",
+      "status": "pass",
+      "elapsedMs": 476,
+      "details": [
+        {
+          "input": "\"",
+          "literal": "\"",
+          "converted": "“"
+        },
+        {
+          "input": "--",
+          "literal": "--",
+          "converted": "–"
+        },
+        {
+          "input": "---",
+          "literal": "---",
+          "converted": "—"
+        },
+        {
+          "input": "...",
+          "literal": "...",
+          "converted": "…"
+        }
+      ]
+    },
+    {
+      "name": "curly quote pairing skips existing close and pair Backspace is reversible",
+      "status": "pass",
+      "elapsedMs": 282,
+      "details": {
+        "pair": "“”",
+        "emptyDeletionUndoRedo": true
+      }
+    },
+    {
+      "name": "curly quotes preserve selected Unicode 😀",
+      "status": "pass",
+      "elapsedMs": 172,
+      "details": {
+        "original": "😀",
+        "replacement": "left “X” right\n",
+        "backward": true
+      }
+    },
+    {
+      "name": "curly quotes preserve selected Unicode é",
+      "status": "pass",
+      "elapsedMs": 174,
+      "details": {
+        "original": "é",
+        "replacement": "left “X” right\n",
+        "backward": true
+      }
+    },
+    {
+      "name": "curly quotes preserve selected Unicode 👨‍👩‍👧‍👦",
+      "status": "pass",
+      "elapsedMs": 178,
+      "details": {
+        "original": "👨‍👩‍👧‍👦",
+        "replacement": "left “X” right\n",
+        "backward": true
+      }
+    },
+    {
+      "name": "curly quotes preserve selected bold and linked text markup",
+      "status": "pass",
+      "elapsedMs": 277,
+      "details": {
+        "scenarios": 2
+      }
+    },
+    {
+      "name": "composition events do not convert provisional or committed IME text",
+      "status": "pass",
+      "elapsedMs": 180,
+      "details": {
+        "syntheticOnly": true,
+        "actual": "prefix \"--...\n",
+        "realOSIME": "not tested"
+      }
+    },
+    {
+      "name": "plain paste is not transformed by input conversion",
+      "status": "pass",
+      "elapsedMs": 327,
+      "details": {
+        "actual": "prefix \"plain\" -- --- ...\n"
+      }
+    },
+    {
+      "name": "focus/typewriter and dark theme keep punctuation editing behavior",
+      "status": "pass",
+      "elapsedMs": 207,
+      "details": {
+        "actual": "prefix “a”–…\n",
+        "theme": "dark",
+        "focus": true,
+        "typewriter": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "fatalError": null,
+  "pass": true
+}

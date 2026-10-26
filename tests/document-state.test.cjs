@@ -1,0 +1,10 @@
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const {DocumentState,wordStats,literalMatches}=require('../src/document-state.js');
+test('open and save preserves exact original Markdown including unknown HTML',()=>{const d=new DocumentState();const raw='---\r\ntitle: 测试\r\n---\r\n\r\n- a\r\n\r\n<!-- keep -->\r\n<custom-tag a="1">中文</custom-tag>';d.load(raw,'* a\n\n<!-- keep -->\n<custom-tag a="1">中文</custom-tag>\n');d.input(d.canonical);assert.equal(d.text,raw);assert.equal(d.dirty,false);d.save();assert.equal(d.text,raw);});
+test('real edit dirties document and undo to canonical baseline restores original bytes',()=>{const d=new DocumentState();d.load('- hello\r\n','* hello\n');d.input('* hello world\n');assert.equal(d.dirty,true);d.input('* hello\n');assert.equal(d.text,'- hello\r\n');assert.equal(d.dirty,false);});
+test('source mode is authoritative and toggling observation does not modify it',()=>{const d=new DocumentState();d.load('# a\n','# a\n');d.input('# a\n\n<custom>中文</custom>\n',true);const raw=d.text;d.observe('# a\n\n中文\n');assert.equal(d.text,raw);assert.equal(d.dirty,true);d.save();assert.equal(d.dirty,false);});
+test('statistics count Chinese and English words without counting fenced code',()=>{assert.equal(wordStats('你好 world\n```js\nconst variable = 1;\n```').words,3);});
+test('literal find accepts regex characters and non-overlapping matches',()=>{assert.deepEqual(literalMatches('a.b a.b','a.b'),[0,4]);assert.deepEqual(literalMatches('aaa','aa'),[0]);assert.deepEqual(literalMatches('x',''),[]);});
+test('undo back to an unsaved source snapshot restores its exact whitespace',()=>{const d=new DocumentState();d.load('old\n','old\n');d.input('new  \nline\r\n',true);d.observe('new\nline\n');d.input('new!\nline\n');d.input('new\nline\n');assert.equal(d.text,'new  \nline\r\n');});
+test('continuous source typing does not retain a full document for every character',()=>{const d=new DocumentState();for(let i=0;i<1000;i++)d.input('中'.repeat(i),true);assert.equal(d.rawStates.size,1);});

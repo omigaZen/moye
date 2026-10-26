@@ -1,0 +1,91 @@
+{
+  "generatedAt": "2026-10-25T10:47:04.766Z",
+  "platform": "linux/x64",
+  "purpose": "Moye real-editor settings integration; not Typora differential acceptance",
+  "results": [
+    {
+      "name": "body font preference changes the real editor and paragraph computed font family",
+      "status": "pass",
+      "elapsedMs": 129,
+      "details": {
+        "before": "\"Noto Sans SC\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "editor": "serif",
+        "paragraph": "serif",
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "real editor switches MathJax to KaTeX and back after explicit settings reload",
+      "status": "pass",
+      "elapsedMs": 603,
+      "details": {
+        "stages": [
+          {
+            "engine": "MathJax",
+            "mathjax": 2,
+            "katex": 0
+          },
+          {
+            "engine": "KaTeX",
+            "mathjax": 0,
+            "katex": 2
+          },
+          {
+            "engine": "MathJax",
+            "mathjax": 2,
+            "katex": 0
+          }
+        ],
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "macro preference expands then removes a macro in the actual editor without stale expansion",
+      "status": "pass",
+      "elapsedMs": 513,
+      "details": {
+        "addedGlyphs": [
+          "34",
+          "32"
+        ],
+        "removedGlyphs": [
+          "5C",
+          "6D",
+          "6F",
+          "79",
+          "65",
+          "70",
+          "72",
+          "62"
+        ],
+        "oldExpansionRemoved": true,
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "numbering preference affects real equation labels and resets between documents",
+      "status": "pass",
+      "elapsedMs": 672,
+      "details": {
+        "offLabels": [],
+        "onLabels": [
+          "(1)",
+          "(2)"
+        ],
+        "newDocumentLabels": [
+          "(1)"
+        ],
+        "disabledLabels": [],
+        "sourceUnchanged": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "application": {
+    "version": "0.5.0",
+    "isPackaged": false,
+    "path": "/workspace/scratch/8a7610d50e71/moye"
+  },
+  "pass": true
+}
