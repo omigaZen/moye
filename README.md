@@ -6,9 +6,22 @@
 
 原版参考获取取得了新的事实：官方 Linux 浮动下载包的实际元数据为 1.14.9，与稳定发布页顶部 1.14.10 不同；原版运行受当前环境限制，尚未取得 UI 和默认值。详细记录见 `tests/typora-reference-report.json`。
 
+## 下载（0.5.0 开发预览）
+
+| 平台 | 发布包 | 启动方式 |
+| --- | --- | --- |
+| Windows x64 | [下载 ZIP](https://github.com/omigaZen/moye/releases/download/v0.5.0/Moye-0.5.0-Windows-x64.zip) | 解压后运行 `Moye.exe` |
+| Linux x64 | [下载 tar.gz](https://github.com/omigaZen/moye/releases/download/v0.5.0/Moye-0.5.0-Linux-x64.tar.gz) | 解压保留权限，运行 `start-moye.sh` |
+| macOS Intel | [下载 ZIP](https://github.com/omigaZen/moye/releases/download/v0.5.0/Moye-0.5.0-macOS-x64.zip) | 解压后运行 `Moye.app` |
+| macOS Apple Silicon | [下载 ZIP](https://github.com/omigaZen/moye/releases/download/v0.5.0/Moye-0.5.0-macOS-arm64.zip) | 解压后运行 `Moye.app` |
+
+[发布说明与全部附件](https://github.com/omigaZen/moye/releases/tag/v0.5.0) · [完整离线源码 ZIP](https://github.com/omigaZen/moye/releases/download/v0.5.0/Moye-0.5.0-source.zip) · [SHA256 校验清单](https://github.com/omigaZen/moye/releases/download/v0.5.0/Moye-0.5.0-SHA256SUMS.txt)
+
+本版为未签名开发预览：Linux 已完成无头环境验证，Windows/macOS 为交叉构建，尚未实机验证。完整限制和测试记录见 [验收报告](docs/验收报告.md)。
+
 ## 使用
 
-对应目标的便携包构建后，按以下方式启动；0.5.0 各包是否已构建和实测，以 `docs/验收报告.md` 为准：
+下载上方对应平台的便携包并解压，按以下方式启动；0.5.0 各包的构建与实测情况，以 `docs/验收报告.md` 为准：
 
 - Windows x64：运行 `Moye.exe`。
 - macOS Apple Silicon：使用 arm64 包；Intel Mac 使用 x64 包，运行 `Moye.app`。
@@ -72,4 +85,4 @@ npm run verify:packages
 
 ## 源码仓库
 
-源码持续保存于 [omigaZen/moye](https://github.com/omigaZen/moye)（私有）。0.5.0初始快照、生成资源与历史提交说明见 [GitHub同步说明](docs/GitHub同步说明.md)。
+源码持续保存于 [omigaZen/moye](https://github.com/omigaZen/moye)。0.5.0初始快照、生成资源与历史提交说明见 [GitHub同步说明](docs/GitHub同步说明.md)。
