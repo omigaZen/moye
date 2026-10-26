@@ -2,6 +2,8 @@
 
 2026-10-26，墨页 0.5.0 源码快照导入私有仓库 https://github.com/omigaZen/moye ，默认分支为 main。后续以该仓库保存源码和改动历史。
 
+同日按用户要求改为公开仓库，并发布 [0.5.0 开发预览及下载附件](https://github.com/omigaZen/moye/releases/tag/v0.5.0)。各平台直接下载链接及 SHA256 校验清单见 README。
+
 ## 初始快照来源
 
 - 原始文件：Moye-0.5.0-source.zip，1091项。
